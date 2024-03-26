@@ -13,6 +13,26 @@ return new class extends Migration
     {
         Schema::create('dishes_orders', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('type_id');
+            $table->unsignedBigInteger('dish_id');
+            $table->unsignedBigInteger('order_id');
+            $table->unsignedTinyInteger('quantity');
+            
+            
+            $table->foreign('dish_id')
+            ->references('id')
+            ->on('dishes')
+            ->onUpdate('cascade')
+            ->onDelete('cascade');
+
+            $table->foreign('order_id')
+            ->references('id')
+            ->on('orders')
+            ->onUpdate('cascade')
+            ->onDelete('cascade');
+            
+            $table->primary(['user_id', 'type_id']);
             $table->timestamps();
         });
     }

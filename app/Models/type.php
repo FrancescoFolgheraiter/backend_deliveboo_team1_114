@@ -8,4 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class type extends Model
 {
     use HasFactory;
+
+    /*
+        Relationships
+    */
+    // Many-to-Many con User
+    public function tags()
+    {
+        return $this->belongsToMany(User::class);
+    }
 }

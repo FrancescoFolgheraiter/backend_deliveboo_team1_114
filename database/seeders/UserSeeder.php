@@ -8,6 +8,7 @@ use Illuminate\Database\Seeder;
 // Models
 use App\Models\User;
 
+
 // Helpers 
 use Illuminate\Support\Facades\Schema;
 class UserSeeder extends Seeder
@@ -48,14 +49,10 @@ class UserSeeder extends Seeder
             'La Bella Italia',
             'Sushi Palace'
         ];
-
         //popolazione table  user
         for ($i=0; $i < 20; $i++) {
-            //prelevo un nome random dall'array nomi e poi lo elimino
-            $randomIndex=random_int(0,count($name));
-            $resturant_name = $name[$randomIndex];
-            unset($name[$randomIndex]);
-            //fine gestione nomi
+
+            $resturant_name = $name[$i];
 
             $email = fake()->email;
             $password = 'password';
@@ -66,7 +63,16 @@ class UserSeeder extends Seeder
             for ($i=0; $i < 11; $i++) { 
                 $vatNumber .= rand(0,9);
             };
-            $resturant_image = "immagine";
+            $resturantImage = "immagine";
+
+            $user = user::create([
+                'resturant_name'=>$resturant_name,
+                'email'=>$email,
+                'password'=> $password,
+                'address'=>$address,
+                'vat_number'=>$vatNumber,
+                'resturant_image'=>$resturantImage 
+            ]);
         }
     }
 }

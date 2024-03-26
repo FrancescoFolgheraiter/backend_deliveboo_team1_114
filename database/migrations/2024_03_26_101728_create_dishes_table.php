@@ -19,6 +19,14 @@ return new class extends Migration
             $table->decimal('price', 5, 2)->unsigned();
             $table->boolean('visible')->default(true);
             $table->string('image', 255)->nullable();
+            $table->unsignedBigInteger('user_id');
+
+            $table->foreign('user_id')
+                  ->references('id')
+                  ->on('users')
+                  ->onUpdate('cascade')
+                  ->onDelete('cascade');
+                  
             $table->timestamps();
         });
     }

@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Order extends Model
 {
     use HasFactory;
+
+    // Relationships
+
+    public function dishes() {
+
+        return $this->belongsToMany(Dish::class);
+    }
 }

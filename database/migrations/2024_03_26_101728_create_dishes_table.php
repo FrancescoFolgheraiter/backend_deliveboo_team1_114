@@ -20,6 +20,16 @@ return new class extends Migration
             $table->boolean('visible')->default(true);
             $table->string('image', 255)->nullable();
             $table->unsignedBigInteger('user_id');
+<<<<<<< HEAD
+=======
+
+            $table->foreign('user_id')
+                  ->references('id')
+                  ->on('users')
+                  ->onUpdate('cascade')
+                  ->onDelete('cascade');
+                  
+>>>>>>> seeders-for-dish,-dishes_orders-and-orders
             $table->timestamps();
         });
     }

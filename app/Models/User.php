@@ -42,4 +42,13 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    /*
+        Relationships
+    */
+    // Many-to-Many con Type
+    public function tags()
+    {
+        return $this->belongsToMany(Type::class);
+    }
 }

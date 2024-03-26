@@ -66,8 +66,7 @@ class UserSeeder extends Seeder
             for ($i=0; $i < 11; $i++) { 
                 $vatNumber .= rand(0,9);
             };
-
-
+            $resturant_image = "immagine";
         }
     }
 }

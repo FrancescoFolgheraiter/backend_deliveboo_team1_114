@@ -12,9 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('dishes_orders', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('type_id');
+            
             $table->unsignedBigInteger('dish_id');
             $table->unsignedBigInteger('order_id');
             $table->unsignedTinyInteger('quantity');
@@ -32,7 +30,7 @@ return new class extends Migration
             ->onUpdate('cascade')
             ->onDelete('cascade');
             
-            $table->primary(['user_id', 'type_id']);
+            $table->primary(['dish_id', 'order_id']);
             $table->timestamps();
         });
     }

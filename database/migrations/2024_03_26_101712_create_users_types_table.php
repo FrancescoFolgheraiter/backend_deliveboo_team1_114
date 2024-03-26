@@ -12,8 +12,21 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('users_types', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')
+                ->references('id')
+                ->on('users')
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
+
+            $table->unsignedBigInteger('type_id');
+            $table->foreign('type_id')
+                ->references('id')
+                ->on('types')
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
+
+            $table->primary(['user_id', 'type_id']);
         });
     }
 

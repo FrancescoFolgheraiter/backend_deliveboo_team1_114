@@ -11,6 +11,7 @@ use App\Models\User;
 
 // Helpers 
 use Illuminate\Support\Facades\Schema;
+use Faker\Factory as Faker;
 class UserSeeder extends Seeder
 {
     /**
@@ -56,22 +57,27 @@ class UserSeeder extends Seeder
 
             $email = fake()->email;
             $password = 'password';
-            $address = fake() -> address;
-
+            //utilizzo faker per creare un indirizzo ITA e uso explode per prendere la prima parte
+            //senza il CAP e la città
+            //adress diventa un array con key 0 e 1, successivamente usero l'array in posizione 0
+            $address = explode("\n",Faker::create('it_IT')->address());
             //inizializzo a stringa vuota vatNumber
             $vatNumber = '';
-            for ($i=0; $i < 11; $i++) { 
+            //non utilizzo fake()->vat perchè il fortmato è IT#############
+            //con il ciclo creo una partita iva composta solo da numeri
+            for ($j=0; $j < 11; $j++) { 
                 $vatNumber .= rand(0,9);
             };
+
             $resturantImage = "immagine";
 
             $user = user::create([
-                'resturant_name'=>$resturant_name,
-                'email'=>$email,
+                'resturant_name'=> $resturant_name,
+                'email'=> $email,
                 'password'=> $password,
-                'address'=>$address,
-                'vat_number'=>$vatNumber,
-                'resturant_image'=>$resturantImage 
+                'address'=> $address[0],
+                'vat_number'=> $vatNumber,
+                'resturant_image'=> $resturantImage 
             ]);
         }
     }

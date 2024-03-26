@@ -19,6 +19,7 @@ return new class extends Migration
             $table->decimal('price', 5, 2)->unsigned();
             $table->boolean('visible')->default(true);
             $table->string('image', 255)->nullable();
+            $table->unsignedBigInteger('user_id');
             $table->timestamps();
         });
     }

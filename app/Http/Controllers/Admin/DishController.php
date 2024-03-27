@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 
 //Models
 use App\Models\Dish;
+
 class DishController extends Controller
 {
     /**
@@ -15,7 +16,9 @@ class DishController extends Controller
      */
     public function index()
     {
-        //
+        $user = auth()->user();
+        $dishes = Dish::all();
+        return view('admin.dishes.index', compact('dishes','user'));
     }
 
     /**

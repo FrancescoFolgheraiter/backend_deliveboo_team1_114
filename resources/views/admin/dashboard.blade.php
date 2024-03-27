@@ -59,7 +59,9 @@
                         </div>
                         <div class="col-md-9 col-12 d-flex flex-column justify-content-between ">
                             <div>
-                                Vai alla modifica dei tuoi piatti
+                                <a href="{{ route('admin.dishes.create') }}" class="btn btn-outline-success">
+                                    Aggiungi un nuovo piatto
+                                </a> 
                             </div>
                             <div>
                                 Ordini di oggi 

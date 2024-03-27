@@ -1,11 +1,15 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use App\Models\type;
+//importazione controller
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class TypeController extends Controller
+//Models
+use App\Models\Order;
+
+class OrderController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -34,7 +38,7 @@ class TypeController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(type $type)
+    public function show(Order $order)
     {
         //
     }
@@ -42,7 +46,7 @@ class TypeController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(type $type)
+    public function edit(Order $order)
     {
         //
     }
@@ -50,7 +54,7 @@ class TypeController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, type $type)
+    public function update(Request $request, Order $order)
     {
         //
     }
@@ -58,7 +62,7 @@ class TypeController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(type $type)
+    public function destroy(Order $order)
     {
         //
     }

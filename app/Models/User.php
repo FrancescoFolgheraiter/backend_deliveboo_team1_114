@@ -51,4 +51,10 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(Type::class);
     }
+
+    // One-to-Many con Dish
+    public function dishes() 
+    {
+        return $this->hasMany(Dish::class);
+    }
 }

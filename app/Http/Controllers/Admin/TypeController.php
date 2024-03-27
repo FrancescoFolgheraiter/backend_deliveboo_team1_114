@@ -1,11 +1,14 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use App\Models\Dish;
+//importazione controller
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+// Models
+use App\Models\type;
 
-class DishController extends Controller
+class TypeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -34,7 +37,7 @@ class DishController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Dish $dish)
+    public function show(type $type)
     {
         //
     }
@@ -42,7 +45,7 @@ class DishController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Dish $dish)
+    public function edit(type $type)
     {
         //
     }
@@ -50,7 +53,7 @@ class DishController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Dish $dish)
+    public function update(Request $request, type $type)
     {
         //
     }
@@ -58,7 +61,7 @@ class DishController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Dish $dish)
+    public function destroy(type $type)
     {
         //
     }

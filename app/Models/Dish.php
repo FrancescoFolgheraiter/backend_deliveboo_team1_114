@@ -9,6 +9,15 @@ class Dish extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'name',
+        'description',
+        'ingredients',
+        'price',
+        'visible',
+        'image'
+    ];
+
     /*
         Relationships
     */

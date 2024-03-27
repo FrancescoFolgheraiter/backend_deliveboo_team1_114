@@ -22,8 +22,11 @@ class TypeUserSeeder extends Seeder
         
         //popolazione della tabella
         $users = User::all();
+        //ciclo su tutti gli utenti
         foreach ($users as $user) {
+            //prelevo da 1 a 3 tipologie random
             $types = type::inRandomOrder()->limit(rand(1, 3))->get();
+            //leggo i tipi prelevati e li utilizzo la relazione per aggiungerli al db
             foreach ($types as $type) {
                 $user->types()->attach($type->id);
             }

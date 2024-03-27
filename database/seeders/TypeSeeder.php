@@ -25,10 +25,7 @@ class TypeSeeder extends Seeder
         //tipologie di locali che possiamo avere nel nostro applicativo
         $types = [
             'Pizzeria',
-            'Trattoria',
-            'Osteria',
-            'Ristorante',
-            'Gastronomia',
+            'Italiano',
             'Paninoteca',
             'Enoteca',
             'Gelateria',
@@ -38,7 +35,7 @@ class TypeSeeder extends Seeder
             'Rosticceria',
             'Friggitoria',
             'Sushi',
-            'Tavola fredda',
+            'Etnica',
             'Orientale',
             'Cinese',
             'Americano',

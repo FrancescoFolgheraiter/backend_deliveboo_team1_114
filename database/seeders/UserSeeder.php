@@ -25,7 +25,7 @@ class UserSeeder extends Seeder
         Schema::enableForeignKeyConstraints();
 
         //nomi plausibili per le attività
-        $name=[
+        $name = [
             'Galloway',
             'BurgerKong',
             'MucDonalds',

@@ -16,16 +16,28 @@ class DishOrderSeeder extends Seeder
      */
     public function run(): void
     {
+        // recupero tutti gli orders dal database
         $orders = Order::all();
 
+        // recupero tutti i piatti dal database
         $dishes = Dish::all();
 
+        // itero su ciascun ordine 
         foreach ($orders as $order) {
+
+            // seleziono in modo casuale un piatto da 1 a 4
             $randomDishes = rand(1, 4);
+
+            // mescolo tramite shuffle() e prendo casualmente un piatto
             $selectedDishes = $dishes->shuffle()->take($randomDishes);
 
+            // itero sui piatti selezionati per ordine 
             foreach ($selectedDishes as $dish) {
+
+                // seleziono in modo casuale una quantità da 1 a 10
                 $quantity = rand(1, 10);
+
+                // associo per ogni ordine un piatto e ne specifico la quantità
                 $order->dishes()->attach($dish, ['quantity' => $quantity]);
             };
         };

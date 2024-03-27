@@ -19,10 +19,16 @@ class OrderSeeder extends Seeder
      */
     public function run(): void
     {   
+        // disabilito i vincoli con le foreign keys
         Schema::disableForeignKeyConstraints();
+
+        // cancello tutti i dati presenti nella table
         Order::truncate();
+
+        // riabilito i vincoli con le foreign keys
         Schema::enableForeignKeyConstraints();
 
+        // definisco un array con elementi in italiano
         $customers = [
             [
                 'nome' => 'Mario',
@@ -267,7 +273,11 @@ class OrderSeeder extends Seeder
         ];
 
         foreach ($customers as $customer) {
+
+            // creo un nuovo order
             $order = new Order();
+
+            // genero dei dati fake tramier faker e assegno gli elementi presenti nell'array 
             $order->date = fake()->dateTimeBetween('2024-01-01', 'now')->format('Y-m-d H:i:s');
             $order->note = fake()->sentence();
             $order->total_price = fake()->randomFloat(2, 1, 1000);

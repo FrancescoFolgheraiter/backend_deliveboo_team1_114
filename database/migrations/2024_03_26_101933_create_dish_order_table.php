@@ -17,19 +17,21 @@ return new class extends Migration
             $table->unsignedBigInteger('order_id');
             $table->unsignedTinyInteger('quantity');
             
-            
+            // foreign key che fa riferimento all'ID del piatto nella table "dishes"
             $table->foreign('dish_id')
             ->references('id')
             ->on('dishes')
             ->onUpdate('cascade')
             ->onDelete('cascade');
 
+            // foreign key che fa riferimento all'ID del piatto nella table "orders"
             $table->foreign('order_id')
             ->references('id')
             ->on('orders')
             ->onUpdate('cascade')
             ->onDelete('cascade');
             
+            // primary key composta da dish_id e order_id
             $table->primary(['dish_id', 'order_id']);
             $table->timestamps();
         });

@@ -18,11 +18,17 @@ class DishSeeder extends Seeder
      * Run the database seeds.
      */
     public function run(): void
-    {
+    {   
+        // disabilito i vincoli con le foreign keys
         Schema::disableForeignKeyConstraints();
+
+        // cancello tutti i dati presenti nella table
         Dish::truncate();
+
+        // riabilito i vincoli con le foreign keys
         Schema::enableForeignKeyConstraints();
 
+        // definisco un array con elementi in italiano
         $dishes = [
             [
                 'nome' => 'Pizza Margherita',
@@ -373,10 +379,13 @@ class DishSeeder extends Seeder
             ]
         ];
 
-        // ricordarsi di pushare l'elemento utilizzando il json_decode
-        
         foreach ($dishes as $dish) {
+
+            // creo un nuovo order
             $newDish = new Dish();
+
+            // genero dei dati fake tramier faker e assegno gli elementi presenti nell'array
+            // ricordarsi di pushare l'elemento utilizzando il json_decode
             $newDish->name = $dish['nome'];
             $newDish->description = fake()->sentence();
             $newDish->ingredients = json_encode($dish['ingredienti']);

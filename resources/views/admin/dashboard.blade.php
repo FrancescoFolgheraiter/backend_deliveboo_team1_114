@@ -8,7 +8,7 @@
             <div class="card my-user-card">
                 <div class="card-body">
                     <h1 class="text-center text-success">
-                        Nome del locale
+                        {{ $user->resturant_name }}
                     </h1>
                     <hr>
                     <!--contenuto principale di interazione utente-->
@@ -16,10 +16,15 @@
                         <div class="col-md-3 col-12 h-100 ">
                             <aside class="d-flex flex-column justify-content-around h-100">
                                 <div>
-                                    Località
+                                    <h5>
+                                        Località:
+                                    </h5>
+                                    {{ $user->address }}
                                 </div>
                                 <div>
-                                    Tipologià di ristorante
+                                    <h5>
+                                        Tipologià di ristorante
+                                    </h5>
                                     <ul>
                                         @foreach ($types as $type)
                                         <li>
@@ -29,7 +34,26 @@
                                     </ul>
                                 </div>
                                 <div>
-                                    Immagine di copertina
+                                    <h5>
+                                        Immagine di copertina:
+                                    </h5>
+                                    {{ $user->resturant_image  }}
+                                </div>
+                                <div>
+                                    <h5>
+                                        Partita Iva:
+                                    </h5>
+                                    {{ $user->vat_number }}
+                                </div>
+                                <div>
+                                    <h5>
+                                        Utente creato in data:
+                                    </h5>
+                                    @php
+                                    //prendo solo la data tramite explode lasciando perdere l'orario di creazione
+                                       $date = explode(" ", $user->created_at);
+                                    @endphp
+                                    {{ $date[0]}}
                                 </div>
                             </aside>
                         </div>

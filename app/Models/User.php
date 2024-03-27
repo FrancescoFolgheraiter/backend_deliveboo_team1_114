@@ -47,7 +47,7 @@ class User extends Authenticatable
         Relationships
     */
     // Many-to-Many con Type
-    public function tags()
+    public function Types()
     {
         return $this->belongsToMany(Type::class);
     }

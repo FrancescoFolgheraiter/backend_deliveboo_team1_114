@@ -13,7 +13,7 @@ class type extends Model
         Relationships
     */
     // Many-to-Many con User
-    public function tags()
+    public function Users()
     {
         return $this->belongsToMany(User::class);
     }

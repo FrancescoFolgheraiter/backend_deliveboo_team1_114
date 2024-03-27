@@ -25,7 +25,7 @@ class TypeUserSeeder extends Seeder
         foreach ($users as $user) {
             $types = type::inRandomOrder()->limit(rand(1, 3))->get();
             foreach ($types as $type) {
-                $user->tags()->attach($type->id);
+                $user->types()->attach($type->id);
             }
         }
     }

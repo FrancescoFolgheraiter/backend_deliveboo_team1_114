@@ -20,6 +20,13 @@
                                 </div>
                                 <div>
                                     Tipologià di ristorante
+                                    <ul>
+                                        @foreach ($types as $type)
+                                        <li>
+                                            {{ $type->name }}
+                                        </li>
+                                        @endforeach
+                                    </ul>
                                 </div>
                                 <div>
                                     Immagine di copertina

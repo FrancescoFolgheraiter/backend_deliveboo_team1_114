@@ -9,6 +9,12 @@ use Illuminate\Http\Request;
 //Models
 use App\Models\Dish;
 
+//Form request
+use App\Http\Requests\Dish\StoreRequest as StoreDishRequest;
+use App\Http\Requests\Dish\UpdateRequest as UpdateDishRequest;
+
+//Helpers
+use Illuminate\Support\Facades\Storage;
 class DishController extends Controller
 {
     /**
@@ -26,13 +32,13 @@ class DishController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.dishes.create');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreDishRequest $request)
     {
         //
     }
@@ -56,7 +62,7 @@ class DishController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Dish $dish)
+    public function update(UpdateDishRequest $request, Dish $dish)
     {
         //
     }

@@ -63,10 +63,10 @@
                             <option value="" {{ old('visible') == null ? 'selected' : '' }}>
                                 Seleziona una se il piatto è disponibile..
                             </option>
-                            <option value="0" {{ old('visible') == 0 ? 'selected' : '' }}>
+                            <option value="0" {{ old('visible') == 0 ? 'selected' : '' }} class=" text-danger ">
                                 Non disponibile
                             </option>
-                            <option value="1" {{ old('visible') == 1 ? 'selected' : '' }}>
+                            <option value="1" {{ old('visible') == 1 ? 'selected' : '' }} class="text-success">
                                 Disponibile
                             </option>
                         </select>

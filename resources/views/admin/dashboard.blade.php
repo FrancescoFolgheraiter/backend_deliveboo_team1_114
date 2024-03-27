@@ -26,7 +26,7 @@
                                         Tipologià di ristorante
                                     </h5>
                                     <ul>
-                                        @foreach ($types as $type)
+                                        @foreach ($user->Types as $type)
                                         <li>
                                             {{ $type->name }}
                                         </li>

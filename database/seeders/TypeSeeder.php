@@ -24,21 +24,68 @@ class TypeSeeder extends Seeder
         Schema::enableForeignKeyConstraints();
         //tipologie di locali che possiamo avere nel nostro applicativo
         $types = [
-            'Pizzeria',
-            'Italiano',
-            'Paninoteca',
-            'Enoteca',
-            'Gelateria',
-            'Iberica',
-            'Friggitoria',
-            'Sushi',
-            'Etnica',
-            'Orientale',
-            'Cinese',
-            'Americano',
-            'BBQ',
-            'Fast food',
+            [
+                'name' => 'Pizzeria',
+                'image' => 'pizzeria.jpg',
+                'description' => ''
+            ],
+            [
+                'name' => 'Pesce',
+                'image' => 'pesce.jpg',
+                'description' => ''
+            ],
+            [
+                'name' => 'Paninoteca',
+                'image' => 'paninoteca.jpg',
+                'description' => ''
+            ],
+            [
+                'name' => 'Iberica',
+                'image' => 'iberica.jpg',
+                'description' => ''
+            ],
+            [
+                'name' => 'Giapponese',
+                'image' => 'giapponese.jpg',
+                'description' => ''
+            ],
+            [
+                'name' => 'Sushi',
+                'image' => 'sushi.jpg',
+                'description' => ''
+            ],
+            [
+                'name' => 'Etnica',
+                'image' => 'etnico.jpg',
+                'description' => ''
+            ],
+            [
+                'name' => 'Cinese',
+                'image' => 'cinese.jpg',
+                'description' => ''
+            ],
+            [
+                'name' => 'Americano',
+                'image' => 'americano.jpg',
+                'description' => ''
+            ],
+            [
+                'name' => 'BBQ',
+                'image' => 'BBQ.jpg',
+                'description' => ''
+            ],
+            [
+                'name' => 'Fast food',
+                'image' => 'fastFood.jpg',
+                'description' => ''
+            ],
+            [
+                'name' => 'Messicano',
+                'image' => 'messicano.jpg',
+                'description' => ''
+            ]
         ];
+        
         //eseguo un foreach per popolare type->name descrizione la lascio a null
         foreach ($types as $elem) {
             $type = type::create([

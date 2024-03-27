@@ -47,7 +47,7 @@
                                         @endif
                                     </td>
                                     <td>
-                                        <a href="#" class="btn btn-xs btn-primary me-2">
+                                        <a href="{{ route('admin.dishes.show', ['dish' => $dish->id]) }}" class="btn btn-xs btn-primary me-2">
                                             Vedi
                                         </a>
                                     </td>

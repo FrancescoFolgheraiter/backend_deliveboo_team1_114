@@ -28,7 +28,7 @@
                         </div>
                         <div class="col-md-9 col-12 d-flex flex-column justify-content-between ">
                             <div>
-                                Vai alla modifica dei tuoi piatit
+                                Vai alla modifica dei tuoi piatti
                             </div>
                             <div>
                                 Ordini di oggi 

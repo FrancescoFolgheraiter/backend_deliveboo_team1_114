@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 // Controllers
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\Admin\MainController as AdminMainController;
+use App\Http\Controllers\Admin\DishController as AdminDishController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,8 +24,10 @@ Route::prefix('admin')
     ->name('admin.')
     ->middleware('auth')
     ->group(function () {
-
+    //rotta per la dashboard con visibilità dei dati utente
     Route::get('/dashboard', [AdminMainController::class, 'dashboard'])->name('dashboard');
+    //rotte per CRUD di dishes
+    Route::resource('dishes', AdminDishController::class);
 
 });
 

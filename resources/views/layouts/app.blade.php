@@ -24,7 +24,7 @@
                                 <a class="nav-link" href="{{ route('admin.dashboard') }}">Pagina del ristorante</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Lista piatti</a>
+                                <a class="nav-link" href="{{ route('admin.dishes.index') }}">Lista piatti</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Ordini</a>

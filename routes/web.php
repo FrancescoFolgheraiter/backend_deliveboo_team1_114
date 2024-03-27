@@ -26,6 +26,7 @@ Route::prefix('admin')
     ->group(function () {
     //rotta per la dashboard con visibilità dei dati utente
     Route::get('/dashboard', [AdminMainController::class, 'dashboard'])->name('dashboard');
+    Route::get('/dashboard/{dish}', [AdminMainController::class, 'show'])->name('show');
     //rotte per CRUD di dishes
     Route::resource('dishes', AdminDishController::class);
 

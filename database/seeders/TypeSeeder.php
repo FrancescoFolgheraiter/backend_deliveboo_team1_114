@@ -89,7 +89,8 @@ class TypeSeeder extends Seeder
         //eseguo un foreach per popolare type->name descrizione la lascio a null
         foreach ($types as $elem) {
             $type = type::create([
-                'name'=>$elem,
+                'name'=>$elem['name'],
+                'image'=>$elem['image']
             ]);
         }
        

@@ -9,10 +9,19 @@ class Dish extends Model
 {
     use HasFactory;
 
-    // Relationships
+    /*
+        Relationships
+    */
 
-    public function orders() {
-
+    // Many-to-Many con Order
+    public function orders() 
+    {
         return $this->belongsToMany(Order::class);
+    }
+
+    // One-to-Many con User
+    public function user() 
+    {
+        return $this->belongsTo(User::class);
     }
 }

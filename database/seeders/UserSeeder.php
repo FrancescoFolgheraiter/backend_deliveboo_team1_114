@@ -26,26 +26,26 @@ class UserSeeder extends Seeder
 
         //nomi plausibili per le attività
         $name = [
-            'Galloway', // Fast Food 0
-            'BurgerKong', // Americano 1
-            'MucDonalds', // Americano 2
-            'Da Albert', // Pizzeria 3
-            'Korallo', // Pesce 4
-            'RoadMouse', // BBQ 5
-            'StefanoPizza', // Pizzeria 6
-            'Cinatown', // Cinese 7
-            'Da Mario', // Pizzeria 8
-            'Fork', // Etnica 9
-            'Mindujo', // Iberica 10
-            'Burger Bistro', // Americano 11
-            'Pizzeria Deliziosa', // Pizzeria 12
-            'Slice & Grill', // BBQ 13
-            'Crispy Crust Cafe', // Messicano 14
-            'Pizzamania', // Pizzeria 15
-            'Burger Barbecue', // Americano 16
-            'Sushi Sinfonia', // Sushi 17
-            'La Bella Italia', // Paninoteca 18
-            'Sushi Palace' // Sushi 19
+            'Galloway', // Fast Food 1
+            'BurgerKong', // Americano 2
+            'MucDonalds', // Americano 3
+            'Da Albert', // Pizzeria 4
+            'Korallo', // Pesce 5
+            'RoadMouse', // BBQ 6
+            'StefanoPizza', // Pizzeria 7
+            'Cinatown', // Cinese 8
+            'Da Mario', // Pizzeria 9
+            'Fork', // Etnica 10
+            'Mindujo', // Iberica 11
+            'Burger Bistro', // Americano 12
+            'Pizzeria Deliziosa', // Pizzeria 13
+            'Slice & Grill', // BBQ 14
+            'Crispy Crust Cafe', // Messicano 15
+            'Pizzamania', // Pizzeria 16
+            'Burger Barbecue', // Americano 17
+            'Sushi Sinfonia', // Sushi 18
+            'La Bella Italia', // Paninoteca 19
+            'Sushi Palace' // Sushi 20
         ];
         //popolazione table  user
         for ($i=0; $i < 20; $i++) {

@@ -3,6 +3,8 @@
 @section('page-title', $dish->name)
 
 @section('main-content')
+
+    {{-- possibiltà di tornare a tutti i piatti --}}
     <div class="d-flex justify-content-end py-3">
         <a href="{{ route('admin.dishes.index') }}" class="btn btn-light my-badge text-dark fw-bolder">
             <- Ritorna ai tuoi piatti
@@ -16,6 +18,7 @@
                         {{ $dish->name }}
                     </h1>
 
+                    {{-- in base alla visibilità del prodotto, ritorna if o else --}}
                     <div class="mb-4">
                         @if ($dish->visible == 0)
                             <span class="fw-bolder text-danger">
@@ -28,6 +31,7 @@
                         @endif
                     </div>
 
+                    {{-- se l'img non è null, fai vedere l'img del piatto --}}
                     @if ($dish->image != null)
                         <div class="img-box mx-auto mb-4">
                             <img src="/image/seeder_dishes/{{ $dish->image }}" alt="{{ $dish->name }}">
@@ -71,6 +75,8 @@
                         <div>
                             RISTORANTE
                         </div>
+
+                        {{-- mi vado a recuperare l'user(ristorante) che corrisponde a quel piatto --}}
                         <span class="text-dark">
                             {{ $dish->user->resturant_name }}
                         </span>

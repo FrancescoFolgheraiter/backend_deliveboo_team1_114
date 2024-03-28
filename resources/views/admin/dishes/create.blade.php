@@ -10,7 +10,7 @@
                 <h1 class="text-center">
                     Aggiungi un piatto
                 </h1>
-                <form action="#" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('admin.dishes.store')}}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <!--nome-->
                     <div class="mb-3">
@@ -36,8 +36,8 @@
                     <!--fine descrizione-->
                     <!--ingredienti-->
                     <div class="mb-3">
-                        <label for="ingredients" class="form-label">Ingredienti<span class="text-danger">*</span></label>
-                        <textarea class="form-control" id="ingredients" name="ingredients" rows="3" placeholder="Inserisci gli artisti">{{ old('ingredients') }}</textarea>
+                        <label for="ingredients" class="form-label">Ingredienti(spera gli ingredienti con una virgola)<span class="text-danger">*</span></label>
+                        <textarea class="form-control" id="ingredients" name="ingredients" rows="3" placeholder="Inserisci gli ingredienti separati da ,">{{ old('ingredients') }}</textarea>
                         @error('ingredients')
                              <div class="alert alert-danger">
                                  {{ $message }}

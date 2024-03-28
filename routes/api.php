@@ -23,7 +23,7 @@ Route::name('api.')->group(function() {
         return $request->user();
     });
     //Rotta per Index e show delle mie api DishColtroller che permettono di far visualizzare i cibi
-    Route::resource('projects', ApiDishController::class)->only([
+    Route::resource('dishes', ApiDishController::class)->only([
         'index',
         'show'
     ]);

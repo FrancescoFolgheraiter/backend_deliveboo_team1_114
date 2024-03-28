@@ -117,6 +117,13 @@ class DishController extends Controller
      */
     public function destroy(Dish $dish)
     {
-        //
+        //controllo se è presente un immagine del piatto e in caso la elimino da storage
+        if ($dish->thumb != null) {
+            Storage::disk('public')->delete($dish->image);
+        }
+        //cancello il piatto
+        $dish->delete();
+        //reindirizzo sull'index dei piatti
+        return redirect()->route('admin.dishes.index');
     }
 }

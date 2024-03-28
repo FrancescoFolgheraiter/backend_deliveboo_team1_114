@@ -44,8 +44,6 @@ class DishController extends Controller
         
         //trasformo gli ingredienti presi in input in arrya per preservare la struttura dati
         //successivamente li trasformo nuovamente in stringa grazie ad encode
-        //per poterli inserire nel db
-        $dishData['ingredients'] = json_encode(explode(" ",$dishData['ingredients']));
         //gestione inserimento immagini
         $imgPath = null;
         //se l'immagine è stata aggiunta la aggiungo allo storage/img/dishes

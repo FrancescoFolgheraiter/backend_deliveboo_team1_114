@@ -82,7 +82,7 @@
 
             <div class="mb-3">
                 <label for="price" class="form-label">Prezzo Modificato</label>
-                <input type="number" class="form-control" @error('price') is-invalid @enderror value="{{ old('price') }}" id="price" name="price" placeholder="Inserisci il tuo prezzo modificato..." step="0.01" min="1" max="999.99" required>
+                <input type="number" class="form-control" @error('price') is-invalid @enderror value="{{ $dish->price }}" id="price" name="price" placeholder="Inserisci il tuo prezzo modificato..." step="0.01" min="1" max="999.99" required>
                 @error('price')
                     <div class="alert alert-danger">
                         {{ $message }}

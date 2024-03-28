@@ -18,6 +18,7 @@
                             <th scope="col">Cliente</th>
                             <th scope="col">Indirizzo</th>
                             <th scope="col" class="text-center">Data dell'ordine</th>
+                            <th scope="col" class="text-center">Valore dell'ordine</th>
                             <th colspan="3" class="text-center"scope="col">Azioni</th>
                         </tr>
                     </thead>
@@ -28,15 +29,18 @@
                                         {{ $order->name }} {{ $order->surname }}
                                     </th>
                                     <td>
-                                        {{ $order->total_price }}
+                                        {{ $order->address }}
                                     </td>
                                     <td class="text-center">
                                         {{ $order->date }}
                                     </td>
                                     <td class="text-center">
-                                        {{-- <a href="{{ route('admin.orders.show', ['order' => $order->id]) }}" class="btn btn-xs btn-primary me-2 fw-bolder">
+                                        {{ $order->total_price }} €
+                                    </td>
+                                    <td class="text-center">
+                                        <a href="{{ route('admin.orders.show', ['order' => $order->id]) }}" class="btn btn-xs btn-primary me-2 fw-bolder">
                                             Vedi ordine
-                                        </a> --}}
+                                        </a>
                                     </td>
                                 </tr>
                         @endforeach

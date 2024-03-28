@@ -4,25 +4,15 @@ return [
     [
         'nome' => 'Pizza Margherita',
         'immagine' => 'img/dishes/pizza-margherita.jpg',
-        'descrizione' => 'La pizza Margherita è un classico della 
-            cucina italiana. Realizzata con una base di pasta lievitata, 
-            è condita con mozzarella di bufala DOP, pomodoro San Marzano, 
-            basilico fresco e olio extravergine di oliva. 
-            L\'armonia dei sapori e la semplicità degli ingredienti 
-            rendono questa pizza un\'icona della gastronomia italiana.',
-        'ingredienti' =>'mozzarella, pomodoro, basilico, olio d\'oliva',
+        'descrizione' => 'La pizza Margherita è un classico della cucina italiana. Realizzata con una base di pasta lievitata, è condita con mozzarella di bufala DOP, pomodoro San Marzano, basilico fresco e olio extravergine di oliva. L\'armonia dei sapori e la semplicità degli ingredienti rendono questa pizza un\'icona della gastronomia italiana.',
+        'ingredienti' => 'mozzarella, pomodoro, basilico, olio d\'oliva',
         'prezzo' => 7.50,
         'ristorante'=> 4
     ],
     [
         'nome' => 'Pizza Margherita',
         'immagine' => 'img/dishes/pizza-margherita.jpg',
-        'descrizione' => 'La pizza Margherita è un classico della 
-            cucina italiana. Realizzata con una base di pasta lievitata, 
-            è condita con mozzarella di bufala DOP, pomodoro San Marzano, 
-            basilico fresco e olio extravergine di oliva. 
-            L\'armonia dei sapori e la semplicità degli ingredienti 
-            rendono questa pizza un\'icona della gastronomia italiana.',
+        'descrizione' => 'La pizza Margherita è un classico della cucina italiana. Realizzata con una base di pasta lievitata, è condita con mozzarella di bufala DOP, pomodoro San Marzano, basilico fresco e olio extravergine di oliva. L\'armonia dei sapori e la semplicità degli ingredienti rendono questa pizza un\'icona della gastronomia italiana.',
         'ingredienti' => 'mozzarella, pomodoro, basilico, olio d\'oliva',
         'prezzo' => 7.50,
         'ristorante'=> 7
@@ -30,12 +20,7 @@ return [
     [
         'nome' => 'Pizza Margherita',
         'immagine' => 'img/dishes/pizza-margherita.jpg',
-        'descrizione' => 'La pizza Margherita è un classico della 
-            cucina italiana. Realizzata con una base di pasta lievitata, 
-            è condita con mozzarella di bufala DOP, pomodoro San Marzano, 
-            basilico fresco e olio extravergine di oliva. 
-            L\'armonia dei sapori e la semplicità degli ingredienti 
-            rendono questa pizza un\'icona della gastronomia italiana.',
+        'descrizione' => 'La pizza Margherita è un classico della cucina italiana. Realizzata con una base di pasta lievitata, è condita con mozzarella di bufala DOP, pomodoro San Marzano, basilico fresco e olio extravergine di oliva. L\'armonia dei sapori e la semplicità degli ingredienti rendono questa pizza un\'icona della gastronomia italiana.',
         'ingredienti' => 'mozzarella, pomodoro, basilico, olio d\'oliva',
         'prezzo' => 7.50,
         'ristorante'=> 9
@@ -43,12 +28,7 @@ return [
     [
         'nome' => 'Pizza Margherita',
         'immagine' => 'img/dishes/pizza-margherita.jpg',
-        'descrizione' => 'La pizza Margherita è un classico della 
-            cucina italiana. Realizzata con una base di pasta lievitata, 
-            è condita con mozzarella di bufala DOP, pomodoro San Marzano, 
-            basilico fresco e olio extravergine di oliva. 
-            L\'armonia dei sapori e la semplicità degli ingredienti 
-            rendono questa pizza un\'icona della gastronomia italiana.',
+        'descrizione' => 'La pizza Margherita è un classico della cucina italiana. Realizzata con una base di pasta lievitata, è condita con mozzarella di bufala DOP, pomodoro San Marzano, basilico fresco e olio extravergine di oliva. L\'armonia dei sapori e la semplicità degli ingredienti rendono questa pizza un\'icona della gastronomia italiana.',
         'ingredienti' => 'mozzarella, pomodoro, basilico, olio d\'oliva',
         'prezzo' => 7.50,
         'ristorante'=> 13
@@ -56,12 +36,7 @@ return [
     [
         'nome' => 'Pizza Margherita',
         'immagine' => 'img/dishes/pizza-margherita.jpg',
-        'descrizione' => 'La pizza Margherita è un classico della 
-            cucina italiana. Realizzata con una base di pasta lievitata, 
-            è condita con mozzarella di bufala DOP, pomodoro San Marzano, 
-            basilico fresco e olio extravergine di oliva. 
-            L\'armonia dei sapori e la semplicità degli ingredienti 
-            rendono questa pizza un\'icona della gastronomia italiana.',
+        'descrizione' => 'La pizza Margherita è un classico della cucina italiana. Realizzata con una base di pasta lievitata, è condita con mozzarella di bufala DOP, pomodoro San Marzano, basilico fresco e olio extravergine di oliva. L\'armonia dei sapori e la semplicità degli ingredienti rendono questa pizza un\'icona della gastronomia italiana.',
         'ingredienti' => 'mozzarella, pomodoro, basilico, olio d\'oliva',
         'prezzo' => 7.50,
         'ristorante'=> 16
@@ -69,14 +44,7 @@ return [
     [
         'nome' => 'Pizza Pepperoni',
         'immagine' => 'img/dishes/pizza-diavola.jpg',
-        'descrizione' => 'La pizza Pepperoni è una deliziosa 
-            variante della pizza tradizionale. 
-            La sua base croccante è arricchita 
-            con mozzarella filante, salsa di pomodoro, 
-            peperoni piccanti affettati sottili e una 
-            spolverata di origano. 
-            È una scelta perfetta per gli amanti 
-            dei sapori intensi e piccanti.',
+        'descrizione' => 'La pizza Pepperoni è una deliziosa variante della pizza tradizionale. La sua base croccante è arricchita con mozzarella filante, salsa di pomodoro, peperoni piccanti affettati sottili e una spolverata di origano. È una scelta perfetta per gli amanti dei sapori intensi e piccanti.',
         'ingredienti' => 'mozzarella, pomodoro, peperoni, origano',
         'prezzo' => 8.00,
         'ristorante'=> 4
@@ -84,14 +52,7 @@ return [
     [
         'nome' => 'Pizza Pepperoni',
         'immagine' => 'img/dishes/pizza-diavola.jpg',
-        'descrizione' => 'La pizza Pepperoni è una deliziosa 
-            variante della pizza tradizionale. 
-            La sua base croccante è arricchita 
-            con mozzarella filante, salsa di pomodoro, 
-            peperoni piccanti affettati sottili e una 
-            spolverata di origano. 
-            È una scelta perfetta per gli amanti 
-            dei sapori intensi e piccanti.',
+        'descrizione' => 'La pizza Pepperoni è una deliziosa variante della pizza tradizionale. La sua base croccante è arricchita con mozzarella filante, salsa di pomodoro, peperoni piccanti affettati sottili e una spolverata di origano. È una scelta perfetta per gli amanti dei sapori intensi e piccanti.',
         'ingredienti' => 'mozzarella, pomodoro, peperoni, origano',
         'prezzo' => 8.00,
         'ristorante'=> 7
@@ -99,14 +60,7 @@ return [
     [
         'nome' => 'Pizza Pepperoni',
         'immagine' => 'img/dishes/pizza-diavola.jpg',
-        'descrizione' => 'La pizza Pepperoni è una deliziosa 
-            variante della pizza tradizionale. 
-            La sua base croccante è arricchita 
-            con mozzarella filante, salsa di pomodoro, 
-            peperoni piccanti affettati sottili e una 
-            spolverata di origano. 
-            È una scelta perfetta per gli amanti 
-            dei sapori intensi e piccanti.',
+        'descrizione' => 'La pizza Pepperoni è una deliziosa variante della pizza tradizionale. La sua base croccante è arricchita con mozzarella filante, salsa di pomodoro, peperoni piccanti affettati sottili e una spolverata di origano. È una scelta perfetta per gli amanti dei sapori intensi e piccanti.',
         'ingredienti' => 'mozzarella, pomodoro, peperoni, origano',
         'prezzo' => 8.00,
         'ristorante'=> 9
@@ -114,14 +68,7 @@ return [
     [
         'nome' => 'Pizza Pepperoni',
         'immagine' => 'img/dishes/pizza-diavola.jpg',
-        'descrizione' => 'La pizza Pepperoni è una deliziosa 
-            variante della pizza tradizionale. 
-            La sua base croccante è arricchita 
-            con mozzarella filante, salsa di pomodoro, 
-            peperoni piccanti affettati sottili e una 
-            spolverata di origano. 
-            È una scelta perfetta per gli amanti 
-            dei sapori intensi e piccanti.',
+        'descrizione' => 'La pizza Pepperoni è una deliziosa variante della pizza tradizionale. La sua base croccante è arricchita con mozzarella filante, salsa di pomodoro, peperoni piccanti affettati sottili e una spolverata di origano. È una scelta perfetta per gli amanti dei sapori intensi e piccanti.',
         'ingredienti' => 'mozzarella, pomodoro, peperoni, origano',
         'prezzo' => 8.00,
         'ristorante'=> 13
@@ -129,14 +76,7 @@ return [
     [
         'nome' => 'Pizza Pepperoni',
         'immagine' => 'img/dishes/pizza-diavola.jpg',
-        'descrizione' => 'La pizza Pepperoni è una deliziosa 
-            variante della pizza tradizionale. 
-            La sua base croccante è arricchita 
-            con mozzarella filante, salsa di pomodoro, 
-            peperoni piccanti affettati sottili e una 
-            spolverata di origano. 
-            È una scelta perfetta per gli amanti 
-            dei sapori intensi e piccanti.',
+        'descrizione' => 'La pizza Pepperoni è una deliziosa variante della pizza tradizionale. La sua base croccante è arricchita con mozzarella filante, salsa di pomodoro, peperoni piccanti affettati sottili e una spolverata di origano. È una scelta perfetta per gli amanti dei sapori intensi e piccanti.',
         'ingredienti' => 'mozzarella, pomodoro, peperoni, origano',
         'prezzo' => 8.00,
         'ristorante'=> 16
@@ -144,12 +84,7 @@ return [
     [
         'nome' => 'Pizza Quattro Stagioni',
         'immagine' => 'img/dishes/pizza-olive.jpg',
-        'descrizione' => 'La pizza Quattro Stagioni è una 
-            composizione perfetta di sapori e colori. 
-            Divisa in quattro parti, ognuna rappresenta una stagione
-            dell\'anno: primavera con carciofi, estate con olive, 
-            autunno con funghi e inverno con prosciutto cotto. Un 
-            tripudio di gusti da scoprire ad ogni morso.',
+        'descrizione' => 'La pizza Quattro Stagioni è una composizione perfetta di sapori e colori. Divisa in quattro parti, ognuna rappresenta una stagione dell\'anno: primavera con carciofi, estate con olive, autunno con funghi e inverno con prosciutto cotto. Un tripudio di gusti da scoprire ad ogni morso.',
         'ingredienti' => 'mozzarella, pomodoro, funghi, carciofi, olive',
         'prezzo' => 9.00,
         'ristorante'=> 4
@@ -157,12 +92,7 @@ return [
     [
         'nome' => 'Pizza Quattro Stagioni',
         'immagine' => 'img/dishes/pizza-olive.jpg',
-        'descrizione' => 'La pizza Quattro Stagioni è una 
-            composizione perfetta di sapori e colori. 
-            Divisa in quattro parti, ognuna rappresenta una stagione
-            dell\'anno: primavera con carciofi, estate con olive, 
-            autunno con funghi e inverno con prosciutto cotto. Un 
-            tripudio di gusti da scoprire ad ogni morso.',
+        'descrizione' => 'La pizza Quattro Stagioni è una composizione perfetta di sapori e colori. Divisa in quattro parti, ognuna rappresenta una stagione dell\'anno: primavera con carciofi, estate con olive, autunno con funghi e inverno con prosciutto cotto. Un tripudio di gusti da scoprire ad ogni morso.',
         'ingredienti' => 'mozzarella, pomodoro, funghi, carciofi, olive',
         'prezzo' => 9.00,
         'ristorante'=> 7
@@ -170,12 +100,7 @@ return [
     [
         'nome' => 'Pizza Quattro Stagioni',
         'immagine' => 'img/dishes/pizza-olive.jpg',
-        'descrizione' => 'La pizza Quattro Stagioni è una 
-            composizione perfetta di sapori e colori. 
-            Divisa in quattro parti, ognuna rappresenta una stagione
-            dell\'anno: primavera con carciofi, estate con olive, 
-            autunno con funghi e inverno con prosciutto cotto. Un 
-            tripudio di gusti da scoprire ad ogni morso.',
+        'descrizione' => 'La pizza Quattro Stagioni è una composizione perfetta di sapori e colori. Divisa in quattro parti, ognuna rappresenta una stagione dell\'anno: primavera con carciofi, estate con olive, autunno con funghi e inverno con prosciutto cotto. Un tripudio di gusti da scoprire ad ogni morso.',
         'ingredienti' => 'mozzarella, pomodoro, funghi, carciofi, olive',
         'prezzo' => 9.00,
         'ristorante'=> 9
@@ -183,12 +108,7 @@ return [
     [
         'nome' => 'Pizza Quattro Stagioni',
         'immagine' => 'img/dishes/pizza-olive.jpg',
-        'descrizione' => 'La pizza Quattro Stagioni è una 
-            composizione perfetta di sapori e colori. 
-            Divisa in quattro parti, ognuna rappresenta una stagione
-            dell\'anno: primavera con carciofi, estate con olive, 
-            autunno con funghi e inverno con prosciutto cotto. Un 
-            tripudio di gusti da scoprire ad ogni morso.',
+        'descrizione' => 'La pizza Quattro Stagioni è una composizione perfetta di sapori e colori. Divisa in quattro parti, ognuna rappresenta una stagione dell\'anno: primavera con carciofi, estate con olive, autunno con funghi e inverno con prosciutto cotto. Un tripudio di gusti da scoprire ad ogni morso.',
         'ingredienti' => 'mozzarella, pomodoro, funghi, carciofi, olive',
         'prezzo' => 9.00,
         'ristorante'=> 13
@@ -196,12 +116,7 @@ return [
     [
         'nome' => 'Pizza Quattro Stagioni',
         'immagine' => 'img/dishes/pizza-olive.jpg',
-        'descrizione' => 'La pizza Quattro Stagioni è una 
-            composizione perfetta di sapori e colori. 
-            Divisa in quattro parti, ognuna rappresenta una stagione
-            dell\'anno: primavera con carciofi, estate con olive, 
-            autunno con funghi e inverno con prosciutto cotto. Un 
-            tripudio di gusti da scoprire ad ogni morso.',
+        'descrizione' => 'La pizza Quattro Stagioni è una composizione perfetta di sapori e colori. Divisa in quattro parti, ognuna rappresenta una stagione dell\'anno: primavera con carciofi, estate con olive, autunno con funghi e inverno con prosciutto cotto. Un tripudio di gusti da scoprire ad ogni morso.',
         'ingredienti' => 'mozzarella, pomodoro, funghi, carciofi, olive',
         'prezzo' => 9.00,
         'ristorante'=> 16
@@ -209,11 +124,7 @@ return [
     [
         'nome' => 'Pizza Prosciutto e Funghi',
         'immagine' => 'img/dishes/pizza-diavola.jpg',
-        'descrizione' => 'La pizza Prosciutto e Funghi è un 
-            classico intramontabile della cucina italiana. La sua 
-            base soffice e fragrante è condita con mozzarella, 
-            pomodoro, fette di prosciutto cotto e funghi champignon. 
-            Un connubio perfetto di sapori che conquista ogni palato.',
+        'descrizione' => 'La pizza Prosciutto e Funghi è un classico intramontabile della cucina italiana. La sua base soffice e fragrante è condita con mozzarella, pomodoro, fette di prosciutto cotto e funghi champignon. Un connubio perfetto di sapori che conquista ogni palato.',
         'ingredienti' => 'mozzarella, pomodoro, prosciutto, funghi, origano',
         'prezzo' => 8.50,
         'ristorante'=> 4
@@ -221,11 +132,7 @@ return [
     [
         'nome' => 'Pizza Prosciutto e Funghi',
         'immagine' => 'img/dishes/pizza-diavola.jpg',
-        'descrizione' => 'La pizza Prosciutto e Funghi è un 
-            classico intramontabile della cucina italiana. La sua 
-            base soffice e fragrante è condita con mozzarella, 
-            pomodoro, fette di prosciutto cotto e funghi champignon. 
-            Un connubio perfetto di sapori che conquista ogni palato.',
+        'descrizione' => 'La pizza Prosciutto e Funghi è un classico intramontabile della cucina italiana. La sua base soffice e fragrante è condita con mozzarella, pomodoro, fette di prosciutto cotto e funghi champignon. Un connubio perfetto di sapori che conquista ogni palato.',
         'ingredienti' => 'mozzarella, pomodoro, prosciutto, funghi, origano',
         'prezzo' => 8.50,
         'ristorante'=> 13
@@ -233,11 +140,7 @@ return [
     [
         'nome' => 'Pizza Prosciutto e Funghi',
         'immagine' => 'img/dishes/pizza-diavola.jpg',
-        'descrizione' => 'La pizza Prosciutto e Funghi è un 
-            classico intramontabile della cucina italiana. La sua 
-            base soffice e fragrante è condita con mozzarella, 
-            pomodoro, fette di prosciutto cotto e funghi champignon. 
-            Un connubio perfetto di sapori che conquista ogni palato.',
+        'descrizione' => 'La pizza Prosciutto e Funghi è un classico intramontabile della cucina italiana. La sua base soffice e fragrante è condita con mozzarella, pomodoro, fette di prosciutto cotto e funghi champignon. Un connubio perfetto di sapori che conquista ogni palato.',
         'ingredienti' => 'mozzarella, pomodoro, prosciutto, funghi, origano',
         'prezzo' => 8.50,
         'ristorante'=> 16
@@ -245,37 +148,23 @@ return [
     [
         'nome' => 'Pizza Capricciosa',
         'immagine' => 'img/dishes/pizza-margherita.jpg',
-        'descrizione' => 'La pizza Capricciosa è un tripudio di 
-            ingredienti che soddisfano ogni gusto. La sua base croccante 
-            è ricoperta con mozzarella, pomodoro, funghi champignon, 
-            prosciutto cotto, carciofi e olive nere. Un\'esplosione 
-            di sapori che delizia il palato.',
+        'descrizione' => 'La pizza Capricciosa è un tripudio di ingredienti che soddisfano ogni gusto. La sua base croccante è ricoperta con mozzarella, pomodoro, funghi champignon, prosciutto cotto, carciofi e olive nere. Un\'esplosione di sapori che delizia il palato.',
         'ingredienti' => 'mozzarella, pomodoro, funghi, prosciutto, carciofi, olive',
         'prezzo' => 9.50,
         'ristorante'=> 16
-
     ],
     [
         'nome' => 'Pizza Capricciosa',
         'immagine' => 'img/dishes/pizza-diavola.jpg',
-        'descrizione' => 'La pizza Capricciosa è un tripudio di 
-            ingredienti che soddisfano ogni gusto. La sua base croccante 
-            è ricoperta con mozzarella, pomodoro, funghi champignon, 
-            prosciutto cotto, carciofi e olive nere. Un\'esplosione 
-            di sapori che delizia il palato.',
+        'descrizione' => 'La pizza Capricciosa è un tripudio di ingredienti che soddisfano ogni gusto. La sua base croccante è ricoperta con mozzarella, pomodoro, funghi champignon, prosciutto cotto, carciofi e olive nere. Un\'esplosione di sapori che delizia il palato.',
         'ingredienti' => 'mozzarella, pomodoro, funghi, prosciutto, carciofi, olive',
         'prezzo' => 9.50,
         'ristorante'=> 7
-
     ],
     [
         'nome' => 'Pizza Quattro Formaggi',
         'immagine' => 'img/dishes/pizza-margherita.jpg',
-        'descrizione' => 'La pizza Quattro Formaggi 
-            è una delizia per gli amanti del formaggio. 
-            La base croccante è ricoperta con una selezione 
-            di quattro formaggi prelibati: mozzarella, gorgonzola, 
-            fontina e parmigiano. Un tripudio di sapori cremosi e intensi.',
+        'descrizione' => 'La pizza Quattro Formaggi è una delizia per gli amanti del formaggio. La base croccante è ricoperta con una selezione di quattro formaggi prelibati: mozzarella, gorgonzola, fontina e parmigiano. Un tripudio di sapori cremosi e intensi.',
         'ingredienti' => 'mozzarella, gorgonzola, fontina, parmigiano, pomodoro',
         'prezzo' => 10.00,
         'ristorante'=> 9
@@ -283,11 +172,7 @@ return [
     [
         'nome' => 'Pizza Quattro Formaggi',
         'immagine' => 'img/dishes/pizza-margherita.jpg',
-        'descrizione' => 'La pizza Quattro Formaggi 
-            è una delizia per gli amanti del formaggio. 
-            La base croccante è ricoperta con una selezione 
-            di quattro formaggi prelibati: mozzarella, gorgonzola, 
-            fontina e parmigiano. Un tripudio di sapori cremosi e intensi.',
+        'descrizione' => 'La pizza Quattro Formaggi è una delizia per gli amanti del formaggio. La base croccante è ricoperta con una selezione di quattro formaggi prelibati: mozzarella, gorgonzola, fontina e parmigiano. Un tripudio di sapori cremosi e intensi.',
         'ingredienti' => 'mozzarella, gorgonzola, fontina, parmigiano, pomodoro',
         'prezzo' => 10.00,
         'ristorante'=> 13
@@ -295,11 +180,7 @@ return [
     [
         'nome' => 'Pizza Quattro Formaggi',
         'immagine' => 'img/dishes/pizza-margherita.jpg',
-        'descrizione' => 'La pizza Quattro Formaggi 
-            è una delizia per gli amanti del formaggio. 
-            La base croccante è ricoperta con una selezione 
-            di quattro formaggi prelibati: mozzarella, gorgonzola, 
-            fontina e parmigiano. Un tripudio di sapori cremosi e intensi.',
+        'descrizione' => 'La pizza Quattro Formaggi è una delizia per gli amanti del formaggio. La base croccante è ricoperta con una selezione di quattro formaggi prelibati: mozzarella, gorgonzola, fontina e parmigiano. Un tripudio di sapori cremosi e intensi.',
         'ingredienti' => 'mozzarella, gorgonzola, fontina, parmigiano, pomodoro',
         'prezzo' => 10.00,
         'ristorante'=> 16
@@ -307,12 +188,7 @@ return [
     [
         'nome' => 'Pizza Frutti di Mare',
         'immagine' => 'img/dishes/pizza-margherita.jpg',
-        'descrizione' => 'La pizza Frutti di Mare è una 
-            prelibatezza per gli amanti dei sapori marini. La sua 
-            base soffice è ricoperta con una generosa quantità di 
-            frutti di mare freschi, arricchita con aglio, prezzemolo 
-            e una spruzzata di olio extravergine di oliva. Un viaggio 
-            culinario tra i profumi del mare.',
+        'descrizione' => 'La pizza Frutti di Mare è una prelibatezza per gli amanti dei sapori marini. La sua base soffice è ricoperta con una generosa quantità di frutti di mare freschi, arricchita con aglio, prezzemolo e una spruzzata di olio extravergine di oliva. Un viaggio culinario tra i profumi del mare.',
         'ingredienti' => 'mozzarella, pomodoro, frutti di mare, aglio, prezzemolo',
         'prezzo' => 11.00,
         'ristorante'=> 7
@@ -320,11 +196,7 @@ return [
     [
         'nome' => 'Pizza Vegetariana',
         'immagine' => 'img/dishes/pizza-olive.jpg',
-        'descrizione' => 'La pizza Vegetariana è un\'esplosione 
-            di colori e sapori vegetali. La sua base croccante è 
-            ricoperta con mozzarella, pomodoro, zucchine, peperoni, 
-            melanzane e funghi. Un piatto leggero e salutare adatto 
-            a tutti i gusti.',
+        'descrizione' => 'La pizza Vegetariana è un\'esplosione di colori e sapori vegetali. La sua base croccante è ricoperta con mozzarella, pomodoro, zucchine, peperoni, melanzane e funghi. Un piatto leggero e salutare adatto a tutti i gusti.',
         'ingredienti' => 'mozzarella, pomodoro, zucchine, peperoni, melanzane, funghi',
         'prezzo' => 9.50,
         'ristorante'=> 4
@@ -332,11 +204,7 @@ return [
     [
         'nome' => 'Pizza Bufalina',
         'immagine' => 'img/dishes/pizza-margherita.jpg',
-        'descrizione' => 'La Pizza Bufalina è un\'esplosione 
-            di freschezza e gusto. La sua base croccante è arricchita 
-            con mozzarella di bufala DOP, pomodoro fresco, basilico e 
-            un filo d\'olio extravergine di oliva. Un classico 
-            intramontabile della cucina partenopea.',
+        'descrizione' => 'La Pizza Bufalina è un\'esplosione di freschezza e gusto. La sua base croccante è arricchita con mozzarella di bufala DOP, pomodoro fresco, basilico e un filo d\'olio extravergine di oliva. Un classico intramontabile della cucina partenopea.',
         'ingredienti' => 'mozzarella di bufala, pomodoro, basilico, olio d\'oliva',
         'prezzo' => 10.50,
         'ristorante'=> 9
@@ -344,11 +212,7 @@ return [
     [
         'nome' => 'Pizza Diavola',
         'immagine' => 'img/dishes/pizza-diavola.jpg',
-        'descrizione' => 'La Pizza Diavola è un mix di sapori 
-            intensi e piccanti. La sua base croccante è ricoperta 
-            con mozzarella, pomodoro, salsiccia piccante, peperoncino 
-            e una spolverata di origano. Un piatto perfetto per gli 
-            amanti delle sensazioni forti.',
+        'descrizione' => 'La Pizza Diavola è un mix di sapori intensi e piccanti. La sua base croccante è ricoperta con mozzarella, pomodoro, salsiccia piccante, peperoncino e una spolverata di origano. Un piatto perfetto per gli amanti delle sensazioni forti.',
         'ingredienti' => 'mozzarella, pomodoro, salsiccia piccante, peperoncino, origano',
         'prezzo' => 9.00,
         'ristorante'=> 4
@@ -356,11 +220,7 @@ return [
     [
         'nome' => 'Pizza Diavola',
         'immagine' => 'img/dishes/pizza-diavola.jpg',
-        'descrizione' => 'La Pizza Diavola è un mix di sapori 
-            intensi e piccanti. La sua base croccante è ricoperta 
-            con mozzarella, pomodoro, salsiccia piccante, peperoncino 
-            e una spolverata di origano. Un piatto perfetto per gli 
-            amanti delle sensazioni forti.',
+        'descrizione' => 'La Pizza Diavola è un mix di sapori intensi e piccanti. La sua base croccante è ricoperta con mozzarella, pomodoro, salsiccia piccante, peperoncino e una spolverata di origano. Un piatto perfetto per gli amanti delle sensazioni forti.',
         'ingredienti' => 'mozzarella, pomodoro, salsiccia piccante, peperoncino, origano',
         'prezzo' => 9.00,
         'ristorante'=> 13
@@ -368,47 +228,31 @@ return [
     [
         'nome' => 'Pizza Diavola',
         'immagine' => 'img/dishes/pizza-diavola.jpg',
-        'descrizione' => 'La Pizza Diavola è un mix di sapori 
-            intensi e piccanti. La sua base croccante è ricoperta 
-            con mozzarella, pomodoro, salsiccia piccante, peperoncino 
-            e una spolverata di origano. Un piatto perfetto per gli 
-            amanti delle sensazioni forti.',
+        'descrizione' => 'La Pizza Diavola è un mix di sapori intensi e piccanti. La sua base croccante è ricoperta con mozzarella, pomodoro, salsiccia piccante, peperoncino e una spolverata di origano. Un piatto perfetto per gli amanti delle sensazioni forti.',
         'ingredienti' => 'mozzarella, pomodoro, salsiccia piccante, peperoncino, origano',
         'prezzo' => 9.00,
         'ristorante'=> 7
     ],
     [
-        'nome' => 'Cheeseburger',
-        'immagine' => 'img/dishes/double-cheeseburger.jpg',
-        'descrizione' => 'Il Cheeseburger è un classico 
-            intramontabile della cucina americana. Un morbido 
-            panino riempito con un succulento hamburger, 
-            formaggio fuso, lattuga croccante, pomodoro fresco e 
-            cipolla. Un piatto che soddisferà ogni desiderio di gusto.',
-        'ingredienti' => 'pane, hamburger, formaggio, lattuga, pomodoro, cipolla',
-        'prezzo' => 8.50,
-        'ristorante'=> 1
+        "nome"=> "Cheeseburger",
+        "immagine"=> "img/dishes/double-cheeseburger.jpg",
+        "descrizione"=> "Il Cheeseburger è un classico intramontabile della cucina americana. Un morbido panino riempito con un succulento hamburger, formaggio fuso, lattuga croccante, pomodoro fresco e cipolla. Un piatto che soddisferà ogni desiderio di gusto.",
+        "ingredienti"=> "pane, hamburger, formaggio, lattuga, pomodoro, cipolla",
+        "prezzo"=> 8.50,
+        "ristorante"=> 1
+    ],
+    [
+        "nome"=> "Cheeseburger",
+        "immagine"=> "img/dishes/double-cheeseburger.jpg",
+        "descrizione"=> "Il Cheeseburger è un classico intramontabile della cucina americana. Un morbido panino riempito con un succulento hamburger, formaggio fuso, lattuga croccante, pomodoro fresco e cipolla. Un piatto che soddisferà ogni desiderio di gusto.",
+        "ingredienti"=> "pane, hamburger, formaggio, lattuga, pomodoro, cipolla",
+        "prezzo"=> 8.50,
+        "ristorante"=> 2
     ],
     [
         'nome' => 'Cheeseburger',
         'immagine' => 'img/dishes/double-cheeseburger.jpg',
-        'descrizione' => 'Il Cheeseburger è un classico 
-            intramontabile della cucina americana. Un morbido 
-            panino riempito con un succulento hamburger, 
-            formaggio fuso, lattuga croccante, pomodoro fresco e 
-            cipolla. Un piatto che soddisferà ogni desiderio di gusto.',
-        'ingredienti' => 'pane, hamburger, formaggio, lattuga, pomodoro, cipolla',
-        'prezzo' => 8.50,
-        'ristorante'=> 2
-    ],
-    [
-        'nome' => 'Cheeseburger',
-        'immagine' => 'img/dishes/double-cheeseburger.jpg',
-        'descrizione' => 'Il Cheeseburger è un classico 
-            intramontabile della cucina americana. Un morbido 
-            panino riempito con un succulento hamburger, 
-            formaggio fuso, lattuga croccante, pomodoro fresco e 
-            cipolla. Un piatto che soddisferà ogni desiderio di gusto.',
+        'descrizione' => 'Il Cheeseburger è un classico intramontabile della cucina americana. Un morbido panino riempito con un succulento hamburger, formaggio fuso, lattuga croccante, pomodoro fresco e cipolla. Un piatto che soddisferà ogni desiderio di gusto.',
         'ingredienti' => 'pane, hamburger, formaggio, lattuga, pomodoro, cipolla',
         'prezzo' => 8.50,
         'ristorante'=> 3
@@ -416,11 +260,7 @@ return [
     [
         'nome' => 'Hamburger con Bacon',
         'immagine' => 'img/dishes/bacon-burger.jpg',
-        'descrizione' => 'L\'Hamburger con Bacon è un\'esplosione 
-            di sapore e consistenza. Un succulento hamburger avvolto in 
-            croccante bacon, arricchito con formaggio fuso, lattuga fresca, 
-            pomodoro e una generosa porzione di maionese. Un piatto che 
-            soddisferà ogni palato goloso.',
+        'descrizione' => 'L\'Hamburger con Bacon è un\'esplosione di sapore e consistenza. Un succulento hamburger avvolto in croccante bacon, arricchito con formaggio fuso, lattuga fresca, pomodoro e una generosa porzione di maionese. Un piatto che soddisferà ogni palato goloso.',
         'ingredienti' => 'pane, hamburger, bacon, formaggio, lattuga, pomodoro',
         'prezzo' => 9.50,
         'ristorante'=> 1
@@ -428,11 +268,7 @@ return [
     [
         'nome' => 'Hamburger con Bacon',
         'immagine' => 'img/dishes/bacon-burger.jpg',
-        'descrizione' => 'L\'Hamburger con Bacon è un\'esplosione 
-            di sapore e consistenza. Un succulento hamburger avvolto in 
-            croccante bacon, arricchito con formaggio fuso, lattuga fresca, 
-            pomodoro e una generosa porzione di maionese. Un piatto che 
-            soddisferà ogni palato goloso.',
+        'descrizione' => 'L\'Hamburger con Bacon è un\'esplosione di sapore e consistenza. Un succulento hamburger avvolto in croccante bacon, arricchito con formaggio fuso, lattuga fresca, pomodoro e una generosa porzione di maionese. Un piatto che soddisferà ogni palato goloso.',
         'ingredienti' => 'pane, hamburger, bacon, formaggio, lattuga, pomodoro',
         'prezzo' => 9.50,
         'ristorante'=> 17
@@ -440,11 +276,7 @@ return [
     [
         'nome' => 'Hamburger con Bacon',
         'immagine' => 'img/dishes/bacon-burger.jpg',
-        'descrizione' => 'L\'Hamburger con Bacon è un\'esplosione 
-            di sapore e consistenza. Un succulento hamburger avvolto in 
-            croccante bacon, arricchito con formaggio fuso, lattuga fresca, 
-            pomodoro e una generosa porzione di maionese. Un piatto che 
-            soddisferà ogni palato goloso.',
+        'descrizione' => 'L\'Hamburger con Bacon è un\'esplosione di sapore e consistenza. Un succulento hamburger avvolto in croccante bacon, arricchito con formaggio fuso, lattuga fresca, pomodoro e una generosa porzione di maionese. Un piatto che soddisferà ogni palato goloso.',
         'ingredienti' => 'pane, hamburger, bacon, formaggio, lattuga, pomodoro',
         'prezzo' => 9.50,
         'ristorante'=> 14
@@ -452,11 +284,7 @@ return [
     [
         'nome' => 'Hamburger al Formaggio',
         'immagine' => 'img/dishes/double-cheeseburger.jpg',
-        'descrizione' => 'L\'Hamburger al Formaggio è un 
-            trionfo di gusto e cremosità. Un morbido panino 
-            farcito con un succulento hamburger, formaggio filante, 
-            salsa speciale, croccante lattuga, pomodoro fresco e cipolla. 
-            Un piatto da gustare in ogni boccone.',
+        'descrizione' => 'L\'Hamburger al Formaggio è un trionfo di gusto e cremosità. Un morbido panino farcito con un succulento hamburger, formaggio filante, salsa speciale, croccante lattuga, pomodoro fresco e cipolla. Un piatto da gustare in ogni boccone.',
         'ingredienti' => 'pane, hamburger, formaggio, salsa, lattuga, pomodoro',
         'prezzo' => 9.00,
         'ristorante'=> 19
@@ -464,23 +292,15 @@ return [
     [
         'nome' => 'Hamburger Vegetariano',
         'immagine' => 'img/dishes/hamburger.jpg',
-        'descrizione' => 'L\'Hamburger Vegetariano è una 
-            deliziosa alternativa senza carne. Un panino soffice 
-            accompagnato da un burger di verdure, formaggio filante, 
-            lattuga fresca, pomodoro succoso e cipolla croccante. Un 
-            piatto sano e gustoso per i buongustai vegetariani.',
+        'descrizione' => 'L\'Hamburger Vegetariano è una deliziosa alternativa senza carne. Un panino soffice accompagnato da un burger di verdure, formaggio filante, lattuga fresca, pomodoro succoso e cipolla croccante. Un piatto sano e gustoso per i buongustai vegetariani.',
         'ingredienti' => 'pane, hamburger di verdure, formaggio, lattuga, pomodoro, cipolla',
         'prezzo' => 8.00,
-        'ristorante'=> 17 
+        'ristorante'=> 17
     ],
     [
         'nome' => 'Hamburger Vegetariano',
         'immagine' => 'img/dishes/hamburger.jpg',
-        'descrizione' => 'L\'Hamburger Vegetariano è una 
-            deliziosa alternativa senza carne. Un panino soffice 
-            accompagnato da un burger di verdure, formaggio filante, 
-            lattuga fresca, pomodoro succoso e cipolla croccante. Un 
-            piatto sano e gustoso per i buongustai vegetariani.',
+        'descrizione' => 'L\'Hamburger Vegetariano è una deliziosa alternativa senza carne. Un panino soffice accompagnato da un burger di verdure, formaggio filante, lattuga fresca, pomodoro succoso e cipolla croccante. Un piatto sano e gustoso per i buongustai vegetariani.',
         'ingredienti' => 'pane, hamburger di verdure, formaggio, lattuga, pomodoro, cipolla',
         'prezzo' => 8.00,
         'ristorante'=> 12
@@ -488,11 +308,7 @@ return [
     [
         'nome' => 'Hamburger con Uovo',
         'immagine' => 'img/dishes/hamburger.jpg',
-        'descrizione' => 'L\'Hamburger con Uovo è una combinazione 
-            deliziosa di sapori e consistenze. Un morbido panino farcito 
-            con un succulento hamburger, uovo al tegamino, formaggio fuso, 
-            lattuga croccante, pomodoro fresco e cipolla croccante. 
-            Un piatto perfetto per una colazione o un pranzo sostanzioso.',
+        'descrizione' => 'L\'Hamburger con Uovo è una combinazione deliziosa di sapori e consistenze. Un morbido panino farcito con un succulento hamburger, uovo al tegamino, formaggio fuso, lattuga croccante, pomodoro fresco e cipolla croccante. Un piatto perfetto per una colazione o un pranzo sostanzioso.',
         'ingredienti' => 'pane, hamburger, formaggio, uovo, lattuga, pomodoro',
         'prezzo' => 9.50,
         'ristorante'=> 12
@@ -500,11 +316,7 @@ return [
     [
         'nome' => 'Hamburger con Guacamole',
         'immagine' => 'img/dishes/hamburger.jpg',
-        'descrizione' => 'L\'Hamburger con Guacamole è un\'esplosione 
-            di freschezza e sapore. Un soffice panino farcito con un 
-            gustoso hamburger, guacamole fatto in casa, formaggio fuso, 
-            croccante lattuga, pomodoro succoso e cipolla croccante. Un 
-            mix di sapori messicani e americani in ogni morso.',
+        'descrizione' => 'L\'Hamburger con Guacamole è un\'esplosione di freschezza e sapore. Un soffice panino farcito con un gustoso hamburger, guacamole fatto in casa, formaggio fuso, croccante lattuga, pomodoro succoso e cipolla croccante. Un mix di sapori messicani e americani in ogni morso.',
         'ingredienti' => 'pane, hamburger, formaggio, guacamole, lattuga, pomodoro',
         'prezzo' => 10.00,
         'ristorante'=> 12
@@ -512,25 +324,15 @@ return [
     [
         'nome' => 'Hamburger con Barbecue',
         'immagine' => 'img/dishes/bacon-burger.jpg',
-        'descrizione' => 'L\'Hamburger con Barbecue 
-            è una festa per il palato. Un morbido panino 
-            farcito con un succulento hamburger, salsa barbecue 
-            affumicata, formaggio fuso, lattuga croccante, pomodoro 
-            fresco e cipolla croccante. Un mix irresistibile di dolcezza
-            e affumicato.',
+        'descrizione' => 'L\'Hamburger con Barbecue è una festa per il palato. Un morbido panino farcito con un succulento hamburger, salsa barbecue affumicata, formaggio fuso, lattuga croccante, pomodoro fresco e cipolla croccante. Un mix irresistibile di dolcezza e affumicato.',
         'ingredienti' => 'pane, hamburger, formaggio, salsa barbecue, lattuga, pomodoro',
         'prezzo' => 9.50,
-        'ristorante'=> 17 
+        'ristorante'=> 17
     ],
     [
         'nome' => 'Hamburger con Barbecue',
         'immagine' => 'img/dishes/bacon-burger.jpg',
-        'descrizione' => 'L\'Hamburger con Barbecue 
-            è una festa per il palato. Un morbido panino 
-            farcito con un succulento hamburger, salsa barbecue 
-            affumicata, formaggio fuso, lattuga croccante, pomodoro 
-            fresco e cipolla croccante. Un mix irresistibile di dolcezza
-            e affumicato.',
+        'descrizione' => 'L\'Hamburger con Barbecue è una festa per il palato. Un morbido panino farcito con un succulento hamburger, salsa barbecue affumicata, formaggio fuso, lattuga croccante, pomodoro fresco e cipolla croccante. Un mix irresistibile di dolcezza e affumicato.',
         'ingredienti' => 'pane, hamburger, formaggio, salsa barbecue, lattuga, pomodoro',
         'prezzo' => 9.50,
         'ristorante'=> 6
@@ -538,12 +340,7 @@ return [
     [
         'nome' => 'Hamburger con Barbecue',
         'immagine' => 'img/dishes/bacon-burger.jpg',
-        'descrizione' => 'L\'Hamburger con Barbecue 
-            è una festa per il palato. Un morbido panino 
-            farcito con un succulento hamburger, salsa barbecue 
-            affumicata, formaggio fuso, lattuga croccante, pomodoro 
-            fresco e cipolla croccante. Un mix irresistibile di dolcezza
-            e affumicato.',
+        'descrizione' => 'L\'Hamburger con Barbecue è una festa per il palato. Un morbido panino farcito con un succulento hamburger, salsa barbecue affumicata, formaggio fuso, lattuga croccante, pomodoro fresco e cipolla croccante. Un mix irresistibile di dolcezza e affumicato.',
         'ingredienti' => 'pane, hamburger, formaggio, salsa barbecue, lattuga, pomodoro',
         'prezzo' => 9.50,
         'ristorante'=> 14
@@ -551,11 +348,7 @@ return [
     [
         'nome' => 'Hamburger con Jalapeños',
         'immagine' => 'img/dishes/bacon-burger.jpg',
-        'descrizione' => 'L\'Hamburger con Jalapeños è un mix 
-            esplosivo di sapori. Un soffice panino farcito con un 
-            succulento hamburger, peperoncini jalapeños piccanti, 
-            formaggio fuso, lattuga croccante, pomodoro fresco e 
-            cipolla croccante. Un piatto per gli amanti del piccante.',
+        'descrizione' => 'L\'Hamburger con Jalapeños è un mix esplosivo di sapori. Un soffice panino farcito con un succulento hamburger, peperoncini jalapeños piccanti, formaggio fuso, lattuga croccante, pomodoro fresco e cipolla croccante. Un piatto per gli amanti del piccante.',
         'ingredienti' => 'pane, hamburger, formaggio, jalapeños, lattuga, pomodoro',
         'prezzo' => 10.00,
         'ristorante'=> 12
@@ -563,12 +356,7 @@ return [
     [
         'nome' => 'Hamburger con Funghi',
         'immagine' => 'img/dishes/hamburger.jpg',
-        'descrizione' => 'L\'Hamburger con Funghi è un 
-            piatto classico e saporito. Un morbido panino farcito 
-            con un gustoso hamburger, funghi freschi saltati, 
-            formaggio fuso, lattuga croccante, pomodoro fresco e 
-            cipolla croccante. Perfetto per gli amanti 
-            dei sapori terrosi.',
+        'descrizione' => 'L\'Hamburger con Funghi è un piatto classico e saporito. Un morbido panino farcito con un gustoso hamburger, funghi freschi saltati, formaggio fuso, lattuga croccante, pomodoro fresco e cipolla croccante. Perfetto per gli amanti dei sapori terrosi.',
         'ingredienti' => 'pane, hamburger, formaggio, funghi, lattuga, pomodoro',
         'prezzo' => 9.50,
         'ristorante'=> 12
@@ -576,12 +364,7 @@ return [
     [
         'nome' => 'Hamburger con Cipolla Caramellata',
         'immagine' => 'img/dishes/hamburger.jpg',
-        'descrizione' => 'L\'Hamburger con Cipolla Caramellata 
-            è una delizia per il palato. Un soffice panino farcito 
-            con un succulento hamburger, cipolle caramellate dolci, 
-            formaggio fuso, lattuga croccante, pomodoro fresco e 
-            maionese cremosa. Un mix di dolce e salato 
-            in ogni morso.',
+        'descrizione' => 'L\'Hamburger con Cipolla Caramellata è una delizia per il palato. Un soffice panino farcito con un succulento hamburger, cipolle caramellate dolci, formaggio fuso, lattuga croccante, pomodoro fresco e maionese cremosa. Un mix di dolce e salato in ogni morso.',
         'ingredienti' => 'pane, hamburger, formaggio, cipolla caramellata, lattuga, pomodoro',
         'prezzo' => 10.00,
         'ristorante'=> 1
@@ -589,12 +372,7 @@ return [
     [
         'nome' => 'Hamburger con Cipolla Caramellata',
         'immagine' => 'img/dishes/hamburger.jpg',
-        'descrizione' => 'L\'Hamburger con Cipolla Caramellata 
-            è una delizia per il palato. Un soffice panino farcito 
-            con un succulento hamburger, cipolle caramellate dolci, 
-            formaggio fuso, lattuga croccante, pomodoro fresco e 
-            maionese cremosa. Un mix di dolce e salato 
-            in ogni morso.',
+        'descrizione' => 'L\'Hamburger con Cipolla Caramellata è una delizia per il palato. Un soffice panino farcito con un succulento hamburger, cipolle caramellate dolci, formaggio fuso, lattuga croccante, pomodoro fresco e maionese cremosa. Un mix di dolce e salato in ogni morso.',
         'ingredienti' => 'pane, hamburger, formaggio, cipolla caramellata, lattuga, pomodoro',
         'prezzo' => 10.00,
         'ristorante'=> 6

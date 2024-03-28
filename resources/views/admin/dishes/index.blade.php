@@ -42,28 +42,48 @@
                                         @endif
                                     </td>
                                     <td class="text-center">
-                                        <a href="{{ route('admin.dishes.show', ['dish' => $dish->id]) }}" class="btn btn-xs btn-primary me-2">
+                                        <a href="{{ route('admin.dishes.show', ['dish' => $dish->id]) }}" class="btn btn-xs btn-primary me-2 fw-bolder">
                                             Vedi
                                         </a>
                                     </td>
                                     <td class="text-center">
-                                        <a href="{{ route('admin.dishes.edit', ['dish' => $dish->id]) }}" class="btn btn-warning me-2">
+                                        <a href="{{ route('admin.dishes.edit', ['dish' => $dish->id]) }}" class="btn btn-warning me-2 fw-bolder text-white">
                                             Modifica
                                         </a>
                                     </td>
                                     <td>
-                                        <form onsubmit="return confirm('Sei sicuro di voler eliminare questa voce?');"  action="{{ route('admin.dishes.destroy', ['dish' => $dish->id]) }}" method="POST">
-                                            @csrf
-                                            @method('DELETE')
-                                                <button type="submit" class="btn btn-danger">
-                                                    Elimina
-                                                </button>
-                                            @error('name')
-                                                <div class="alert alert-danger">
-                                                        {{ $message }}
+                                        <a class="btn fw-bolder btn-danger" data-bs-toggle="modal" data-bs-target="#DishModal{{ $dish->id }}">
+                                            Elimina
+                                        </a>
+                                    
+                                        <div class="modal fade" id="DishModal{{ $dish->id }}" tabindex="-1" aria-labelledby="DishModalLabel{{ $dish->id }}" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h1 class="modal-title fs-5" id="DishModalLabel{{ $dish->id }}"><span class="text-danger">Eliminazione</span> del piatto {{ $dish->name }}</h1>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        Sei sicuro di voler eliminare {{ $dish->name }}?
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-dark fw-bolder" data-bs-dismiss="modal">Annulla</button>
+                                                        <form action="{{ route('admin.dishes.destroy', ['dish' => $dish->id]) }}" method="POST">
+                                                            @csrf
+                                                            @method('DELETE')
+                                                            <button type="submit" class="btn btn-danger fw-bolder">
+                                                                Elimina
+                                                            </button>
+                                                            @error('name')
+                                                                <div class="alert alert-danger">
+                                                                    {{ $message }}
+                                                                </div>
+                                                            @enderror
+                                                        </form>
+                                                    </div>
                                                 </div>
-                                            @enderror
-                                        </form>
+                                            </div>
+                                        </div>
                                     </td>
                                 </tr>
                         @endforeach

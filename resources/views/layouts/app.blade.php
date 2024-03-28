@@ -27,7 +27,7 @@
                                 <a class="nav-link" href="{{ route('admin.dishes.index') }}">Lista piatti</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Ordini</a>
+                                <a class="nav-link" href="{{ route('admin.orders.index') }}">Ordini</a>
                             </li>
                         </ul>
                         <form method="POST" action="{{ route('logout') }}">

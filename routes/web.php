@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\Admin\MainController as AdminMainController;
 use App\Http\Controllers\Admin\DishController as AdminDishController;
+use App\Http\Controllers\Admin\OrderController as AdminOrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,7 +30,10 @@ Route::prefix('admin')
     Route::get('/dashboard/{dish}', [AdminMainController::class, 'show'])->name('show');
     //rotte per CRUD di dishes
     Route::resource('dishes', AdminDishController::class);
-
+    Route::resource('orders', AdminOrderController::class)->only([
+        'index',
+        'show'
+    ]);
 });
 
 require __DIR__.'/auth.php';

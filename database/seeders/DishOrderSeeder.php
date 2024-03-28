@@ -35,7 +35,7 @@ class DishOrderSeeder extends Seeder
             foreach ($selectedDishes as $dish) {
 
                 // seleziono in modo casuale una quantità da 1 a 10
-                $quantity = rand(1, 10);
+                $quantity = rand(1, 5);
 
                 // associo per ogni ordine un piatto e ne specifico la quantità
                 $order->dishes()->attach($dish, ['quantity' => $quantity]);

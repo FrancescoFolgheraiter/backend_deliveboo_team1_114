@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 
 //importazione controller API Project
 use App\Http\Controllers\Api\DishController as ApiDishController;
+use App\Http\Controllers\Api\TypeController as ApiTypeController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -26,5 +28,10 @@ Route::name('api.')->group(function() {
     Route::resource('dishes', ApiDishController::class)->only([
         'index',
         'show'
+    ]);
+
+    //Rotta per Index delle mie api TypeColtroller che permettono di far visualizzare i tipi
+    Route::resource('types', ApiTypeController::class)->only([
+        'index'
     ]);
 });

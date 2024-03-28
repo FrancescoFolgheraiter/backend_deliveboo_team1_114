@@ -34,7 +34,7 @@
                     {{-- se l'img non è null, fai vedere l'img del piatto --}}
                     @if ($dish->image != null)
                         <div class="img-box mx-auto mb-4">
-                            <img src="/image/seeder_dishes/{{ $dish->image }}" alt="{{ $dish->name }}">
+                            <img src="/storage/{{ $dish->image }}" alt="{{ $dish->name }}">
                         </div>
                     @endif
 
@@ -52,13 +52,7 @@
                             INGREDIENTI
                         </div>
                         <span class="text-dark">
-                            @php
-                                // decodifico il json e separo ogni ingrediente con una virgola
-                                $decodedIngredients = json_decode($dish->ingredients);
-                                $ingredients = implode(", ", $decodedIngredients);
-                            @endphp
-
-                            {{ $ingredients }}
+                            {{ $dish->ingredients }}
                         </span>
                     </h3>
 

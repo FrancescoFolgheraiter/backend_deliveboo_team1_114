@@ -29,12 +29,7 @@
                                         {{ $dish->name }}
                                     </th>
                                     <td>
-                                        @php
-                                        //prendo la stringa dal db degli ingredienti e la rendo una struttura dati
-                                            $ingredients = json_decode($dish->ingredients);
-                                            $ingredients = implode(", ",$ingredients );
-                                        @endphp
-                                        {{ $ingredients }}
+                                        {{ $dish->ingredients }}
                                     </td>
                                     <td class="text-center">
                                         {{ $dish->price }}
@@ -46,9 +41,14 @@
                                             <span class="badge rounded-pill text-bg-success">Si</span>  
                                         @endif
                                     </td>
-                                    <td>
+                                    <td class="text-center">
                                         <a href="{{ route('admin.dishes.show', ['dish' => $dish->id]) }}" class="btn btn-xs btn-primary me-2">
                                             Vedi
+                                        </a>
+                                    </td>
+                                    <td class="text-center">
+                                        <a href="{{ route('admin.dishes.edit', ['dish' => $dish->id]) }}" class="btn btn-xs btn-primary me-2">
+                                            Modifica
                                         </a>
                                     </td>
                                 </tr>

@@ -40,7 +40,7 @@ class DishSeeder extends Seeder
             // ricordarsi di pushare l'elemento utilizzando il json_decode
             $newDish->name = $dish['nome'];
             $newDish->description = $dish['descrizione'];
-            $newDish->ingredients = json_encode($dish['ingredienti']);
+            $newDish->ingredients = $dish['ingredienti'];
             $newDish->price = $dish['prezzo'];
             $newDish->visible = fake()->boolean();
             $newDish->user_id = $dish['ristorante'];

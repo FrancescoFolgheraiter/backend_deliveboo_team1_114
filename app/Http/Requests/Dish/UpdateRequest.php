@@ -32,6 +32,7 @@ class UpdateRequest extends FormRequest
            'price' => 'required|numeric|between:0.5,999.99',
            'visible' => 'boolean',
            'image' => 'nullable|image|max:2048', // massimo 2MB per immagine
+           'delete_image' => 'boolean'
        ];
    }
    //modifica messaggi di non avvenuta validazione

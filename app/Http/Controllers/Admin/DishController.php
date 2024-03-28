@@ -40,7 +40,27 @@ class DishController extends Controller
      */
     public function store(StoreDishRequest $request)
     {
-        //
+        $dishData = $request->validated();
+        
+        //trasformo gli ingredienti presi in input in arrya per preservare la struttura dati
+        //successivamente li trasformo nuovamente in stringa grazie ad encode
+        //per poterli inserire nel db
+        $dishData['ingredients'] = json_encode(explode(" ",$dishData['ingredients']));
+        //gestione inserimento immagini
+        $imgPath = null;
+        //se l'immagine è stata aggiunta la aggiungo allo storage/img/dishes
+        if (isset($dishData['image'])) {
+            $imgPath = Storage::disk('public')->put('img/dishes', $dishData['image']);
+        }
+        //una volta aggiunta l'immagine alla cartella storage sostituisco il valore $dishData['image'] con il percorso
+        $dishData['image'] = $imgPath;
+        //fine gestione immagini
+
+        //recupero l'id dell'utente per poi poter creare la relazione col piatot
+        $userID = auth()->user()->id;
+        $dishData['user_id'] = $userID;
+        $dish = Dish::create($dishData);
+        return redirect()->route('admin.dishes.index');
     }
 
     /**

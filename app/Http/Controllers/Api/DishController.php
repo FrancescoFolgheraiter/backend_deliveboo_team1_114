@@ -15,7 +15,9 @@ class DishController extends Controller
     public function index()
     {
         //paginate mi permette di suddivide i dati in pagine, gli argomenti nel with() permettono l'Eager Loading
-        $foods = Dish::with('user')->paginate(12);
+        $foods = Dish::with(['user' => function ($query) {
+            $query->select('id', 'resturant_name', 'address', 'vat_number');
+        }])->paginate(12);
         //tramite questa funzione ritorno il file json con al struttura delineata nelle []
         return response()->json([
             'code'=> 200,
@@ -30,7 +32,9 @@ class DishController extends Controller
 
     public function show(Dish $dish)
     {
-        $dish = dish::with('user')->firstOrFail();
+        $dish = dish::with(['user' => function ($query) {
+            $query->select('id', 'resturant_name', 'address', 'vat_number');
+        }])->where('id', $dish->id)->firstOrFail();
 
         return response()->json([
             'code'=> 200,

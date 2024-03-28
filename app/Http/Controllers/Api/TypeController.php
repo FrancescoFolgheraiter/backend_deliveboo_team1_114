@@ -14,7 +14,7 @@ class TypeController extends Controller
     {
         $types = Type::with(['users' => function ($query) {
             $query->select('id', 'resturant_name', 'address', 'email');
-        }]);
+        }])->paginate(10);
 
         return response()->json([
             'code' => 200,

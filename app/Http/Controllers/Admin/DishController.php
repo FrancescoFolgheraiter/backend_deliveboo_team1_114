@@ -90,7 +90,7 @@ class DishController extends Controller
                 Storage::disk('public')->delete($dish->image);
             }
 
-            $ImagePath = Storage::disk('public')->put('img', $validDishes['image']);
+            $ImagePath = Storage::disk('public')->put('img/dishes', $validDishes['image']);
         }
         else if (isset($validDishes['delete_image'])){
             Storage::disk('public')->delete($dish->image);

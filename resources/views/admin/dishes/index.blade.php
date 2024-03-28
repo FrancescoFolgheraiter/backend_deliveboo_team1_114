@@ -47,9 +47,23 @@
                                         </a>
                                     </td>
                                     <td class="text-center">
-                                        <a href="{{ route('admin.dishes.edit', ['dish' => $dish->id]) }}" class="btn btn-xs btn-primary me-2">
+                                        <a href="{{ route('admin.dishes.edit', ['dish' => $dish->id]) }}" class="btn btn-warning me-2">
                                             Modifica
                                         </a>
+                                    </td>
+                                    <td>
+                                        <form onsubmit="return confirm('Sei sicuro di voler eliminare questa voce?');"  action="{{ route('admin.dishes.destroy', ['dish' => $dish->id]) }}" method="POST">
+                                            @csrf
+                                            @method('DELETE')
+                                                <button type="submit" class="btn btn-danger">
+                                                    Elimina
+                                                </button>
+                                            @error('name')
+                                                <div class="alert alert-danger">
+                                                        {{ $message }}
+                                                </div>
+                                            @enderror
+                                        </form>
                                     </td>
                                 </tr>
                         @endforeach

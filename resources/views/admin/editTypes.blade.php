@@ -13,7 +13,10 @@
                 <hr>
                 <!--Tabella visualizzazione contenuti table dishes-->
                 <div>
-                    <form action="#" method="POST">
+                    <form action="{{ route('admin.dashboard.types.update')}}" method="POST">
+                        @csrf
+                        @method('PUT')
+
                         <div class="mb-3">
                             <label class="form-label">Tecnologie</label>
             

@@ -18,7 +18,8 @@ class DatabaseSeeder extends Seeder
             TypeUserSeeder::class,
             DishSeeder::class,
             OrderSeeder::class,
-            DishOrderSeeder::class
+            DishOrderSeeder::class,
+            TotalPriceSeeder::class
         ]);
     }
 }

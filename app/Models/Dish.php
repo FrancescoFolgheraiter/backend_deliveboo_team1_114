@@ -27,7 +27,7 @@ class Dish extends Model
     // Many-to-Many con Order
     public function orders() 
     {
-        return $this->belongsToMany(Order::class);
+        return $this->belongsToMany(Order::class)->withPivot('quantity');
     }
 
     // One-to-Many con User

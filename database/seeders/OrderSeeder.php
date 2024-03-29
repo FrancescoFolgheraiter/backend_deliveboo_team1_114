@@ -37,7 +37,6 @@ class OrderSeeder extends Seeder
             $order = new Order();
 
             // genero dei dati fake tramier faker e assegno gli elementi presenti nell'array 
-            $order->date = fake()->dateTimeBetween('2024-01-01', 'now')->format('Y-m-d H:i:s');
             $order->note = fake()->sentence();
             $order->total_price = 0;
             $order->name = $customer['nome'];

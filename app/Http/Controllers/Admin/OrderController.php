@@ -17,7 +17,16 @@ class OrderController extends Controller
     public function index()
     {
         $user = auth()->user();
-        $orders = Order::all();
+
+        // filtro gli ordini in base all'utente loggato
+        $orders = Order::whereHas('dishes', function ($query) {
+
+            // scope molto particolari
+            $user = auth()->user();
+
+            $query->where('user_id', $user->id);
+        })->get();
+
         return view('admin.orders.index', compact('orders','user'));
     }
 

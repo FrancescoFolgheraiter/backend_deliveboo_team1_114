@@ -34,6 +34,12 @@
                                     </ul>
                                 </div>
                                 <div>
+                                    <!--permette il rindirizzamento per poter modificare la relazione user-types-->
+                                    <a href="{{ route('admin.dashboard.types')}}" class="btn btn-outline-success">
+                                        Modifica
+                                    </a> 
+                                </div>
+                                <div>
                                     <h5>
                                         Immagine di copertina:
                                     </h5>

@@ -1,0 +1,36 @@
+// importo tutte le variabili SCSS
+@import './variables.scss';
+
+@mixin custom-container-style{
+    height: 85vh;
+    display: flex;
+    align-items: center;
+}
+
+@mixin custom-card-style-1{
+    width: $width-1000; 
+    margin: 0 auto;
+    border-radius: 15px;
+    background-color: $utility;
+    -webkit-box-shadow: 0px 3px 25px 2px #000000;
+    -moz-box-shadow: 0px 3px 25px 2px #000000;
+    -o-box-shadow: 0px 3px 25px 2px #000000;
+    box-shadow: 0px 3px 25px 2px #000000;
+}
+
+@mixin custom-card-style-2{
+    width: $width-500; 
+    margin: 0 auto;
+    border-radius: 15px;
+    background-color: $utility;
+    -webkit-box-shadow: 0px 3px 25px 2px #000000;
+    -moz-box-shadow: 0px 3px 25px 2px #000000;
+    -o-box-shadow: 0px 3px 25px 2px #000000;
+    box-shadow: 0px 3px 25px 2px #000000;
+}
+
+@mixin image-style-100{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

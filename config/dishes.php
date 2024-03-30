@@ -512,5 +512,149 @@ return [
         'ingredienti' => 'riso, tonno piccante, alga nori, sesamo, avocado',
         'prezzo' => 10.00,
         'ristorante'=> 20 
+    ],
+    [
+        'nome' => 'Anatra all\'arancia',
+        'immagine' => 'img/dishes/anatra-all-arancia.jpg',
+        'descrizione' => 'Anatra marinata e cotta con salsa all\'arancia, servita con verdure croccanti.',
+        'ingredienti' => 'anatra, arancia, verdure',
+        'prezzo' => 12.50,
+        'ristorante' => 8 
+    ],
+    [
+        'nome' => 'Involtini primavera',
+        'immagine' => 'img/dishes/involtini-primavera.jpg',
+        'descrizione' => 'Involtini di verdure e carne avvolti in pasta croccante, serviti con salsa agrodolce.',
+        'ingredienti' => 'verdure, carne, salsa agrodolce',
+        'prezzo' => 8.00,
+        'ristorante' => 8 
+    ],
+    [
+        'nome' => 'Gamberi saltati con verdure',
+        'immagine' => 'img/dishes/gamberi-saltati-verdure.jpg',
+        'descrizione' => 'Gamberi freschi saltati con verdure miste in una salsa agrodolce.',
+        'ingredienti' => 'gamberi, verdure, salsa agrodolce',
+        'prezzo' => 14.00,
+        'ristorante' => 8 
+    ],
+    [
+        'nome' => 'Spaghetti allo scoglio',
+        'immagine' => 'img/dishes/spaghetti-allo-scoglio.jpg',
+        'descrizione' => 'Spaghetti conditi con frutti di mare freschi in una salsa di pomodoro e prezzemolo.',
+        'ingredienti' => 'spaghetti, frutti di mare, pomodoro, prezzemolo',
+        'prezzo' => 16.00,
+        'ristorante' => 5 
+    ],
+    [
+        'nome' => 'Salmone alla griglia',
+        'immagine' => 'img/dishes/salmone-alla-griglia.jpg',
+        'descrizione' => 'Filetto di salmone fresco alla griglia, servito con contorno di verdure al vapore.',
+        'ingredienti' => 'salmone, verdure',
+        'prezzo' => 18.50,
+        'ristorante' => 5 
+    ],
+    [
+        'nome' => 'Fritto misto di pesce',
+        'immagine' => 'img/dishes/fritto-misto-pesce.jpg',
+        'descrizione' => 'Selezione di pesce fresco fritto in pastella croccante, servito con maionese al limone.',
+        'ingredienti' => 'pesce misto, pastella, limone, maionese',
+        'prezzo' => 15.00,
+        'ristorante' => 5 
+    ],
+    [
+        'nome' => 'Panino con prosciutto e mozzarella',
+        'immagine' => 'img/dishes/panino-prosciutto-mozzarella.jpg',
+        'descrizione' => 'Panino farcito con prosciutto crudo e mozzarella fresca.',
+        'ingredienti' => 'panino, prosciutto, mozzarella',
+        'prezzo' => 7.50,
+        'ristorante' => 19 
+    ],
+    [
+        'nome' => 'Panino vegetariano',
+        'immagine' => 'img/dishes/panino-vegetariano.jpg',
+        'descrizione' => 'Panino vegetariano con verdure grigliate e formaggio.',
+        'ingredienti' => 'panino, verdure grigliate, formaggio',
+        'prezzo' => 8.00,
+        'ristorante' => 19 
+    ],
+    [
+        'nome' => 'Panino con pollo alla griglia',
+        'immagine' => 'img/dishes/panino-pollo-alla-griglia.jpg',
+        'descrizione' => 'Panino farcito con pollo alla griglia, lattuga e pomodoro.',
+        'ingredienti' => 'panino, pollo alla griglia, lattuga, pomodoro',
+        'prezzo' => 9.00,
+        'ristorante' => 19 
+    ],
+    [
+        'nome' => 'Tacos al pastor',
+        'immagine' => 'img/dishes/tacos-al-pastor.jpg',
+        'descrizione' => 'Tacos ripieni di carne di maiale marinata, serviti con cipolle, coriandolo e salsa piccante.',
+        'ingredienti' => 'tacos, carne di maiale, cipolle, coriandolo, salsa piccante',
+        'prezzo' => 10.00,
+        'ristorante' => 15 
+    ],
+    [
+        'nome' => 'Burrito di pollo',
+        'immagine' => 'img/dishes/burrito-pollo.jpg',
+        'descrizione' => 'Burrito farcito con pollo alla griglia, riso, fagioli, formaggio e pico de gallo.',
+        'ingredienti' => 'burrito, pollo alla griglia, riso, fagioli, formaggio, pico de gallo',
+        'prezzo' => 11.50,
+        'ristorante' => 15 
+    ],
+    [
+        'nome' => 'Enchiladas di carne',
+        'immagine' => 'img/dishes/enchiladas-carne.jpg',
+        'descrizione' => 'Tortillas ripiene di carne di manzo, cotte al forno con salsa di pomodoro e formaggio.',
+        'ingredienti' => 'tortillas, carne di manzo, salsa di pomodoro, formaggio',
+        'prezzo' => 12.00,
+        'ristorante' => 15 
+    ],
+    [
+        'nome' => 'Couscous al pollo',
+        'immagine' => 'img/dishes/couscous-pollo.jpg',
+        'descrizione' => 'Couscous con pollo, ceci, carote e spezie, condito con salsa allo yogurt.',
+        'ingredienti' => 'couscous, pollo, ceci, carote, spezie, salsa allo yogurt',
+        'prezzo' => 13.00,
+        'ristorante' => 10 
+    ],
+    [
+        'nome' => 'Pad Thai al gamberi',
+        'immagine' => 'img/dishes/pad-thai-gamberi.jpg',
+        'descrizione' => 'Noodles di riso saltati con gamberi, uova, cipolle, germogli di soia e salsa di tamarindo.',
+        'ingredienti' => 'noodles di riso, gamberi, uova, cipolle, germogli di soia, salsa di tamarindo',
+        'prezzo' => 14.50,
+        'ristorante' => 10 
+    ],
+    [
+        'nome' => 'Falafel con hummus',
+        'immagine' => 'img/dishes/falafel-hummus.jpg',
+        'descrizione' => 'Palline di falafel fritte servite con hummus e insalata.',
+        'ingredienti' => 'falafel, hummus, insalata',
+        'prezzo' => 9.00,
+        'ristorante' => 10 
+    ],
+    [
+        'nome' => 'Tapas miste',
+        'immagine' => 'img/dishes/tapas-miste.jpg',
+        'descrizione' => 'Selezione di tapas tradizionali spagnole, inclusi patatas bravas, tortilla e gamberi all\'aglio.',
+        'ingredienti' => 'patatas bravas, tortilla, gamberi, aglio',
+        'prezzo' => 16.00,
+        'ristorante' => 11 
+    ],
+    [
+        'nome' => 'Paella alla valenciana',
+        'immagine' => 'img/dishes/paella-valenciana.jpg',
+        'descrizione' => 'Paella con pollo, coniglio, fagioli verdi e carciofi, preparata con riso al saffron.',
+        'ingredienti' => 'riso, pollo, coniglio, fagioli verdi, carciofi, zafferano',
+        'prezzo' => 18.00,
+        'ristorante' => 11 
+    ],
+    [
+        'nome' => 'Pulpo alla gallega',
+        'immagine' => 'img/dishes/pulpo-alla-gallega.jpg',
+        'descrizione' => 'Polpo alla griglia condito con paprika affumicata e olio d\'oliva, servito con patate.',
+        'ingredienti' => 'polpo, paprika, olio d\'oliva, patate',
+        'prezzo' => 15.00,
+        'ristorante' => 11 
     ]
 ];

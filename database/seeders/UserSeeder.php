@@ -25,32 +25,91 @@ class UserSeeder extends Seeder
         Schema::enableForeignKeyConstraints();
 
         //nomi plausibili per le attività
-        $name = [
-            'Galloway', // Fast Food 1
-            'BurgerKong', // Americano 2
-            'MucDonalds', // Americano 3
-            'Da Albert', // Pizzeria 4
-            'Korallo', // Pesce 5
-            'RoadMouse', // BBQ 6
-            'StefanoPizza', // Pizzeria 7
-            'Cinatown', // Cinese 8
-            'Da Mario', // Pizzeria 9
-            'Fork', // Etnica 10
-            'Mindujo', // Iberica 11
-            'Burger Bistro', // Americano 12
-            'Pizzeria Deliziosa', // Pizzeria 13
-            'Slice & Grill', // BBQ 14
-            'Crispy Crust Cafe', // Messicano 15
-            'Pizzamania', // Pizzeria 16
-            'Burger Barbecue', // Americano 17
-            'Sushi Sinfonia', // Sushi 18
-            'La Bella Italia', // Paninoteca 19
-            'Sushi Palace' // Sushi 20
+        $resturants = [
+            [
+                'name' => 'Galloway', // Fast Food 1
+                'image' => 'img/user/galloway.jpg',
+            ],
+            [
+                'name' => 'BurgerKong', // Americano 2
+                'image' => 'img/user/burgerkong.jpg',
+            ],
+            [
+                'name' => 'MucDonalds', // Americano 3
+                'image' => 'img/user/mucdonalds.jpg',
+            ],
+            [
+                'name' => 'Da Albert', // Pizzeria 4
+                'image' => 'img/user/da_albert.jpg',
+            ],
+            [
+                'name' => 'Korallo', // Pesce 5
+                'image' => 'img/user/korallo.jpg',
+            ],
+            [
+                'name' => 'RoadMouse', // BBQ 6
+                'image' => 'img/user/roadmouse.jpg',
+            ],
+            [
+                'name' => 'StefanoPizza', // Pizzeria 7
+                'image' => 'img/user/stefanopizza.jpg',
+            ],
+            [
+                'name' => 'Cinatown', // Cinese 8
+                'image' => 'img/user/cinatown.jpg',
+            ],
+            [
+                'name' => 'Da Mario', // Pizzeria 9
+                'image' => 'img/user/da_mario.jpg',
+            ],
+            [
+                'name' => 'Fork', // Etnica 10
+                'image' => 'img/user/fork.jpg',
+            ],
+            [
+                'name' => 'Mindujo', // Iberica 11
+                'image' => 'img/user/burger_bistro.jpg',
+            ],
+            [
+                'name' => 'Burger Bistro', // Americano 12
+                'image' => 'img/user/burger_bistro.jpg',
+            ],
+            [
+                'name' => 'Pizzeria Deliziosa', // Pizzeria 13
+                'image' => 'img/user/pizzeria_deliziosa.jpg',
+            ],
+            [
+                'name' => 'Slice & Grill', // BBQ 14
+                'image' => 'img/user/slice&grill.jpg',
+            ],
+            [
+                'name' => 'Crispy Crust Cafe', // Messicano 15
+                'image' => 'img/user/crispy.jpg',
+            ],
+            [
+                'name' => 'Pizzamania', // Pizzeria 16
+                'image' => 'img/user/pizzamania.jpg',
+            ],
+            [
+                'name' => 'Burger Barbecue', // Americano 17
+                'image' => 'img/user/burgerBarbecue.jpg',
+            ],
+            [
+                'name' => 'Sushi Sinfonia', // Sushi 18
+                'image' => 'img/user/sushisinfonia.jpg',
+            ],
+            [
+                'name' => 'La Bella Italia', // Paninoteca 19
+                'image' => 'img/user/bellaItalia.jpg',
+            ],
+            [
+                'name' => 'Sushi Palace', // Sushi 20
+                'image' => 'img/user/sushipalace.jpg',
+            ]
         ];
         //popolazione table  user
-        for ($i=0; $i < 20; $i++) {
-
-            $resturant_name = $name[$i];
+        foreach ($resturants as $resturant) {
+            $resturant_name = $resturant['name'];
 
             $email = fake()->email;
             $password = 'password';
@@ -66,7 +125,7 @@ class UserSeeder extends Seeder
                 $vatNumber .= rand(0,9);
             };
 
-            $resturantImage = "immagine";
+            $resturant_image = $resturant['image'];
 
             $user = user::create([
                 'resturant_name'=> $resturant_name,
@@ -74,7 +133,7 @@ class UserSeeder extends Seeder
                 'password'=> $password,
                 'address'=> $address[0],
                 'vat_number'=> $vatNumber,
-                'resturant_image'=> $resturantImage 
+                'resturant_image'=> $resturant_image 
             ]);
         }
     }

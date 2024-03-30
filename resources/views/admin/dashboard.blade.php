@@ -35,7 +35,7 @@
                                 </div>
                                 <div>
                                     <!--permette il rindirizzamento per poter modificare la relazione user-types-->
-                                    <a href="{{ route('admin.dashboard.types')}}" class="btn btn-outline-success">
+                                    <a href="{{ route('admin.dashboard.editUser')}}" class="btn btn-outline-success">
                                         Modifica
                                     </a> 
                                 </div>
@@ -43,7 +43,9 @@
                                     <h5>
                                         Immagine di copertina:
                                     </h5>
-                                    {{ $user->resturant_image  }}
+                                    <div class="img-box mx-auto mb-4">
+                                        <img src="/storage/{{ $user->resturant_image  }}" alt="{{ $user->resturant_name }}">
+                                    </div>
                                 </div>
                                 <div>
                                     <h5>

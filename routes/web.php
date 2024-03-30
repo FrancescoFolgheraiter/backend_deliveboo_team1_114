@@ -27,7 +27,8 @@ Route::prefix('admin')
     ->group(function () {
     //rotta per la dashboard con visibilità dei dati utente
     Route::get('/dashboard', [AdminMainController::class, 'dashboard'])->name('dashboard');
-    Route::get('/dashboard/{dish}', [AdminMainController::class, 'show'])->name('show');
+    Route::get('/dashboard/types', [AdminMainController::class, 'types'])->name('dashboard.types');
+    Route::put('/dashboard/types/', [AdminMainController::class, 'typesUpdate'])->name('dashboard.types.update');
     //rotte per CRUD di dishes
     Route::resource('dishes', AdminDishController::class);
     Route::resource('orders', AdminOrderController::class)->only([

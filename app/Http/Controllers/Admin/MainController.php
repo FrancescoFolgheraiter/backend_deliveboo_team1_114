@@ -23,19 +23,27 @@ class MainController extends Controller
         $types = Type::all();
         return view('admin.editTypes', compact('user','types'));
     }
-    //funzione di salvataggio nel db
-    public function typesUpdate(request $request, User $user){
+    //funzione di salvataggio nel db che permette di salvare e modificare
+    //la relazione tra user e types
+    public function typesUpdate(request $request){
+        //tramite la facede auth prelevo i dati dell'utente loggato
+        $user = auth()->user();
+        //controllo se i dati arrivati dalla view
+        //non sono stait compromessi
         $request->validate([
             'types'=>'nullable|array|exists:types,id',
         ]);
+        //controllo se sono presenti types
         if ($request->has('types')) {
+            //faccio la sincronizzazione delle relazioni
             $user->types()->sync($request->types);
-        }
-        else {
+        } else {
+            //nel caso non siano presenti types cancello le relazioni
+            //precedentemente rigistrate
             $user->types()->detach();
         }
-
-        return view('admin.types.index', compact('user','types'));
+        
+        return redirect()->route('admin.dashboard');
     }
 
 }

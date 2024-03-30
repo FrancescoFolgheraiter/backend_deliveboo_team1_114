@@ -11,11 +11,22 @@
                     Modifica la categoria del tuo ristorante
                 </h1>
                 <hr>
-                <!--Tabella visualizzazione contenuti table dishes-->
                 <div>
-                    <form action="{{ route('admin.dashboard.types.update')}}" method="POST">
+                    <form action="{{ route('admin.dashboard.users.update')}}" method="POST" enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
+
+                        <div class="mb-3">
+                            <label for="resturant-image" class="form-label">
+                                Cambia l'immagine di copertina del tuo locale
+                            </label>
+                            <input value="{{ old('resturant-image') }}" type="file" class="form-control" @error('resturant-image') is-invalid @enderror id="resturant-image" name="resturant-image" placeholder="Aggiungi la tua nuova immagine del piatto..." maxlength="2048">
+                            @error('resturant-image')
+                                <div class="alert alert-danger">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+                        </div>
 
                         <div class="mb-3">
                             <label class="form-label">Tecnologie</label>

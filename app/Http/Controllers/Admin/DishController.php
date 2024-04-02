@@ -67,8 +67,14 @@ class DishController extends Controller
     public function show(Dish $dish)
     {
         $user = auth()->user();
-        $dish = dish::where('user_id',$user->id)->firstOrFail();
-        return view('admin.dishes.show', compact('dish'));
+
+        if($user->id == $dish->user_id){
+            return view('admin.dishes.show', compact('dish'));
+        }
+        else{
+            return redirect()->route('admin.dishes.index')->with('error', 'Non sei autorizzato a visualizzare questo ordine.');
+        }
+    
     }
 
     /**

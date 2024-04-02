@@ -76,6 +76,25 @@
                         <label for="resturant_image" class="form-label fw-bolder"> Carica l'immagine del locale</label>
                         <input class="form-control" type="file" id="resturant_image" name="resturant_image">
                     </div>
+
+                    <!--tipologia del locale-->
+                    <div class="mt-4">
+                        <label class="form-label fw-bolder">Scegli la tipologia del tuo ristorante</label>
+                        <div>
+                            @foreach ($types as $type)
+                                <div class="form-check form-check-inline">
+                                    <input
+                                        {{ in_array($type->id, old('types', [])) ? 'checked' : '' }}
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        id="type-{{ $type->id }}"
+                                        name="types[]"
+                                        value="{{ $type->id }}" >
+                                    <label class="form-check-label" for="type-{{ $type->id }}">{{ $type->name }}</label>
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
             
                     <div class="mt-4">
                         <button type="submit" class="btn button-color fw-bolder text-white">

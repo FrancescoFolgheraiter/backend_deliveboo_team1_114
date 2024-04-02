@@ -26,7 +26,7 @@ main{
 }
 .custom-card-register{
     @include custom-card-style-1;
-
+    //container dei tipi di locale
     .container-types{
         background-color: #ece2e2;
         border-radius: 15px;
@@ -34,7 +34,15 @@ main{
         margin:0 auto;
         border:1px solid gray;
     }
-    
+    //modifica ai check della registrazione
+    .form-check-input {
+        box-shadow: none !important;;
+        &:checked {
+            background-color: $details; 
+            border:1px solid black;
+        }
+    }
+
     .text-color{
         color: $text;
     }
@@ -53,3 +61,4 @@ main{
         background-color: $details;
     }
 }
+

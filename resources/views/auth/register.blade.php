@@ -24,7 +24,7 @@
                         <div class="col-12 col-md-6">
                             <!-- Email Address -->
                             <div class="form-floating">
-                                <input type="email" name="email" class="form-control" id="email" placeholder="Email">
+                                <input type="email" name="email" class="form-control" id="email">
                                 <label for="email">Email</label>
                             </div>
     

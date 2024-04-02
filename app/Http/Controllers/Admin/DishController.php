@@ -66,6 +66,8 @@ class DishController extends Controller
      */
     public function show(Dish $dish)
     {
+        $user = auth()->user();
+        $dish = dish::where('user_id',$user->id)->firstOrFail();
         return view('admin.dishes.show', compact('dish'));
     }
 
@@ -74,6 +76,8 @@ class DishController extends Controller
      */
     public function edit(Dish $dish)
     {
+        $user = auth()->user();
+        $dish = dish::where('user_id',$user->id)->firstOrFail();
         return view('admin.dishes.edit', compact('dish'));
     }
 

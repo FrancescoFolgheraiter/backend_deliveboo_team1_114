@@ -37,7 +37,7 @@
                     <!--ingredienti-->
                     <div class="mb-3">
                         <label for="ingredients" class="form-label">Ingredienti(spera gli ingredienti con una virgola)<span class="text-danger">*</span></label>
-                        <textarea class="form-control" id="ingredients" name="ingredients" rows="3" placeholder="Inserisci gli ingredienti separati da ,">{{ old('ingredients') }}</textarea>
+                        <textarea class="form-control" id="ingredients" name="ingredients" rows="3" placeholder="Inserisci gli ingredienti separati da ," required>{{ old('ingredients') }}</textarea>
                         @error('ingredients')
                              <div class="alert alert-danger">
                                  {{ $message }}
@@ -48,7 +48,7 @@
                     <!--price-->
                     <div class="mb-3">
                         <label for="price" class="form-label">Prezzo<span class="text-danger">*</span></label>
-                        <input type="number" step="0.01" class="form-control" id="price" name="price" placeholder="Inserisci il prezzo..." min="0.5" max="999" value="{{ old('price') }}">
+                        <input type="number" step="0.01" class="form-control" id="price" name="price" placeholder="Inserisci il prezzo..." min="0.5" max="999" value="{{ old('price') }}" required>
                         @error('price')
                                 <div class="alert alert-danger">
                                     {{ $message }}

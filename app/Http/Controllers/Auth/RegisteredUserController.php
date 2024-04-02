@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use Illuminate\View\View;
 
+//Model
+use App\Models\type;
+
 class RegisteredUserController extends Controller
 {
     /**
@@ -20,7 +23,8 @@ class RegisteredUserController extends Controller
      */
     public function create(): View
     {
-        return view('auth.register');
+        $types = Type::all();
+        return view('auth.register',compact('types'));
     }
 
     /**
@@ -37,8 +41,8 @@ class RegisteredUserController extends Controller
             'address'=>['required', 'string', 'max:255'],
             'vat_number'=>['required', 'string', 'max:255'],
             'resturant_image'=>['required', 'image', 'max:2048'],
+            'types'=>['required','array','exists:types,id'],
         ]);
-        
         $imagePath = $request->file('resturant_image')->store('img/user', 'public');
 
         $user = User::create([
@@ -49,6 +53,13 @@ class RegisteredUserController extends Controller
             'vat_number' => $request->vat_number,
             'resturant_image'=>$imagePath 
         ]);
+
+        //creo la relazione tra user e types tramite attach
+        if (isset($request['types'])) {
+            foreach ($request['types'] as $type) {
+                $user->types()->attach($type);
+            }
+        }
 
         event(new Registered($user));
 

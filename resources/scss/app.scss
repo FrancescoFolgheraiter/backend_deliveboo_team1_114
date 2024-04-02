@@ -27,6 +27,14 @@ main{
 .custom-card-register{
     @include custom-card-style-1;
 
+    .container-types{
+        background-color: #ece2e2;
+        border-radius: 15px;
+        width:75%;
+        margin:0 auto;
+        border:1px solid gray;
+    }
+    
     .text-color{
         color: $text;
     }

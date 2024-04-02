@@ -21,9 +21,9 @@
                     @csrf
                     
                     <div class="row">
-                        <div class="col-12 col-md-6">
+                        <div class="col-12 col-md-6 mt-4">
                             <!-- Email Address -->
-                            <div class="form-floating">
+                            <div class="form-floating ">
                                 <input type="email" name="email" class="form-control" id="email" placeholder="Email">
                                 <label for="email">Email</label>
                             </div>
@@ -44,7 +44,7 @@
                                 </label>
                             </div>
                         </div>
-                        <div class="col-12 col-md-6">
+                        <div class="col-12 col-md-6 mt-4">
                             <!-- Name -->
                             <div class="form-floating">
                                 <input type="text" id="resturant_name" name="resturant_name" class="form-control">
@@ -80,19 +80,25 @@
                     <!--tipologia del locale-->
                     <div class="mt-4">
                         <label class="form-label fw-bolder">Scegli la tipologia del tuo ristorante</label>
-                        <div>
-                            @foreach ($types as $type)
-                                <div class="form-check form-check-inline">
-                                    <input
-                                        {{ in_array($type->id, old('types', [])) ? 'checked' : '' }}
-                                        class="form-check-input"
-                                        type="checkbox"
-                                        id="type-{{ $type->id }}"
-                                        name="types[]"
-                                        value="{{ $type->id }}" >
-                                    <label class="form-check-label" for="type-{{ $type->id }}">{{ $type->name }}</label>
+                        <div class="container-types">
+                            <div class="row">
+                                <div class="col-12">
+                                    @foreach ($types->take($types->count() / 2) as $key => $type)
+                                        <div class="form-check form-check-inline mt-3">
+                                            <input {{ in_array($type->id, old('types', [])) ? 'checked' : '' }} class="form-check-input" type="checkbox" id="type-{{ $type->id }}" name="types[]" value="{{ $type->id }}" >
+                                            <label class="form-check-label" for="type-{{ $type->id }}">{{ $type->name }}</label>
+                                        </div>
+                                    @endforeach
                                 </div>
-                            @endforeach
+                                <div class="col-12">
+                                    @foreach ($types->skip($types->count() / 2) as $key => $type)
+                                        <div class="form-check form-check-inline mt-3 mb-3">
+                                            <input {{ in_array($type->id, old('types', [])) ? 'checked' : '' }} class="form-check-input" type="checkbox" id="type-{{ $type->id }}" name="types[]" value="{{ $type->id }}" >
+                                            <label class="form-check-label" for="type-{{ $type->id }}">{{ $type->name }}</label>
+                                        </div>
+                                    @endforeach
+                                </div>
+                            </div>
                         </div>
                     </div>
             

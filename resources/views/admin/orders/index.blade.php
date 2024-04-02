@@ -6,7 +6,12 @@
 <div class="row">
     <div class="col">
         <div class="card p-2">
-            <div class="car-body">
+            {{-- catch di errore --}}
+            @if(session('error'))
+            <div class="alert alert-danger">
+                {{ session('error') }}
+            </div>
+            @endif
                 <h1 class="text-center">
                     Lista degli ordini
                 </h1>

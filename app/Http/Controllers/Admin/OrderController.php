@@ -51,7 +51,16 @@ class OrderController extends Controller
      */
     public function show(Order $order)
     {
-        return view('admin.orders.show', compact('order'));
+        $user = auth()->user();
+
+        // Verifica se l'ordine appartiene all'utente corrente
+        if ($order->dishes()->where('user_id', $user->id)->exists()) {
+            return view('admin.orders.show', compact('order'));
+        } else {
+            // Se l'ordine non appartiene all'utente, reindirizza o restituisci un messaggio di errore
+            // Ad esempio:
+            return redirect()->route('admin.orders.index')->with('error', 'Non sei autorizzato a visualizzare questo ordine.');
+        }
     }
 
     /**

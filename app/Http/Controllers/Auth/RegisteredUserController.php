@@ -66,8 +66,9 @@ class RegisteredUserController extends Controller
             'types.array' => 'Il campo Tipi deve essere un array.',
             'types.exists' => 'Il tipo selezionato non è valido.',
         ]);
+        //aggiunta immagine dell'utente nella cartella storage
         $imagePath = $request->file('resturant_image')->store('img/user', 'public');
-
+        //creazione dell'utente all'interno del DB
         $user = User::create([
             'resturant_name' => $request->resturant_name,
             'email' => $request->email,

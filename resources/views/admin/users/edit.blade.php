@@ -20,6 +20,12 @@
                             <label for="resturant-image" class="form-label">
                                 Cambia l'immagine di copertina del tuo locale
                             </label>
+                            <h5>
+                                Anteprima:
+                            </h5>
+                            <div class="img-box mx-auto mb-4">
+                                <img src="/storage/{{ $user->resturant_image  }}" alt="{{ $user->resturant_name }}">
+                            </div>
                             <input value="{{ old('resturant-image') }}" type="file" class="form-control" @error('resturant-image') is-invalid @enderror id="resturant-image" name="resturant-image" placeholder="Aggiungi la tua nuova immagine del piatto..." maxlength="2048">
                             @error('resturant-image')
                                 <div class="alert alert-danger">

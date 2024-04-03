@@ -66,5 +66,4 @@ class MainController extends Controller
         
         return redirect()->route('admin.dashboard');
     }
-
 }

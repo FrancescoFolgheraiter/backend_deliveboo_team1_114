@@ -35,7 +35,7 @@
                         </div>
 
                         <div class="mb-3">
-                            <label class="form-label">Tecnologie</label>
+                            <label class="form-label">Tipologie</label>
             
                             <div>
                                 @foreach ($types as $type)
@@ -65,7 +65,7 @@
                             </div>
                         </div>
                         <div>
-                           <button type="submit" class="btn btn-warning w-100">
+                           <button type="submit" class="btn btn-danger fw-bolder w-100">
                                  Modifica
                            </button>
                         </div>

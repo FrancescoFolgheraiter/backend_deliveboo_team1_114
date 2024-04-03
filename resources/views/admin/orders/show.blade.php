@@ -75,7 +75,6 @@
                                     <th scope="col">Nome</th>
                                     <th scoper="col">Quantità</th>
                                     <th scope="col" class="text-center">Prezzo</th>
-                                    <th scope="col" class="text-center">Piatto disponibile</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -90,18 +89,6 @@
                                             </td>
                                             <td class="text-center">
                                                 {{ $dish->price }}
-                                            </td>
-                                            <td class="text-center">
-                                                @if ($dish->visible == 0)
-                                                    <span class="badge rounded-pill text-bg-danger">No</span>  
-                                                @else
-                                                    <span class="badge rounded-pill text-bg-success">Si</span>  
-                                                @endif
-                                            </td>
-                                            <td class="text-center">
-                                                <a href="{{ route('admin.dishes.show', ['dish' => $dish->id]) }}" class="btn btn-xs btn-primary me-2 fw-bolder">
-                                                    Vedi
-                                                </a>
                                             </td>
                                         </tr>
                                 @endforeach

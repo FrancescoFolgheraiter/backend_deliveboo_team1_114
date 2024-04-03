@@ -5,7 +5,7 @@
 @section('main-content')
 <div class="row">
     <div class="col">
-        <div class="card p-2">
+        <div class="card p-2 my-user-card">
             <div class="car-body">
                 <h1 class="text-center">
                     Lista dei piatti

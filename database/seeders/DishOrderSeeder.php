@@ -7,7 +7,7 @@ use Illuminate\Database\Seeder;
 
 // Models
 use App\Models\Order;
-use App\Models\Dish;
+
 use App\Models\User;
 
 class DishOrderSeeder extends Seeder

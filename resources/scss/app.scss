@@ -12,6 +12,7 @@ body {
 main{
     .my-user-card{
         height: 80vh;
+        overflow-y: auto;
     }
 }
 .custom-container{

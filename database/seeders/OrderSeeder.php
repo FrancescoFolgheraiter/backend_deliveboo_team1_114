@@ -30,20 +30,36 @@ class OrderSeeder extends Seeder
 
         // mi recupero i dati da orders.php tramite config
         $ordersData = config('orders');
+
+        //per incrementare la consistenza dei dati creiamo molti order attraverso un ciclo for normale
+        for ($i=0; $i < 20; $i++) { 
+            //il foreach va a recuperarmi dalla struttura dati
+            //dei dati verosimili
+            foreach ($ordersData as $customer) {
+    
+                // creo un nuovo order
+                $order = new Order();
+
+                //---------gestione inserimento di note nel solo 20% dei casi----------
+                $populated = 20;
+                $randomNumber = fake()->numberBetween(1, 100);
+                //verifico se il numero uscito è maggiore di 20
+                if ($randomNumber <= $populated) {
+                    // Se la condizione è vera, popola la nota
+                    $order->note = fake()->sentence();
+                } else {
+                    // Altrimenti, lascia la nota vuota
+                    $order->note = null;
+                }
+                //------------fine gestione popolamento $order->note--------
+                $order->total_price = 0;
+                $order->name = $customer['nome'];
+                $order->surname = $customer['cognome'];
+                $order->address = $customer['indirizzo'];
+                $order->phone_number = $customer['numero_di_telefono'];
+                $order->save();
+            };
+        }
         
-        foreach ($ordersData as $customer) {
-
-            // creo un nuovo order
-            $order = new Order();
-
-            // genero dei dati fake tramier faker e assegno gli elementi presenti nell'array 
-            $order->note = fake()->sentence();
-            $order->total_price = 0;
-            $order->name = $customer['nome'];
-            $order->surname = $customer['cognome'];
-            $order->address = $customer['indirizzo'];
-            $order->phone_number = $customer['numero_di_telefono'];
-            $order->save();
-        };
     }
 }

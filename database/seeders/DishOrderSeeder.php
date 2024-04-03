@@ -24,9 +24,8 @@ class DishOrderSeeder extends Seeder
         foreach ($orders as $order) {
             // estraggo un utente casuale
             $user = $users->random();
-
             // Ottengo un numero random da 1 a 5 di piatti possibili dell'utente
-            $userDishes = $user->dishes()->inRandomOrder()->take(rand(1, 5))->get();
+            $userDishes = $user->dishes()->inRandomOrder()->take(rand(2, 5))->get();
             $quantity = rand(1, 5);
             // Allega i piatti dell'utente selezionato all'ordine corrente
             $order->dishes()->attach($userDishes->pluck('id'),['quantity' => $quantity]);

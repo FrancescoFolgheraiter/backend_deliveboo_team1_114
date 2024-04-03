@@ -17,6 +17,7 @@ main{
     height: 100%;
     .my-user-card{
         height: 80vh;
+        overflow-y: auto;
     }
 }
 .custom-container{

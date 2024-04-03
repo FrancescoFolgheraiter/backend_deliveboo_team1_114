@@ -8,6 +8,7 @@ use Illuminate\Database\Seeder;
 // Models
 use App\Models\Order;
 use App\Models\Dish;
+use App\Models\User;
 
 class DishOrderSeeder extends Seeder
 {
@@ -16,30 +17,19 @@ class DishOrderSeeder extends Seeder
      */
     public function run(): void
     {
-        // recupero tutti gli orders dal database
+        $users = User::all();
+
         $orders = Order::all();
 
-        // recupero tutti i piatti dal database
-        $dishes = Dish::all();
-
-        // itero su ciascun ordine 
         foreach ($orders as $order) {
+            // estraggo un utente casuale
+            $user = $users->random();
 
-            // seleziono in modo casuale un piatto da 1 a 4
-            $randomDishes = rand(1, 4);
-
-            // mescolo tramite shuffle() e prendo casualmente un piatto
-            $selectedDishes = $dishes->shuffle()->take($randomDishes);
-
-            // itero sui piatti selezionati per ordine 
-            foreach ($selectedDishes as $dish) {
-
-                // seleziono in modo casuale una quantità da 1 a 10
-                $quantity = rand(1, 5);
-
-                // associo per ogni ordine un piatto e ne specifico la quantità
-                $order->dishes()->attach($dish, ['quantity' => $quantity]);
-            };
-        };
+            // Ottengo un numero random da 1 a 5 di piatti possibili dell'utente
+            $userDishes = $user->dishes()->inRandomOrder()->take(rand(1, 5))->get();
+            $quantity = rand(1, 5);
+            // Allega i piatti dell'utente selezionato all'ordine corrente
+            $order->dishes()->attach($userDishes->pluck('id'),['quantity' => $quantity]);
+        }
     }
 }

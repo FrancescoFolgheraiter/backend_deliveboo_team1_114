@@ -17,7 +17,6 @@
                     <h1 class="text-dark mb-5">
                         Ordine di <span class="text-danger">{{ $order->name }} {{ $order->surname }}</span>
                     </h1>
-
                     <h3 class="mb-5">
                         <div class="mb-2">
                             ORDINATO ALLE
@@ -64,6 +63,52 @@
                             {{ $order->note }}
                         </span>
                     </h3>
+                    <hr>
+                    <div>
+                        <h3>
+                            Piatti ordinati
+                        </h3>
+                        <!--Tabella visualizzazione contenuti table dishes-->
+                        <table class="table">
+                            <thead >
+                                <tr>
+                                    <th scope="col">Nome</th>
+                                    <th scoper="col">Quantità</th>
+                                    <th scope="col" class="text-center">Prezzo</th>
+                                    <th scope="col" class="text-center">Piatto disponibile</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($order->dishes as $dish)
+                                        <tr>
+                                            <th scope="row">
+                                                {{ $dish->name }}
+                                            </th>
+                                            <td>
+                                                {{-- qui viene preso il dato dalla tebella pivot --}}
+                                                {{ $dish->pivot->quantity }}
+                                            </td>
+                                            <td class="text-center">
+                                                {{ $dish->price }}
+                                            </td>
+                                            <td class="text-center">
+                                                @if ($dish->visible == 0)
+                                                    <span class="badge rounded-pill text-bg-danger">No</span>  
+                                                @else
+                                                    <span class="badge rounded-pill text-bg-success">Si</span>  
+                                                @endif
+                                            </td>
+                                            <td class="text-center">
+                                                <a href="{{ route('admin.dishes.show', ['dish' => $dish->id]) }}" class="btn btn-xs btn-primary me-2 fw-bolder">
+                                                    Vedi
+                                                </a>
+                                            </td>
+                                        </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                        {{-- fine gestione tabella piatti  --}}
+                    </div>
                 </div>
             </div>
         </div>

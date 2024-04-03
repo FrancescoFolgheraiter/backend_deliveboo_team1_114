@@ -31,8 +31,9 @@ class DishController extends Controller
      * Show the form for creating a new resource.
      */
     public function create()
-    {
-        return view('admin.dishes.create');
+    {   
+        $user = auth()->user();
+        return view('admin.dishes.create', compact('user'));
     }
 
     /**
@@ -69,7 +70,7 @@ class DishController extends Controller
         $user = auth()->user();
 
         if($user->id == $dish->user_id){
-            return view('admin.dishes.show', compact('dish'));
+            return view('admin.dishes.show', compact('dish', 'user'));
         }
         else{
             return redirect()->route('admin.dishes.index')->with('error', 'Non sei autorizzato a visualizzare questo ordine.');
@@ -84,7 +85,7 @@ class DishController extends Controller
     {
         $user = auth()->user();
         $dish = dish::where('user_id',$user->id)->firstOrFail();
-        return view('admin.dishes.edit', compact('dish'));
+        return view('admin.dishes.edit', compact('dish', 'user'));
     }
 
     /**

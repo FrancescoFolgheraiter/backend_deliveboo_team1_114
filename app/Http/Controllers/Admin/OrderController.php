@@ -55,7 +55,7 @@ class OrderController extends Controller
 
         // Verifica se l'ordine appartiene all'utente corrente
         if ($order->dishes()->where('user_id', $user->id)->exists()) {
-            return view('admin.orders.show', compact('order'));
+            return view('admin.orders.show', compact('order','user'));
         } else {
             // Se l'ordine non appartiene all'utente, reindirizza o restituisci un messaggio di errore
             // Ad esempio:

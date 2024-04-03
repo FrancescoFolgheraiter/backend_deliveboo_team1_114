@@ -6,10 +6,15 @@
 // importo tutti i mixins SCSS
 @import './partials/mixins.scss';
 
+// importo button.scss
+@import './button.scss';
+
 body {
     background-color: $background;
+    overflow: hidden;
 }
 main{
+    height: 100%;
     .my-user-card{
         height: 80vh;
     }
@@ -61,4 +66,58 @@ main{
         background-color: $details;
     }
 }
+
+.row .col-2{
+
+    aside{
+        height: 100vh;
+        background-color: $aside;
+
+        h1{
+            color: $details;
+        }
+
+        .text-color-2{
+            color: $details;
+        }
+
+        .top-aside{
+            
+            .text-color{
+                color: $background;
+            }
+        }
+    }
+}
+
+.img-rounded{
+    height: $height-150;
+    width: $width-150;
+
+    img{
+        @include rounded-image-style;
+    }
+}
+
+.navbar {
+    .form-control {
+        box-shadow: none !important;
+        border: none;
+        &:checked {
+            background-color: $details; 
+            border:1px solid black;
+        }
+    }
+}
+
+.accordion-header{
+    opacity: 1;
+    transition: opacity 1s ease 0s;
+
+    &:hover{
+        opacity: 0.4;
+    }
+}
+
+
 

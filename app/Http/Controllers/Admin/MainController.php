@@ -8,9 +8,11 @@ use Illuminate\Http\Request;
 //Models
 use App\Models\type;
 use App\Models\User;
+use App\Models\Dish;
 
 // Helpers
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Carbon;
 class MainController extends Controller
 {
     //funzione che permette di visualizzare i dati dell'utente le categhorie ad esso collegate
@@ -18,7 +20,21 @@ class MainController extends Controller
     {
         $user = auth()->user();
         $types = Type::all();
-        return view('admin.dashboard', compact('user','types'));
+        $dishes = $user->dishes;
+
+        //istazio una collezzione che andrò a riempire con gli singoli piatti
+        $orders = collect();
+        
+        //recupero la data odierna
+        $today = Carbon::today();
+
+        foreach ($dishes as $dish) {
+            //qui aggiungo ogmi volta con merge un istanza dentro una collezzione
+            //filtrando per WHERE date = data di oggi
+            $orders = $orders->merge($dish->orders()->whereDate('date', $today)->get());
+        }
+
+        return view('admin.dashboard', compact('user','types','orders'));
     }
     //funzione di reindirizzamento sull'edit di user esclusivo per type
     public function editUser(){

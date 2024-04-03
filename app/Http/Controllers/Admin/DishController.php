@@ -15,6 +15,7 @@ use App\Http\Requests\Dish\UpdateRequest as UpdateDishRequest;
 
 //Helpers
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Carbon;
 class DishController extends Controller
 {
     /**
@@ -128,12 +129,18 @@ class DishController extends Controller
      */
     public function destroy(Dish $dish)
     {
+
         //controllo se è presente un immagine del piatto e in caso la elimino da storage
         if ($dish->image != null) {
             Storage::disk('public')->delete($dish->image);
         }
         //cancello il piatto
-        $dish->delete();
+        //invece di  fare un hard delete $dish->delete();
+        //faccio un soft valorizzando la colonna delete con la data di cancellazione
+        $dish->update([
+            'delete' => Carbon::now()->format('Y-m-d')
+        ]);
+
         //reindirizzo sull'index dei piatti
         return redirect()->route('admin.dishes.index');
     }

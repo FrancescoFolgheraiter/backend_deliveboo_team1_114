@@ -24,6 +24,8 @@
                     </thead>
                     <tbody>
                         @foreach ($user->dishes as $dish)
+                            @if ($dish->delete == null)
+                            {{-- stampo solo nel caso delete non sia valorizzata //soft delete --}}
                                 <tr>
                                     <th scope="row">
                                         {{ $dish->name }}
@@ -85,7 +87,8 @@
                                             </div>
                                         </div>
                                     </td>
-                                </tr>
+                                </tr>                                
+                            @endif
                         @endforeach
                     </tbody>
                 </table>

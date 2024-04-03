@@ -16,8 +16,8 @@ class Dish extends Model
         'price',
         'visible',
         'image',
-        'user_id',
-        'delete_image'
+        'delete', 
+        'user_id'
     ];
 
     /*

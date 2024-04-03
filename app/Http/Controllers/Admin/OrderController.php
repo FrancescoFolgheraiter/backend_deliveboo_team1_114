@@ -25,7 +25,7 @@ class OrderController extends Controller
             $user = auth()->user();
 
             $query->where('user_id', $user->id);
-        })->get();
+        })->orderBy('date')->get();
 
         return view('admin.orders.index', compact('orders','user'));
     }

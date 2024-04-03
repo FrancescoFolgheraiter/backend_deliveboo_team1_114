@@ -31,9 +31,8 @@ class MainController extends Controller
         foreach ($dishes as $dish) {
             //qui aggiungo ogmi volta con merge un istanza dentro una collezzione
             //filtrando per WHERE date = data di oggi
-            $orders = $orders->merge($dish->orders()->whereDate('date', $today)->get());
+            $orders = $orders->merge($dish->orders()->whereDate('date', $today)->orderBy('date')->get());
         }
-
         return view('admin.dashboard', compact('user','types','orders'));
     }
     //funzione di reindirizzamento sull'edit di user esclusivo per type

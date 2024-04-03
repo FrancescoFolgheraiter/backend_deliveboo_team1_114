@@ -5,7 +5,7 @@
 @section('main-content')
 <div class="row">
     <div class="col">
-        <div class="card p-2">
+        <div class="card p-2 my-user-card">
             {{-- catch di errore --}}
             @if(session('error'))
             <div class="alert alert-danger">

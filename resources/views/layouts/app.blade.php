@@ -5,6 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
+        {{-- Font Awesome --}}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
         <title>@yield('page-title') | {{ config('app.name', 'DeliveBoo') }}</title>
 
         <!-- Scripts -->
@@ -58,6 +61,9 @@
                                         <u>
                                             <a class="nav-link" href="{{ route('admin.dishes.index') }}">Vedi I Tuoi Piatti</a>
                                         </u>
+                                        <u>
+                                            <a class="nav-link" href="{{ route('admin.dishes.create') }}">Aggiungi un piatto</a>
+                                        </u>
                                     </div>
                                 </div>
                             </div>
@@ -105,26 +111,22 @@
             </div>
             <div class="col-10">
                 <header>
-                    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                        <div class="container">
-                            <div>
-                                <input type="search" placeholder=" Cerca..." class="form-control">
-                            </div>
-                            <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarText">
-                                <form method="POST" action="{{ route('logout') }}">
-                                    @csrf
-        
-                                    <button type="submit" class="button type1">
-                                    </button>
-                                </form>
-                            </div>
+                    <nav class="navbar navbar-expand-lg bg-body-tertiary px-5">
+                        <div>
+                            <input type="search" placeholder=" Cerca..." class="form-control">
+                        </div>
+                        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarText">
+                            <form method="POST" action="{{ route('logout') }}">
+                                @csrf
+    
+                                <button type="submit" class="button type1">
+                                </button>
+                            </form>
                         </div>
                     </nav>
                 </header>
-                <main class="mt-5">
-                    <div class="container">
-                        @yield('main-content')
-                    </div>
+                <main class="m-5">
+                    @yield('main-content')
                 </main>
             </div>
         </div>

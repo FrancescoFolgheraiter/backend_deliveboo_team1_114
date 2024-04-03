@@ -9,15 +9,31 @@
 // importo button.scss
 @import './button.scss';
 
+// importo scrollbar.scss
+@import './scrollbar.scss';
+
 body {
     background-color: $background;
     overflow: hidden;
 }
+
 main{
     height: 100%;
     .my-user-card{
         height: 80vh;
         overflow-y: auto;
+    }
+
+    .bg-color{
+        background-color: $details;
+    }
+
+    .bg-color-2{
+        background-color: $background;
+    }
+
+    .text-color-2{
+        color: $details;
     }
 }
 .custom-container{
@@ -119,6 +135,7 @@ main{
         opacity: 0.4;
     }
 }
+
 
 
 

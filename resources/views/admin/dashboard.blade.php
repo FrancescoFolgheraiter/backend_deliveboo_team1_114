@@ -4,84 +4,22 @@
 
 @section('main-content')
     <div class="row">
-        <div class="col">
+        <div class="col-9">
             <div class="card my-user-card">
-                <div class="card-body">
-                    <h1 class="text-center text-success">
-                        {{ $user->resturant_name }}
-                    </h1>
-                    <hr>
-                    <!--contenuto principale di interazione utente-->
-                    <div class="row h-75">
-                        <div class="col-md-3 col-12 h-100 ">
-                            <aside class="d-flex flex-column justify-content-around h-100">
-                                <div>
-                                    <h5>
-                                        Località:
-                                    </h5>
-                                    {{ $user->address }}
-                                </div>
-                                <div>
-                                    <h5>
-                                        Tipologià di ristorante
-                                    </h5>
-                                    <ul>
-                                        @foreach ($user->Types as $type)
-                                        <li>
-                                            {{ $type->name }}
-                                        </li>
-                                        @endforeach
-                                    </ul>
-                                </div>
-                                <div>
-                                    <!--permette il rindirizzamento per poter modificare la relazione user-types-->
-                                    <a href="{{ route('admin.dashboard.editUser')}}" class="btn btn-outline-success">
-                                        Modifica
-                                    </a> 
-                                </div>
-                                <div>
-                                    <h5>
-                                        Immagine di copertina:
-                                    </h5>
-                                    <div class="img-box mx-auto mb-4">
-                                        <img src="/storage/{{ $user->resturant_image  }}" alt="{{ $user->resturant_name }}">
-                                    </div>
-                                </div>
-                                <div>
-                                    <h5>
-                                        Partita Iva:
-                                    </h5>
-                                    {{ $user->vat_number }}
-                                </div>
-                                <div>
-                                    <h5>
-                                        Utente creato in data:
-                                    </h5>
-                                    @php
-                                    //prendo solo la data tramite explode lasciando perdere l'orario di creazione
-                                       $date = explode(" ", $user->created_at);
-                                    @endphp
-                                    {{ $date[0]}}
-                                </div>
-                            </aside>
-                        </div>
-                        <div class="col-md-9 col-12 d-flex flex-column justify-content-between ">
-                            <div>
-                                <a href="{{ route('admin.dishes.create') }}" class="btn btn-outline-success">
-                                    Aggiungi un nuovo piatto
-                                </a> 
-                            </div>
-                            <div class="flex-grow-1 ">
+                <div class="card-body d-flex justify-content-center">
+                    <div class="row w-100">
+                        <div class="col-md-9 col-12 d-flex w-100">
+                            <div class="flex-grow-1">
                                 @if ($orders->isEmpty())
                                     <h4>
                                         Non sono stati ancora effettuati ordini al tuo locale in data odierna.
                                     </h4>
                                 @else
-                                    <h4>
+                                    <h3 class="text-center">
                                         Ordini di oggi:
-                                    </h4>
-                                    <table class="table">
-                                        <thead >
+                                    </h3>
+                                    <table class="table text-center table-auto">
+                                        <thead>
                                             <tr>
                                                 <th scope="col">Cliente</th>
                                                 <th scope="col">Indirizzo</th>
@@ -93,7 +31,7 @@
                                             @foreach ($orders as $order)
                                             <tr>
                                                 <th>
-                                                    <a href="{{ route('admin.orders.show', ['order' => $order->id]) }}">
+                                                    <a href="{{ route('admin.orders.show', ['order' => $order->id]) }}" class="text-color-2">
                                                         {{ $order->name }} {{ $order->surname }}
                                                     </a>
                                                 </th>
@@ -111,14 +49,61 @@
                                         </tbody>
                                     </table>
                                 @endif
-                            </div>
-                            <div>
-                                Vedi storico ordini
-                            </div>      
+                            </div>   
                         </div>
                     </div>
                     <!--fine contenuto principale di interazione utente-->
                 </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="mb-4">
+                <div class="card p-3">
+                    <h5 class="text-center">
+                        Totale ordini giornalieri
+                    </h5>
+                    <h3 class="text-center fw-bolder text-color-2">
+                        {{ $orders->count() }} ordini effettuati
+                    </h3>
+                </div>
+            </div>
+            <div class="card px-2">
+                <div class="card mt-2 bg-color-2">
+                    <div class="text-center mb-3">
+                        <h5 class="text-center my-3">
+                            Aggiungi un nuovo piatto al tuo ristorante
+                        </h5>
+                        <a href="{{ route('admin.dishes.create') }}" class="btn btn-danger fw-bolder">
+                            <i class="fa-solid fa-plus"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <h5 class="text-center mb-2">
+                        Tipologià del tuo ristorante
+                    </h5>
+                    <div class="text-center">
+                        @foreach ($user->Types as $type)
+                            <span class="badge bg-color">
+                                {{ $type->name }}
+                            </span>
+                        @endforeach
+                    </div>
+                </div>
+                <div>
+                    <h5 class="text-center mt-5">
+                        Immagine attuale del tuo ristorante
+                    </h5>
+                    <div class="img-box mx-auto mb-4">
+                        <img src="/storage/{{ $user->resturant_image  }}" alt="{{ $user->resturant_name }}">
+                    </div>
+                </div>
+                <div class="text-center mb-4">
+                    <!--permette il rindirizzamento per poter modificare la relazione user-types-->
+                    <a href="{{ route('admin.dashboard.editUser')}}" class="btn btn-danger fw-bolder">
+                        Modifica
+                    </a> 
+                </div> 
             </div>
         </div>
     </div>

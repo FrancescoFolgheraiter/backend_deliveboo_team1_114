@@ -71,8 +71,46 @@
                                     Aggiungi un nuovo piatto
                                 </a> 
                             </div>
-                            <div>
-                                Ordini di oggi 
+                            <div class="flex-grow-1 ">
+                                @if ($orders->isEmpty())
+                                    <h4>
+                                        Non sono stati ancora effettuati ordini al tuo locale in data odierna.
+                                    </h4>
+                                @else
+                                    <h4>
+                                        Ordini di oggi:
+                                    </h4>
+                                    <table class="table">
+                                        <thead >
+                                            <tr>
+                                                <th scope="col">Cliente</th>
+                                                <th scope="col">Indirizzo</th>
+                                                <th scope="col" class="text-center">Data dell'ordine</th>
+                                                <th scope="col" class="text-center">Valore dell'ordine</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach ($orders as $order)
+                                            <tr>
+                                                <th>
+                                                    <a href="{{ route('admin.orders.show', ['order' => $order->id]) }}">
+                                                        {{ $order->name }} {{ $order->surname }}
+                                                    </a>
+                                                </th>
+                                                <td>
+                                                    {{ $order->address }}
+                                                </td>
+                                                <td class="text-center">
+                                                    {{ $order->date }}
+                                                </td>
+                                                <td class="text-center">
+                                                    {{ $order->total_price }} €
+                                                </td>
+                                            </tr>
+                                            @endforeach
+                                        </tbody>
+                                    </table>
+                                @endif
                             </div>
                             <div>
                                 Vedi storico ordini

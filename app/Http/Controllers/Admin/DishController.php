@@ -69,8 +69,10 @@ class DishController extends Controller
     public function show(Dish $dish)
     {
         $user = auth()->user();
-
-        if($user->id == $dish->user_id){
+        //proteggo la rotta che può essere visualizzata solo dal utente loggato per i suoi piatti
+        //e proteggo la rotta nel caso sia valorizzata la colonna delete per 
+        //evitare forzature di url
+        if($user->id == $dish->user_id && $dish->delete == null ){
             return view('admin.dishes.show', compact('dish', 'user'));
         }
         else{

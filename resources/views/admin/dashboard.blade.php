@@ -11,9 +11,21 @@
                         <div class="col-md-9 col-12 d-flex w-100">
                             <div class="flex-grow-1">
                                 @if ($orders->isEmpty())
-                                    <h4>
+                                    <h3 class="text-center py-4">
                                         Non sono stati ancora effettuati ordini al tuo locale in data odierna.
-                                    </h4>
+                                    </h3>
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <div class="loader">
+                                            <div class="panWrapper">
+                                                <div class="pan">
+                                                    <div class="food"></div>
+                                                    <div class="panBase"></div>
+                                                    <div class="panHandle"></div>
+                                                </div>
+                                                <div class="panShadow"></div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 @else
                                     <h3 class="text-center">
                                         Ordini di oggi:
@@ -94,7 +106,7 @@
                     <h5 class="text-center mt-5">
                         Immagine attuale del tuo ristorante
                     </h5>
-                    <div class="img-box mx-auto mb-4">
+                    <div class="user-img-box mx-auto mb-4">
                         <img src="/storage/{{ $user->resturant_image  }}" alt="{{ $user->resturant_name }}">
                     </div>
                 </div>

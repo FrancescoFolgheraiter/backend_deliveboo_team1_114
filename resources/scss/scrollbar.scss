@@ -12,7 +12,7 @@
 
 /* width */
 ::-webkit-scrollbar {
-    width: 15px;
+    width: 10px;
 }
 
 /* Track */
@@ -24,13 +24,13 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: $text-2; 
+    background: #9e313a; 
     padding: 2px;
     border-radius: 80px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #8d8989;
+    background: $aside; 
     padding: 2px;
 }

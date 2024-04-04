@@ -12,6 +12,9 @@
 // importo scrollbar.scss
 @import './scrollbar.scss';
 
+// importo loading.scss
+@import './loading.scss';
+
 body {
     background-color: $background;
     overflow: hidden;
@@ -44,6 +47,13 @@ main{
 
     img{
        @include image-style-100;
+    }
+}
+.user-img-box{
+    max-width: $max-width-500;
+
+    img{
+       @include image-style-100-230;
     }
 }
 .custom-card-register{

@@ -90,7 +90,7 @@
                     </div>
                     <!--fine image-->
                     <div class="d-flex justify-content-center ">
-                        <button type="submit" class="btn btn-success w-25 ">
+                        <button type="submit" class="btn btn-danger fw-bolder w-25 ">
                               + Aggiungi
                         </button>
                      </div>

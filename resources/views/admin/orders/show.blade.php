@@ -4,15 +4,9 @@
 
 @section('main-content')
 
-    {{-- possibiltà di tornare a tutti gli ordini --}}
-    <div class="d-flex justify-content-end py-3">
-        <a href="{{ route('admin.orders.index') }}" class="btn btn-light my-badge text-dark fw-bolder">
-            <- Ritorna ai tuoi piatti
-        </a>
-    </div>
     <div class="row">
         <div class="col">
-            <div class="card my-badge">
+            <div class="card my-badge p-2 my-user-card">
                 <div class="card-body text-secondary text-center">
                     <h1 class="text-dark mb-5">
                         Ordine di <span class="text-danger">{{ $order->name }} {{ $order->surname }}</span>
@@ -72,7 +66,7 @@
                         <table class="table">
                             <thead >
                                 <tr>
-                                    <th scope="col">Nome</th>
+                                    <th scope="col" class="text-start">Nome</th>
                                     <th scoper="col">Quantità</th>
                                     <th scope="col" class="text-center">Prezzo</th>
                                 </tr>
@@ -80,7 +74,7 @@
                             <tbody>
                                 @foreach ($order->dishes as $dish)
                                         <tr>
-                                            <th scope="row">
+                                            <th scope="row" class="text-start">
                                                 {{ $dish->name }}
                                             </th>
                                             <td>

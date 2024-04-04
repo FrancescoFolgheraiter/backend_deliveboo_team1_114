@@ -3,16 +3,9 @@
 @section('page-title', $dish->name)
 
 @section('main-content')
-
-    {{-- possibiltà di tornare a tutti i piatti --}}
-    <div class="d-flex justify-content-end py-3">
-        <a href="{{ route('admin.dishes.index') }}" class="btn btn-light my-badge text-dark fw-bolder">
-            <- Ritorna ai tuoi piatti
-        </a>
-    </div>
     <div class="row">
         <div class="col">
-            <div class="card my-badge">
+            <div class="card my-badge p-2 my-user-card">
                 <div class="card-body text-secondary text-center">
                     <h1 class="text-dark mb-2">
                         {{ $dish->name }}

@@ -8,7 +8,7 @@
         <div class="card p-2 my-user-card">
             <div class="car-body">
                 <h1 class="text-center">
-                    Lista dei piatti
+                    I Tuoi Piatti
                 </h1>
                 <hr>
                 <!--Tabella visualizzazione contenuti table dishes-->

@@ -74,12 +74,12 @@
                     <h5 class="text-center">
                         Totale ordini giornalieri
                     </h5>
-                    <h3 class="text-center fw-bolder text-color-3">
+                    <h3 class="text-center fw-bolder text-color-2">
                         {{ $orders->count() }} ordini effettuati
                     </h3>
                 </div>
             </div>
-            <div class="card px-2">
+            <div class="card vh-card px-2">
                 <div class="card mt-2 bg-color-2">
                     <div class="text-center mb-3">
                         <h5 class="text-center my-3">

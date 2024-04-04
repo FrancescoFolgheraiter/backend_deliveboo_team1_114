@@ -26,7 +26,9 @@ main{
         height: 80vh;
         overflow-y: auto;
     }
-
+    .vh-card{
+        height: 66vh;
+    }
     .bg-color{
         background-color: $details;
     }
@@ -48,7 +50,7 @@ main{
     }
 
     .btn-color{
-        background-color: $aside;
+        background-color: $details;
     }
     .btn-outline-danger{
         --bs-btn-border-color: none;

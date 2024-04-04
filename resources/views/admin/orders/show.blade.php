@@ -51,7 +51,7 @@
         </div>
         <div class="col-3">
             
-            <div class="card px-2">
+            <div class="card my-user-card px-2">
                 <div class="text-center my-3">
                     <h3>
                         Ordinato da 

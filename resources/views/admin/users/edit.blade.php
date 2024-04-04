@@ -5,7 +5,7 @@
 @section('main-content')
 <div class="row">
     <div class="col">
-        <div class="card p-2">
+        <div class="card my-user-card p-2">
             <div class="car-body">
                 <h1 class="text-center">
                     Modifica la categoria del tuo ristorante

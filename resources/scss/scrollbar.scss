@@ -24,13 +24,13 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #9e313a; 
+    background: $details; 
     padding: 2px;
     border-radius: 80px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: $aside; 
+    background: #ca3a3a; 
     padding: 2px;
 }

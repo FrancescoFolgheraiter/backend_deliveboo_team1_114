@@ -4,6 +4,11 @@
 // importo tutti i mixins SCSS
 @import './partials/mixins.scss';
 
+/*
+
+    LOGOUT BUTTON
+
+*/
 .button {
     height: 40px;
     width: 120px;
@@ -62,3 +67,48 @@ content: "Log Out";
 .type1:hover::before {
     transform: translateY(-50px) scale(0) rotate(120deg);
 }
+
+/*
+
+    FOOD CARD
+
+*/
+/* .food-card {
+    width: 220px;
+    height: 280px;
+    border-radius: 17px;
+    background: transparent;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    -webkit-transition: 0.5s ease-out;
+    transition: 0.5s ease-out;
+    overflow: visible;
+}
+
+.food-card:hover {
+    border: 1px solid $aside;
+    -webkit-box-shadow: 10px 5px 18px 0 rgba(255, 255, 255, 0.877);
+    box-shadow: 10px 5px 18px 0 rgba(255, 255, 255, 0.877);
+    transform: scale(1.05);
+    
+}
+
+.overlay{
+    transform: translateY(100%);
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.food-card:hover .overlay{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.user-card-body:hover{
+    width: 100%;
+    height: 100%;
+    border: 1px solid transparent;
+    border-radius: 17px;
+    background-color: rgba(0, 0, 0, 0.9);
+} */

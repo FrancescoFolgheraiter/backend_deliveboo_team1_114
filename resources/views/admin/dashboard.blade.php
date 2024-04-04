@@ -27,9 +27,9 @@
                                         </div>
                                     </div>
                                 @else
-                                    <h3 class="text-center">
-                                        Ordini di oggi:
-                                    </h3>
+                                    <h2 class="text-center mb-4">
+                                        Ordini di oggi
+                                    </h2>
                                     <table class="table text-center table-auto">
                                         <thead>
                                             <tr>
@@ -43,7 +43,7 @@
                                             @foreach ($orders as $order)
                                             <tr>
                                                 <th>
-                                                    <a href="{{ route('admin.orders.show', ['order' => $order->id]) }}" class="text-color-2">
+                                                    <a href="{{ route('admin.orders.show', ['order' => $order->id]) }}" class="text-color-3">
                                                         {{ $order->name }} {{ $order->surname }}
                                                     </a>
                                                 </th>
@@ -74,7 +74,7 @@
                     <h5 class="text-center">
                         Totale ordini giornalieri
                     </h5>
-                    <h3 class="text-center fw-bolder text-color-2">
+                    <h3 class="text-center fw-bolder text-color-3">
                         {{ $orders->count() }} ordini effettuati
                     </h3>
                 </div>
@@ -85,7 +85,7 @@
                         <h5 class="text-center my-3">
                             Aggiungi un nuovo piatto al tuo ristorante
                         </h5>
-                        <a href="{{ route('admin.dishes.create') }}" class="btn btn-danger fw-bolder">
+                        <a href="{{ route('admin.dishes.create') }}" class="btn btn-color btn-outline-danger text-white fw-bolder">
                             <i class="fa-solid fa-plus"></i>
                         </a>
                     </div>
@@ -96,7 +96,7 @@
                     </h5>
                     <div class="text-center">
                         @foreach ($user->Types as $type)
-                            <span class="badge bg-color">
+                            <span class="badge btn-color">
                                 {{ $type->name }}
                             </span>
                         @endforeach
@@ -112,7 +112,7 @@
                 </div>
                 <div class="text-center mb-4">
                     <!--permette il rindirizzamento per poter modificare la relazione user-types-->
-                    <a href="{{ route('admin.dashboard.editUser')}}" class="btn btn-danger fw-bolder">
+                    <a href="{{ route('admin.dashboard.editUser')}}" class="btn btn-color btn-outline-danger text-white fw-bolder">
                         Modifica
                     </a> 
                 </div> 

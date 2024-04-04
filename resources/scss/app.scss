@@ -35,8 +35,23 @@ main{
         background-color: $background;
     }
 
+    .bg-color-3{
+        background-color: $bg-color-3;
+    }
+
     .text-color-2{
         color: $details;
+    }
+
+    .text-color-3{
+        color: $aside;
+    }
+
+    .btn-color{
+        background-color: $aside;
+    }
+    .btn-outline-danger{
+        --bs-btn-border-color: none;
     }
 }
 .custom-container{

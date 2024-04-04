@@ -8,13 +8,13 @@
         <div class="card">
             <div class="card-body">
                 <h1 class="text-center">
-                    Aggiungi un piatto
+                    Aggiungi un nuovo piatto
                 </h1>
                 <form action="{{ route('admin.dishes.store')}}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <!--nome-->
                     <div class="mb-3">
-                        <label for="name" class="form-label">Nome del piatto<span class="text-danger">*</span></label>
+                        <label for="name" class="form-label fw-bolder">Nome del piatto <span class="text-danger">*</span></label>
                         <input type="text" class="form-control  @error('name') is-invalid @enderror" id="name" name="name" placeholder="Inserisci il nome..." maxlength="255" required value="{{ old('name') }}">
                         @error('name')
                              <div class="alert alert-danger">
@@ -25,7 +25,7 @@
                      <!--fine nome-->
                      <!--descrizione-->
                      <div class="mb-3">
-                        <label for="description" class="form-label">Descrizione</label>
+                        <label for="description" class="form-label fw-bolder">Descrizione</label>
                         <textarea class="form-control" id="description" name="description" rows="3" placeholder="Inserisci la descrizione...">{{ old('description') }}</textarea>
                         @error('description')
                                 <div class="alert alert-danger">
@@ -36,8 +36,8 @@
                     <!--fine descrizione-->
                     <!--ingredienti-->
                     <div class="mb-3">
-                        <label for="ingredients" class="form-label">Ingredienti(spera gli ingredienti con una virgola)<span class="text-danger">*</span></label>
-                        <textarea class="form-control" id="ingredients" name="ingredients" rows="3" placeholder="Inserisci gli ingredienti separati da ," required>{{ old('ingredients') }}</textarea>
+                        <label for="ingredients" class="form-label fw-bolder">Ingredienti (spera gli ingredienti con una virgola) <span class="text-danger">*</span></label>
+                        <textarea class="form-control" id="ingredients" name="ingredients" rows="3" placeholder="Inserisci gli ingredienti separati da virgola (,)" required>{{ old('ingredients') }}</textarea>
                         @error('ingredients')
                              <div class="alert alert-danger">
                                  {{ $message }}
@@ -47,7 +47,7 @@
                     <!--fine ingredienti-->
                     <!--price-->
                     <div class="mb-3">
-                        <label for="price" class="form-label">Prezzo<span class="text-danger">*</span></label>
+                        <label for="price" class="form-label fw-bolder">Prezzo <span class="text-danger">*</span></label>
                         <input type="number" step="0.01" class="form-control" id="price" name="price" placeholder="Inserisci il prezzo..." min="0.5" max="999" value="{{ old('price') }}" required>
                         @error('price')
                                 <div class="alert alert-danger">
@@ -58,7 +58,7 @@
                     <!--fine price-->
                     <!--piatto visibile-->
                     <div class="mb-3">
-                        <label for="visible" class="form-label">Disponibile<span class="text-danger">*</span></label>
+                        <label for="visible" class="form-label fw-bolder">Disponibile <span class="text-danger">*</span></label>
                         <select name="visible" id="visible" class="form-select" required>
                             <option value="" {{ old('visible') == null ? 'selected' : '' }}>
                                 Seleziona una se il piatto è disponibile..
@@ -79,7 +79,7 @@
                     <!--fine piatto visibile-->
                     <!--Image-->
                     <div class="mb-3">
-                        <label for="image" class="form-label"> Carica l'immagine del piatto</label>
+                        <label for="image" class="form-label fw-bolder">Carica l'immagine del piatto</label>
                         <input class="form-control" type="file" id="image" name="image">
                         {{-- gestione errore --}}
                         @error('image')

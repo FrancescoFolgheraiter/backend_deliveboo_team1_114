@@ -93,32 +93,33 @@ class OrderController extends Controller
         
 
         // filtro gli ordini in base all'utente loggato
-        $orders = Order::whereHas('dishes', function ($query) {
-
-            // scope molto particolari
-            $user = auth()->user();
-
+        $orders = Order::selectRaw('YEAR(date) as year, MONTH(date) as month, SUM(total_price) as total_price')
+        ->whereHas('dishes', function ($query) use ($user) {
             $query->where('user_id', $user->id);
-        })->orderBy('date')->get();
-
+        })
+        ->orderBy('year')
+        ->orderBy('month')
+        ->groupBy('year', 'month')
+        ->get();
+        
         $totalPrice=[];
-
+        
         foreach ($orders as $order) {
             $totalPrice[]=$order->total_price;
-            $date[]=$order->date;
+            $labels[] =  str_pad($order->month, 2, '0', STR_PAD_LEFT). '-' .$order->year ;
         }
         $chartjs = app()->chartjs
         ->name('lineChartTest')
         ->type('line')
         ->size(['width' => 400, 'height' => 200])
-        ->labels($date)
+        ->labels($labels)
         ->datasets([
             [
                 "label" => "Andamento vendite",
-                'backgroundColor' => "rgba(38, 185, 154, 0.31)",
-                'borderColor' => "rgba(38, 185, 154, 0.7)",
-                "pointBorderColor" => "rgba(38, 185, 154, 0.7)",
-                "pointBackgroundColor" => "rgba(38, 185, 154, 0.7)",
+                'backgroundColor' => "rgba(241, 100, 71, 0.31)",
+                'borderColor' => "rgba(241, 100, 71, 1)",
+                "pointBorderColor" => "rgba(241, 100, 71, 0.7)",
+                "pointBackgroundColor" => "rgba(241, 100, 71, 0.7)",
                 "pointHoverBackgroundColor" => "#fff",
                 "pointHoverBorderColor" => "rgba(220,220,220,1)",
                 "data" => $totalPrice,

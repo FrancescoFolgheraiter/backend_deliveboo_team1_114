@@ -6,8 +6,8 @@
 // importo tutti i mixins SCSS
 @import './partials/mixins.scss';
 
-// importo button.scss
-@import './button.scss';
+// importo details.scss
+@import './details.scss';
 
 // importo scrollbar.scss
 @import './scrollbar.scss';
@@ -163,6 +163,40 @@ main{
     }
 }
 
+.food-card {
+    width: 220px;
+    height: 280px;
+    border-radius: 17px;
+    background: transparent;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    -webkit-transition: 0.5s ease-out;
+    transition: 0.5s ease-out;
+    overflow: visible;
+}
 
+.food-card:hover {
+    border: 1px solid $aside;
+    -webkit-box-shadow: 10px 5px 18px 0 rgba(255, 255, 255, 0.877);
+    box-shadow: 10px 5px 18px 0 rgba(255, 255, 255, 0.877);
+    transform: scale(1.05);
+    
+}
 
+.overlay{
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
 
+.food-card:hover .overlay{
+    opacity: 1;
+}
+
+.user-card-body:hover{
+    width: 100%;
+    height: 100%;
+    border: 1px solid transparent;
+    border-radius: 17px;
+    background-color: rgba(0, 0, 0, 0.8);
+}

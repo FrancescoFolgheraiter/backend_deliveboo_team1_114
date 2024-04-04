@@ -86,4 +86,48 @@ class OrderController extends Controller
     {
         //
     }
+
+    public function statistic()
+    {
+        $user = auth()->user();
+        
+
+        // filtro gli ordini in base all'utente loggato
+        $orders = Order::whereHas('dishes', function ($query) {
+
+            // scope molto particolari
+            $user = auth()->user();
+
+            $query->where('user_id', $user->id);
+        })->orderBy('date')->get();
+
+        $totalPrice=[];
+
+        foreach ($orders as $order) {
+            $totalPrice[]=$order->total_price;
+            $date[]=$order->date;
+        }
+        $chartjs = app()->chartjs
+        ->name('lineChartTest')
+        ->type('line')
+        ->size(['width' => 400, 'height' => 200])
+        ->labels($date)
+        ->datasets([
+            [
+                "label" => "Andamento vendite",
+                'backgroundColor' => "rgba(38, 185, 154, 0.31)",
+                'borderColor' => "rgba(38, 185, 154, 0.7)",
+                "pointBorderColor" => "rgba(38, 185, 154, 0.7)",
+                "pointBackgroundColor" => "rgba(38, 185, 154, 0.7)",
+                "pointHoverBackgroundColor" => "#fff",
+                "pointHoverBorderColor" => "rgba(220,220,220,1)",
+                "data" => $totalPrice,
+                "fill" => false,
+            ]
+        ])
+        ->options([
+        ]);
+
+        return view('admin.orders.statistic', compact('chartjs','user'));
+    }
 }

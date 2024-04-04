@@ -33,8 +33,10 @@ Route::prefix('admin')
     Route::resource('dishes', AdminDishController::class);
     Route::resource('orders', AdminOrderController::class)->only([
         'index',
-        'show'
+        'show',
     ]);
+    //rotta per la pagina di statistiche, non potevo aggiungerla al resource
+    Route::get('/dashboard/orders/statistics', [AdminOrderController::class, 'statistic'])->name('dashboard.orders.statistics');
 });
 
 require __DIR__.'/auth.php';

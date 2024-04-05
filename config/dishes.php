@@ -243,7 +243,7 @@ return [
     ],
     [
         "nome"=> "Cheeseburger",
-        "immagine"=> "img/dishes/burger-cheese.jpg",
+        "immagine"=> "img/dishes/cheese-burger.jpg",
         "descrizione"=> "Un'icona della cucina americana, il Cheeseburger è un morbido panino con un succulento hamburger, formaggio fuso, lattuga croccante, pomodoro fresco e cipolla. Un piatto che accontenta tutti i gusti.",
         "ingredienti"=> "pane, hamburger, formaggio, lattuga, pomodoro, cipolla",
         "prezzo"=> 8.50,

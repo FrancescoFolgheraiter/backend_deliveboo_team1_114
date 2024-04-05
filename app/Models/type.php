@@ -9,6 +9,11 @@ class type extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'name',
+        'description',
+        'image'
+    ];
     /*
         Relationships
     */

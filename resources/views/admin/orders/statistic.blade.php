@@ -5,19 +5,35 @@
 
 @section('main-content')
 
-<h1>
-    Statistiche
-</h1>
+<div class="row">
+    <div class="col">
+        <div class="card p-2">
+            {{-- catch di errore --}}
+            @if(session('error'))
+            <div class="alert alert-danger">
+                {{ session('error') }}
+            </div>
+            @endif
+                <h1 class="text-center">
+                    Statistiche
+                </h1>
+                <!--Grafico vendite 2024-->
+                <div class=" m-auto w-75 ">
+                    {!! $sales->render() !!}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 {{-- <div style="width: 800px;">
     <canvas id="acquisitions"></canvas>
 </div> --}}
 
-{{-- example.blade.php --}} 
 
-<div style="width:75%;">
-    {!! $chartjs->render() !!}
-</div>
+
+
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 @endsection

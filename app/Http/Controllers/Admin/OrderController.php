@@ -101,14 +101,15 @@ class OrderController extends Controller
         ->orderBy('month')
         ->groupBy('year', 'month')
         ->get();
-        
-        $totalPrice=[];
+
+        $totalPrice = [];
         
         foreach ($orders as $order) {
-            $totalPrice[]=$order->total_price;
+            $totalPrice[] = $order->total_price;
             $labels[] =  str_pad($order->month, 2, '0', STR_PAD_LEFT). '-' .$order->year ;
         }
-        $chartjs = app()->chartjs
+
+        $sales = app()->chartjs
         ->name('lineChartTest')
         ->type('line')
         ->size(['width' => 400, 'height' => 200])
@@ -129,6 +130,6 @@ class OrderController extends Controller
         ->options([
         ]);
 
-        return view('admin.orders.statistic', compact('chartjs','user'));
+        return view('admin.orders.statistic', compact('sales','user'));
     }
 }

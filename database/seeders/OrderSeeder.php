@@ -32,7 +32,7 @@ class OrderSeeder extends Seeder
         $ordersData = config('orders');
 
         //per incrementare la consistenza dei dati creiamo molti order attraverso un ciclo for normale
-        for ($i=0; $i < 20; $i++) { 
+        for ($i=0; $i < 60; $i++) { 
             //il foreach va a recuperarmi dalla struttura dati
             //dei dati verosimili
             foreach ($ordersData as $customer) {

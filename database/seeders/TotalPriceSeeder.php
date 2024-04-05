@@ -18,7 +18,7 @@ class TotalPriceSeeder extends Seeder
         $orders = Order::all();
         //mi serve per definire un 20 % delle date create 
         //con la data di oggi vedi logica di OrderSeeder
-        $populated = 20;
+        $populated = 10;
 
         foreach ($orders as $order){
             //viene assegnata qui la data perchè altrimenti veniva sovrascritta se veniva
@@ -30,7 +30,7 @@ class TotalPriceSeeder extends Seeder
                 $order->date = now()->startOfDay()->toDateString().' '.fake()->time();
             }
             else{
-                $order->date = fake()->dateTimeBetween('2024-01-01', 'now')->format('Y-m-d H:i:s');
+                $order->date = fake()->dateTimeBetween('2022-01-01', 'now')->format('Y-m-d H:i:s');
             }
             //inizializzo una variabile total price total price
             $totalPrice = 0;

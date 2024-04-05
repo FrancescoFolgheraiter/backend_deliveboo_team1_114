@@ -33,8 +33,12 @@ Route::prefix('admin')
     Route::resource('dishes', AdminDishController::class);
     Route::resource('orders', AdminOrderController::class)->only([
         'index',
-        'show'
+        'show',
     ]);
+    //rotta per la pagina di statistiche del corrente anno
+    Route::get('statistics/salesCurrentYear', [AdminOrderController::class, 'salesCurrentYear'])->name('statistics.salesCurrentYear');
+    //rotta per la pagina di statistiche totali
+    Route::get('statistics/totalSales', [AdminOrderController::class, 'totalSales'])->name('statistics.totalSales');
 });
 
 require __DIR__.'/auth.php';

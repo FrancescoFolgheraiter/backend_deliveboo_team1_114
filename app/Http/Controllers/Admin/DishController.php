@@ -87,8 +87,15 @@ class DishController extends Controller
     public function edit(Dish $dish)
     {
         $user = auth()->user();
-        $dish = dish::where('user_id',$user->id)->firstOrFail();
-        return view('admin.dishes.edit', compact('dish', 'user'));
+        //proteggo la rotta che può essere visualizzata solo dal utente loggato per i suoi piatti
+        //e proteggo la rotta nel caso sia valorizzata la colonna delete per 
+        //evitare forzature di url
+        if($user->id == $dish->user_id && $dish->delete == null ){
+            return view('admin.dishes.edit', compact('dish', 'user'));
+        }
+        else{
+            return redirect()->route('admin.dishes.index')->with('error', 'Non sei autorizzato a visualizzare questo ordine.');
+        }
     }
 
     /**

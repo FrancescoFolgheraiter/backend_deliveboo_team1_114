@@ -17,7 +17,7 @@
                         </div>
                     </div>
                 @endif
-                <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
+                <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data" id="register">
                     @csrf
                     
                     <div class="row">
@@ -38,7 +38,7 @@
     
                             <!-- Password -->
                             <div class="mt-4 form-floating">
-                                <input type="password" id="password" name="password" class="form-control">
+                                <input type="password" id="password" name="password" class="form-control" id="password">
                                 <label for="password">
                                     Password
                                 </label>
@@ -63,7 +63,7 @@
     
                             <!-- Confirm Password -->
                             <div class="mt-4 form-floating">
-                                <input type="password" id="password_confirmation" name="password_confirmation" class="form-control">
+                                <input type="password" id="password_confirmation" name="password_confirmation" class="form-control" id="password_confirmation">
                                 <label for="password_confirmation">
                                     Conferma Password
                                 </label>
@@ -117,4 +117,37 @@
             </div>
         </div>
     </div>
+
+    <script>
+        document.getElementById('register').addEventListener('submit', function(event) {
+            //verifica per i types se sono stati checcati
+            let types = document.querySelectorAll('input[type="checkbox"]');
+            let checked = false;
+            //verifica se le password corrispondono
+            let password = document.getElementById('password').value;
+            let confirmPassword = document.getElementById('password_confirmation').value;
+            for (let i = 0; i < types.length; i++) {
+                if (types[i].checked) {
+                    checked = true;
+                    break;
+                }
+            }
+            //se una delle due verifiche va a buon fine interrompo l'evento di submit
+            if (!checked || password !== confirmPassword) {
+                event.preventDefault();
+            }
+            //messaggi personalizzati 
+            if(!checked && password !== confirmPassword){
+                alert('Selezionare almeno un tipo e le password non corrispondono.');
+            }
+            else if(!checked){
+                alert('Seleziona almeno un tipo');
+            }
+            else{
+                alert('Le password non corrispondono.');
+            }
+            
+        });
+    </script>
 @endsection
+

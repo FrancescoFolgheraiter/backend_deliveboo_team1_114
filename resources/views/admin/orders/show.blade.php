@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('page-title', 'Dashboard')
+@section('page-title', 'Ordine')
 
 @section('main-content')
     <div class="row">
@@ -57,7 +57,7 @@
                         Ordinato da 
                     </h3>
                     <h2>
-                        <span class="text-color-3 fw-bolder">{{ $order->name }} {{ $order->surname }}</span>
+                        <span class="text-color-2 fw-bolder">{{ $order->name }} {{ $order->surname }}</span>
                     </h2>  
                 </div>
                 <div class="mt-4 text-center">
@@ -65,7 +65,7 @@
                         <h4 class="mb-2">
                             Ordinato in data 
                         </h4>
-                        <h3 class="text-color-3 fw-bolder">
+                        <h3 class="text-color-2 fw-bolder">
                             {{ $order->date }}
                         </h3>
                     </div>
@@ -74,7 +74,7 @@
                             <h4 class="mb-2">
                                 Indirizzo dell'ordine
                             </h4>
-                            <h3 class="text-color-3 fw-bolder">
+                            <h3 class="text-color-2 fw-bolder">
                                 {{ $order->address }}
                             </h3>
                         </div>
@@ -84,7 +84,7 @@
                             <h4 class="mb-2">
                                 Numero di telefono
                             </h4>
-                            <h3 class="text-color-3 fw-bolder">
+                            <h3 class="text-color-2 fw-bolder">
                                 +39 {{ $order->phone_number }}
                             </h3>
                         </div>
@@ -94,7 +94,7 @@
                             <h4 class="mb-2">
                                 Valore dell'ordine
                             </h4>
-                            <h3 class="text-color-3 fw-bolder">
+                            <h3 class="text-color-2 fw-bolder">
                                 {{ $order->total_price }} €
                             </h3>
                         </div>
@@ -104,7 +104,7 @@
                                 Note lasciate dal cliente
                             </h4>
                             @if (!empty($order->note))
-                                <h5 class="text-color-3 fw-bolder">
+                                <h5 class="text-color-2 fw-bolder">
                                     {{ $order->note }}
                                 </h5>
                             @else

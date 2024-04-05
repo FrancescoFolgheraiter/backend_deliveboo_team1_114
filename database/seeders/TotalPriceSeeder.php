@@ -30,7 +30,7 @@ class TotalPriceSeeder extends Seeder
                 $order->date = now()->startOfDay()->toDateString().' '.fake()->time();
             }
             else{
-                $order->date = fake()->dateTimeBetween('2024-01-01', 'now')->format('Y-m-d H:i:s');
+                $order->date = fake()->dateTimeBetween('2022-01-01', 'now')->format('Y-m-d H:i:s');
             }
             //inizializzo una variabile total price total price
             $totalPrice = 0;

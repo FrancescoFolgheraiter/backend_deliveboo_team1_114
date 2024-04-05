@@ -32,7 +32,7 @@ class OrderSeeder extends Seeder
         $ordersData = config('orders');
 
         //per incrementare la consistenza dei dati creiamo molti order attraverso un ciclo for normale
-        for ($i=0; $i < 20; $i++) { 
+        for ($i=0; $i < 60; $i++) { 
             //il foreach va a recuperarmi dalla struttura dati
             //dei dati verosimili
             foreach ($ordersData as $customer) {
@@ -41,7 +41,7 @@ class OrderSeeder extends Seeder
                 $order = new Order();
 
                 //---------gestione inserimento di note nel solo 20% dei casi----------
-                $populated = 20;
+                $populated = 10;
                 $randomNumber = fake()->numberBetween(1, 100);
                 //verifico se il numero uscito è maggiore di 20
                 if ($randomNumber <= $populated) {

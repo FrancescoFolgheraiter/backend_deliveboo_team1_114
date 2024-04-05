@@ -8,7 +8,8 @@ use Illuminate\Http\Request;
 
 //Models
 use App\Models\Order;
-
+//Helpers
+use Carbon\Carbon;
 class OrderController extends Controller
 {
     /**
@@ -87,36 +88,41 @@ class OrderController extends Controller
         //
     }
 
-    public function statistic()
+    public function salesCurrentYear()
     {
         $user = auth()->user();
         
-
-        // filtro gli ordini in base all'utente loggato
+        //prelevo l'anno corrente tramite carbon
+        $currentYear = Carbon::now()->year;
+        // filtro gli ordini in base all'utente loggato con whereHas
+        // selectrow permette di creare una struttura dati con YEAR(preso dalla data), MOTH (preso dalla data)
+        //SUM con il totale della somma delle vendite mentre orderBy lo ordino per mesi
+        //e raggruppo per anno e mese
         $orders = Order::selectRaw('YEAR(date) as year, MONTH(date) as month, SUM(total_price) as total_price')
         ->whereHas('dishes', function ($query) use ($user) {
             $query->where('user_id', $user->id);
         })
-        ->orderBy('year')
+        ->whereYear('date', $currentYear)
         ->orderBy('month')
         ->groupBy('year', 'month')
         ->get();
 
         $totalPrice = [];
-        
+        //il foreach mi permette di estrapolare i mesi e il totale dei prezzi
+        //per successivamente utilizzarli con chartjs        
         foreach ($orders as $order) {
             $totalPrice[] = $order->total_price;
             $labels[] =  str_pad($order->month, 2, '0', STR_PAD_LEFT). '-' .$order->year ;
         }
 
-        $sales = app()->chartjs
+        $chart = app()->chartjs
         ->name('lineChartTest')
         ->type('line')
         ->size(['width' => 400, 'height' => 200])
         ->labels($labels)
         ->datasets([
             [
-                "label" => "Andamento vendite",
+                "label" => "Andamento vendite anno corrente",
                 'backgroundColor' => "rgba(241, 100, 71, 0.31)",
                 'borderColor' => "rgba(241, 100, 71, 1)",
                 "pointBorderColor" => "rgba(241, 100, 71, 0.7)",
@@ -130,6 +136,57 @@ class OrderController extends Controller
         ->options([
         ]);
 
-        return view('admin.orders.statistic', compact('sales','user'));
+        return view('admin.statistics.salesCurrentYear', compact('chart','user'));
     }
+
+    public function totalSales()
+    {
+        $user = auth()->user();
+        
+        //prelevo l'anno corrente tramite carbon
+        $currentYear = Carbon::now()->year;
+        // query che mi permette di prelevare e filtrare gli stessi dati
+        //della query precedente solo che prendiamo in considerazione tutti gli anni
+        //aggregando i dati per totale vendite mese
+        $orders = Order::selectRaw('YEAR(date) as year, MONTH(date) as month, SUM(total_price) as total_price')
+        ->whereHas('dishes', function ($query) use ($user) {
+            $query->where('user_id', $user->id);
+        })
+        ->orderBy('year')
+        ->orderBy('month')
+        ->groupBy('year', 'month')
+        ->get();
+
+        $totalPrice = [];
+        //il foreach mi permette di estrapolare i mesi e il totale dei prezzi
+        //per successivamente utilizzarli con chartjs        
+        foreach ($orders as $order) {
+            $totalPrice[] = $order->total_price;
+            $labels[] =  str_pad($order->month, 2, '0', STR_PAD_LEFT). '-' .$order->year ;
+        }
+
+        $chart = app()->chartjs
+        ->name('lineChartTest')
+        ->type('line')
+        ->size(['width' => 400, 'height' => 200])
+        ->labels($labels)
+        ->datasets([
+            [
+                "label" => "Andamento vendite anno corrente",
+                'backgroundColor' => "rgba(241, 100, 71, 0.31)",
+                'borderColor' => "rgba(241, 100, 71, 1)",
+                "pointBorderColor" => "rgba(241, 100, 71, 0.7)",
+                "pointBackgroundColor" => "rgba(241, 100, 71, 0.7)",
+                "pointHoverBackgroundColor" => "#fff",
+                "pointHoverBorderColor" => "rgba(220,220,220,1)",
+                "data" => $totalPrice,
+                "fill" => false,
+            ]
+        ])
+        ->options([
+        ]);
+
+        return view('admin.statistics.salesCurrentYear', compact('chart','user'));
+    }
+
 }

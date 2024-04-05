@@ -35,8 +35,10 @@ Route::prefix('admin')
         'index',
         'show',
     ]);
-    //rotta per la pagina di statistiche, non potevo aggiungerla al resource
-    Route::get('dashboard/orders/statistics', [AdminOrderController::class, 'statistic'])->name('dashboard.orders.statistics');
+    //rotta per la pagina di statistiche del corrente anno
+    Route::get('statistics/salesCurrentYear', [AdminOrderController::class, 'salesCurrentYear'])->name('dashboard.statistics.salesCurrentYear');
+    //rotta per la pagina di statistiche totali
+    Route::get('statistics/totalSales', [AdminOrderController::class, 'totalSales'])->name('dashboard.statistics.totalSales');
 });
 
 require __DIR__.'/auth.php';

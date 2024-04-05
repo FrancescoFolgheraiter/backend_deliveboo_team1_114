@@ -19,7 +19,7 @@
                 </h1>
                 <!--Grafico vendite 2024-->
                 <div class=" m-auto w-75 ">
-                    {!! $sales->render() !!}
+                    {!! $chart->render() !!}
                 </div>
             </div>
         </div>

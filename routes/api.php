@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 //importazione controller API Project
 use App\Http\Controllers\Api\DishController as ApiDishController;
 use App\Http\Controllers\Api\TypeController as ApiTypeController;
+use App\Http\Controllers\Api\OrderController as ApiOrderController;
 
 
 /*
@@ -33,5 +34,10 @@ Route::name('api.')->group(function() {
     //Rotta per Index delle mie api TypeColtroller che permettono di far visualizzare i tipi
     Route::resource('types', ApiTypeController::class)->only([
         'index'
+    ]);
+
+    //Rotta per il salvataggio dei dati dell'UI che effettua un ordine
+    ROute::resource('orders', ApiOrderController::class)->only([
+        'store'
     ]);
 });

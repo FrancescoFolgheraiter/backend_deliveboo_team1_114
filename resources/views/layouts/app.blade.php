@@ -26,7 +26,7 @@
                         <h1 class="text-center mt-3">
                             {{ $user->resturant_name }}
                         </h1>
-                        <p class="fw-bolder text-color">
+                        <p class="fw-bolder text-center text-color">
                             {{ $user->address }}
                         </p>
                     </div>

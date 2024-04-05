@@ -107,7 +107,7 @@ return [
     ],
     [
         'nome' => 'Pizza Quattro Stagioni',
-        'immagine' => 'pizza-quattro-stagioni.jpg',
+        'immagine' => 'img/dishes/pizza-quattro-stagioni.jpg',
         'descrizione' => 'E\' un\'opera d\'arte culinaria con mozzarella fresca, pomodori San Marzano, funghi champignon, carciofi freschi e olive nere. Un\'esplosione di gusto che conquista ogni palato.',
         'ingredienti' => 'mozzarella fresca, pomodori San Marzano, funghi champignon, carciofi freschi, olive nere',
         'prezzo' => 9.20,
@@ -115,7 +115,7 @@ return [
     ],
     [
         'nome' => 'Pizza Quattro Stagioni',
-        'immagine' => 'pizza-quattro-stagioni-3.jpg',
+        'immagine' => 'img/dishes/pizza-quattro-stagioni-3.jpg',
         'descrizione' => 'E\' un tripudio di sapori con mozzarella filante, pomodoro fresco, funghi champignon, carciofi croccanti e olive verdi. Una festa per il palato da gustare ad ogni morso.',
         'ingredienti' => 'mozzarella, pomodoro, funghi champignon, carciofi, olive verdi',
         'prezzo' => 9.00,

@@ -23,7 +23,7 @@
                     <div class="row">
                         <div class="col-12 col-md-6 mt-4">
                             <!-- Email Address -->
-                            <div class="form-floating ">
+                            <div class="form-floating">
                                 <input type="email" name="email" class="form-control" id="email" placeholder="Email">
                                 <label for="email">Email</label>
                             </div>

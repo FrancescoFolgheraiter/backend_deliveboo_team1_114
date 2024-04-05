@@ -18,7 +18,7 @@ class TotalPriceSeeder extends Seeder
         $orders = Order::all();
         //mi serve per definire un 20 % delle date create 
         //con la data di oggi vedi logica di OrderSeeder
-        $populated = 20;
+        $populated = 10;
 
         foreach ($orders as $order){
             //viene assegnata qui la data perchè altrimenti veniva sovrascritta se veniva

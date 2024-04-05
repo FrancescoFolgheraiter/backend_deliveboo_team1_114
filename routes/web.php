@@ -36,9 +36,9 @@ Route::prefix('admin')
         'show',
     ]);
     //rotta per la pagina di statistiche del corrente anno
-    Route::get('statistics/salesCurrentYear', [AdminOrderController::class, 'salesCurrentYear'])->name('dashboard.statistics.salesCurrentYear');
+    Route::get('statistics/salesCurrentYear', [AdminOrderController::class, 'salesCurrentYear'])->name('statistics.salesCurrentYear');
     //rotta per la pagina di statistiche totali
-    Route::get('statistics/totalSales', [AdminOrderController::class, 'totalSales'])->name('dashboard.statistics.totalSales');
+    Route::get('statistics/totalSales', [AdminOrderController::class, 'totalSales'])->name('statistics.totalSales');
 });
 
 require __DIR__.'/auth.php';

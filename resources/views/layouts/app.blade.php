@@ -83,6 +83,29 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="accordion-item mt-5">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button fw-bolder collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        <h4>
+                                            <a class="nav-link" href="{{ route('admin.orders.index') }}">Statistiche</a>
+                                        </h4>
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body text-color-2 fw-bolder">
+                                        <u>
+                                            <a class="nav-link" href="{{ route('admin.statistics.salesCurrentYear') }}">Vendite anno corrente</a>
+                                        </u>
+                                    </div>
+                                </div>
+                                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body text-color-2 fw-bolder">
+                                        <u>
+                                            <a class="nav-link" href="{{ route('admin.statistics.totalSales') }}">Totale vendite</a>
+                                        </u>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="bottom-aside">

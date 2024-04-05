@@ -41,7 +41,7 @@ class OrderSeeder extends Seeder
                 $order = new Order();
 
                 //---------gestione inserimento di note nel solo 20% dei casi----------
-                $populated = 10;
+                $populated = 20;
                 $randomNumber = fake()->numberBetween(1, 100);
                 //verifico se il numero uscito è maggiore di 20
                 if ($randomNumber <= $populated) {

@@ -53,6 +53,17 @@ main{
         color: $aside;
     }
 
+    .text-shadow {
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    }
+    
+    /* ul{
+        list-style-type: none;
+        li{
+
+        }
+    } */
+
     .btn-color{
         background-color: $details;
     }
@@ -64,7 +75,16 @@ main{
     @include custom-container-style;
 }
 .img-box{
-    max-width: $max-width-500;
+    width: 100%;
+    height: $height-400;
+
+    img{
+       @include image-style-100;
+    }
+}
+.logo-img-box{
+    width: 100%;
+    height: $height-350;
 
     img{
        @include image-style-100;
@@ -221,4 +241,38 @@ main{
     border: 1px solid transparent;
     border-radius: 17px;
     background-color: rgba(0, 0, 0, 0.8);
+}
+
+// modifiche sulla card di bootstrap
+.card{
+    --bs-card-spacer-y: 1rem;
+    --bs-card-spacer-x: 1rem;
+    --bs-card-title-spacer-y: 0.5rem;
+    --bs-card-title-color: ;
+    --bs-card-subtitle-color: ;
+    --bs-card-border-width: var(--bs-border-width);
+    --bs-card-border-color: var(--bs-border-color-translucent);
+    --bs-card-border-radius: var(--bs-border-radius);
+    --bs-card-box-shadow: ;
+    --bs-card-inner-border-radius: calc(var(--bs-border-radius) -(var(--bs-border-width)));
+    --bs-card-cap-padding-y: 0.5rem;
+    --bs-card-cap-padding-x: 1rem;
+    --bs-card-cap-bg: rgba(var(--bs-body-color-rgb), 0.03);
+    --bs-card-cap-color: ;
+    --bs-card-height: ;
+    --bs-card-color: ;
+    --bs-card-bg: var(--bs-body-bg);
+    --bs-card-img-overlay-padding: 1rem;
+    --bs-card-group-margin: 0.75rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    height: var(--bs-card-height);
+    color: var(--bs-body-color);
+    word-wrap: break-word;
+    background-color: var(--bs-card-bg);
+    background-clip: border-box;
+    border: none;
+    border-radius: var(--bs-card-border-radius);
 }

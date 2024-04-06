@@ -18,14 +18,14 @@ class TypeUserSeeder extends Seeder
      */
     public function run(): void
     {
-        
+        $resturants = config('usersData');
         
         //popolazione della tabella
         $users = User::all();
         //ciclo su tutti gli utenti
-        foreach ($users as $user) {
+        foreach ($users as $key => $user) {
             //prelevo da 1 a 3 tipologie random
-            $types = type::inRandomOrder()->limit(rand(1, 3))->get();
+            $types = Type::whereIn('name', $resturants[$key]['types'])->get();
             //leggo i tipi prelevati e li utilizzo la relazione per aggiungerli al db
             foreach ($types as $type) {
                 $user->types()->attach($type->id);

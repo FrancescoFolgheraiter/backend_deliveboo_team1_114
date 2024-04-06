@@ -45,8 +45,8 @@ class TypeSeeder extends Seeder
                 'description' => ''
             ],
             [
-                'name' => 'Giapponese',
-                'image' => 'giapponese.jpg',
+                'name' => 'Meditteranea',
+                'image' => 'meditteranea.jpg',
                 'description' => ''
             ],
             [

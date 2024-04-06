@@ -5,103 +5,102 @@
 @section('main-content')
     <div class="row">
         <div class="col-9">
-            <div class="card my-user-card">
-                <div class="card-body d-flex justify-content-center">
-                    <div class="row w-100">
-                        <div class="col-md-9 col-12 w-100">
-                            <div class="flex-grow-1">
-                                <div>
-                                    <h1 class="text-center mb-3">
-                                        {{ $dish->name }}
-                                    </h1>
-                                </div>            
+            <div class="p-0 card my-user-card">
+                <div class="d-flex justify-content-center">
+                    <div>
+                        {{-- se l'img non è null, fai vedere l'img del piatto --}}
+                        @if ($dish->image != null)
+                            <div class="img-box mx-auto">
+                                <img src="/storage/{{ $dish->image }}" alt="{{ $dish->name }}">
                             </div>
-                            {{-- se l'img non è null, fai vedere l'img del piatto --}}
-                            @if ($dish->image != null)
-                                <div class="img-box mx-auto mb-4">
-                                    <img src="/storage/{{ $dish->image }}" alt="{{ $dish->name }}">
-                                </div>
-                            @endif
-        
-                            <div class="mb-5 text-center">
-                                <h3 class="mb-3 text-color-2">
-                                    Descrizione
-                                </h3>
-                                <h3>
-                                    {{ $dish->description }}
-                                </h3>
-                            </div>   
+                        @endif
+                        <h1 class="text-center text-color-2 text-shadow">
+                            {{ $dish->name }}
+                        </h1>
+                        <div class="text-center mt-3">
+                            {{-- in base alla visibilità del prodotto, ritorna if o else --}}
+                            <div class="mb-4">
+                                @if ($dish->visible == 0)
+                                    <span class="fw-bolder text-color-3">
+                                        Questo piatto non è al momento disponibile
+                                    </span>  
+                                @else
+                                    <span class="fw-bolder text-success">
+                                        Questo piatto è al momento disponibile 
+                                    </span>  
+                                @endif
+                            </div>  
                         </div>
+                        <div class="text-center card w-80 p-4 mx-auto">
+                            <h3 class="text-shadow">
+                                {{ $dish->description }}
+                            </h3>
+                        </div>   
                     </div>
                     <!--fine contenuto principale di interazione utente-->
                 </div>
             </div>
         </div>
-        <div class="col-3">
+        <div class="col-3 d-flex flex-column justify-content-between">
             
-            <div class="card my-aside-card px-2">
-                <div class="text-center my-3">
-                    <h3>
-                        Disponibilità
-                    </h3>
-                    {{-- in base alla visibilità del prodotto, ritorna if o else --}}
-                    <div class="mb-4">
-                        @if ($dish->visible == 0)
-                            <span class="fw-bolder text-danger">
-                                Questo piatto non è al momento disponibile
-                            </span>  
-                        @else
-                            <span class="fw-bolder text-success">
-                                Questo piatto è al momento disponibile 
-                            </span>  
-                        @endif
-                    </div>  
-                </div>
-                <div class="text-center">
-                    <div class="mb-5">
-                        <h3 class="mb-2">
-                            Ingredienti
-                        </h3>
-                        <h4 class="text-color-2">
-                            {{ $dish->ingredients }}
-                        </h4>
-                    </div>
-                    <div class="mb-5">
-                        <div class="mb-5">
-                            <h3 class="mb-2">
-                                Prezzo attuale
-                            </h3>
-                            <h4 class="text-color-2">
-                                {{ $dish->price }} €
-                            </h4>
+            <div class="card my-aside-card">
+                <div>
+                    {{-- se l'img non è null, fai vedere l'img del piatto --}}
+                    @if ($dish->image != null)
+                        <div class="logo-img-box mx-auto position-relative">
+                            <img src="/image/User/deliveboo-logo.png" alt="Logo DeliveBoo">
                         </div>
-                    </div>
-                    <div class="mb-5">
-                        <div class="mb-5">
-                            <h3>
-                                Ristorante
-                            </h3>
-    
-                            {{-- mi vado a recuperare l'user(ristorante) che corrisponde a quel piatto --}}
-                            <h4 class="text-color-2">
-                                {{ $dish->user->resturant_name }}
-                            </h4>
+                    @endif
+                    <div class="position-absolute bottom-0">
+                        <div class="text-center">
+                            <div class="mb-5">
+                                <div class="mb-5">
+                                    <h3>
+                                        Ristorante
+                                    </h3>
+            
+                                    {{-- mi vado a recuperare l'user(ristorante) che corrisponde a quel piatto --}}
+                                    <h4 class="text-color-2">
+                                        {{ $dish->user->resturant_name }}
+                                    </h4>
+                                </div>
+                            </div>
+                            <div class="mb-5 px-2">
+                                <h3 class="my-3 text-center">
+                                    Ingredienti
+                                </h3>
+                                <div>
+                                    @php
+                                        $ingredients = explode(', ', $dish->ingredients);
+                                    @endphp
+                                    @foreach($ingredients as $ingredient)
+                                        <span class="badge btn-color">
+                                            {{ $ingredient }}
+                                        </span>
+                                    @endforeach
+                                </div>
+                                {{-- <div>
+                                    {{ $dish->ingredients }}
+                                </div> --}}
+                            </div>
+                            <div class="mb-5">
+                                <div class="mb-5">
+                                    <h3 class="mb-2">
+                                        Prezzo attuale
+                                    </h3>
+                                    <h4 class="text-color-2">
+                                        {{ $dish->price }} €
+                                    </h4>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div>
-                        <div class="mb-5 d-flex justify-content-center flex-column">
+                        <div class="my-3 d-flex justify-content-around">
                             <div>
-                                <h4 class="mb-2">
-                                    Modifica il tuo piatto
-                                </h4>
                                 <a href="{{ route('admin.dishes.edit', ['dish' => $dish->id]) }}" class="btn btn-warning fw-bolder text-white">
                                     Modifica
                                 </a>
                             </div>
-                            <div class="mt-5">
-                                <h4 class="mb-2">
-                                    Elimina il tuo piatto
-                                </h4>
+                            <div>
                                 <a class="btn fw-bolder btn-color btn-outline-danger text-white" data-bs-toggle="modal" data-bs-target="#DishModal{{ $dish->id }}">
                                     Elimina
                                 </a>

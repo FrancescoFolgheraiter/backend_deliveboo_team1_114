@@ -11,7 +11,11 @@
         @if ($dish->delete == null)
             {{-- stampo solo nel caso delete non sia valorizzata //soft delete --}}
             <div class="col-lg-2 col-md-6 mb-4">
-                <div class="card food-card" style="background-image: url('/storage/{{ $dish->image }}');">
+                @if ($dish->image == null)
+                    <div class="food-card" style="background-image: url('/image/User/deliveboo-logo.png');">
+                @else
+                    <div class="food-card" style="background-image: url('/storage/{{ $dish->image }}');">
+                @endif
                     <div class="user-card-body">
                         <div class="card-body text-center overlay p-5">
                             <h5 class="card-title text-color-2">{{ $dish->name }}</h5>

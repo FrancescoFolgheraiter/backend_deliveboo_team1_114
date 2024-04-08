@@ -25,6 +25,10 @@ main{
     .my-user-card{
         height: 80vh;
         overflow-y: auto;
+
+        .card{
+            border: none;
+        }
     }
     .my-aside-card{
         height: 80vh;
@@ -76,7 +80,7 @@ main{
 }
 .img-box{
     width: 100%;
-    height: $height-400;
+    height: $height-450;
 
     img{
        @include image-style-100;
@@ -110,6 +114,7 @@ main{
         @include image-style-edit-user;
     }
 }
+
 .custom-card-register{
     @include custom-card-style-1;
     //container dei tipi di locale
@@ -128,7 +133,6 @@ main{
         background-color: $details;
     }
 }
-
 .custom-card-login{
     @include custom-card-style-2;
 
@@ -139,9 +143,11 @@ main{
         background-color: $details;
     }
 }
-
 .custom-card-create{
     @include custom-card-style-3;
+}
+.custom-card-user{
+    @include custom-card-style-4;
 }
 
 //modifica ai check della registrazione
@@ -273,6 +279,6 @@ main{
     word-wrap: break-word;
     background-color: var(--bs-card-bg);
     background-clip: border-box;
-    border: none;
+    border: 1px solid lightgray;
     border-radius: var(--bs-card-border-radius);
 }

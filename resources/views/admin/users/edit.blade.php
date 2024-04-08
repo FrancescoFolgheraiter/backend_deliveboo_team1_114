@@ -87,7 +87,7 @@
                         </div>
                     </div>
                     <div class="d-flex justify-content-center">
-                       <button type="submit" class="btn btn-danger fw-bolder w-25">
+                       <button type="submit" class="btn btn-danger text-shadow fw-bolder w-25">
                              Modifica
                        </button>
                     </div>

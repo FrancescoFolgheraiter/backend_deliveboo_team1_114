@@ -656,5 +656,231 @@ return [
         'ingredienti' => 'polpo, paprika, olio d\'oliva, patate',
         'prezzo' => 15.00,
         'ristorante' => 11 
-    ]    
+    ],
+    //da aggiungere ancora le immagini-------------------------------------    
+    [
+        'nome' => 'Hamburger con Jalapeno e Cheddar',
+        'immagine' => 'img/dishes/hamburger-jalapeno.jpg',
+        'descrizione' => 'Il Hamburger con Jalapeno e Cheddar offre un mix di sapore piccante e cremoso. Un succulento hamburger condito con fette di jalapeno fresco, formaggio cheddar fuso, lattuga croccante, pomodoro e salsa piccante. Per gli amanti del piccante!',
+        'ingredienti' => 'pane, hamburger, jalapeno, formaggio cheddar, lattuga, pomodoro',
+        'prezzo' => 9.99,
+        'ristorante' => 1
+    ],
+    [
+        'nome' => 'Hot Dog con Cipolla e Salsa BBQ',
+        'immagine' => 'img/dishes/hot-dog-cipolla-bbq.jpg',
+        'descrizione' => 'Il Hot Dog con Cipolla e Salsa BBQ è un classico del fast food americano. Una salsiccia succulenta avvolta in un morbido panino, arricchita con cipolle caramellate, salsa BBQ, senape e ketchup. Un tripudio di sapori!',
+        'ingredienti' => 'panino, salsiccia, cipolla, salsa BBQ, senape, ketchup',
+        'prezzo' => 7.99,
+        'ristorante' => 1
+    ],
+    [
+        'nome' => 'Cheeseburger con Funghi e Swiss',
+        'immagine' =>'img/dishes/Cheeseburger-Funghi-Swiss.jpg' ,
+        'descrizione' => 'Il Cheeseburger con Funghi e Swiss è una delizia per gli amanti del formaggio e dei funghi. Un succulento hamburger impreziosito con funghi freschi, formaggio Swiss fuso, lattuga, pomodoro e maionese. Gustoso e appagante.',
+        'ingredienti' => 'pane, hamburger, funghi, formaggio Swiss, lattuga, pomodoro',
+        'prezzo' => 10.50,
+        'ristorante' => 1
+    ], 
+    [
+        'nome' => 'BBQ Ribs con Patatine Fritte',
+        'immagine' => 'img/dishes/BBQ-Ribs-Patatine-Fritte.jpg',
+        'descrizione' => 'Le BBQ Ribs con Patatine Fritte sono il piatto perfetto per gli amanti della carne e del barbecue. Costine di maiale cotte lentamente e glassate con salsa barbecue, servite con patatine fritte croccanti. Un vero tripudio di sapori e consistenze!',
+        'ingredienti' => 'costine di maiale, salsa barbecue, patatine fritte',
+        'prezzo' => 15.99,
+        'ristorante' => 1
+    ],
+    [
+        'nome' => 'Chicken Wings al Barbecue',
+        'immagine' => 'img/dishes/Chicken-Wings-BBQ.jpg',
+        'descrizione' => 'Le Chicken Wings al Barbecue sono un must per gli amanti del finger food. Ali di pollo croccanti cotte alla perfezione e condite con salsa barbecue fatta in casa. Ideali da gustare con le dita in compagnia di amici e familiari.',
+        'ingredienti' => 'ali di pollo, salsa barbecue',
+        'prezzo' => 12.99,
+        'ristorante' => 1
+    ],
+    [
+        'nome' => 'Philly Cheesesteak Sandwich',
+        'immagine' => 'img/dishes/Philly-Cheesesteak-Sandwich.jpg',
+        'descrizione' => 'Il Philly Cheesesteak Sandwich è un\'icona della cucina americana. Sottili fette di manzo grigliato, cipolle e peperoni saltati, coperti con abbondante formaggio fuso su un panino morbido e tostato. Un viaggio di gusto fino a Philadelphia!',
+        'ingredienti' => 'manzo, cipolla, peperoni, formaggio, panino',
+        'prezzo' => 11.50,
+        'ristorante' => 1
+    ],
+    [
+        'nome' => 'BBQ Pulled Pork Sandwich',
+        'immagine' => 'img/dishes/BBQ-PulledPork-Sandwich.jpg',
+        'descrizione' => 'Il BBQ Pulled Pork Sandwich è un capolavoro di sapore e tenerezza. Maiale cotto lentamente, tirato a filamenti e condito con salsa barbecue, servito su un morbido panino. Un esplosione di sapori che conquisterà ogni palato.',
+        'ingredienti' => 'maiale, salsa barbecue, panino',
+        'prezzo' => 13.50,
+        'ristorante' => 1
+    ],
+    [
+        "nome" => "Chicken Avocado Sandwich",
+        "immagine" => 'img/dishes/chicken-avocado-sandwich.jpg',
+        "descrizione" => "Un delizioso panino con pollo grigliato, avocado maturo, lattuga croccante, pomodoro fresco e maionese cremosa. Un'esplosione di gusto in ogni morso, perfetto per una pausa pranzo leggera.",
+        "ingredienti" => "pane, pollo, avocado, lattuga, pomodoro, maionese",
+        "prezzo" => 9.50,
+        'ristorante' => 2
+    ],
+    [
+        "nome" => "BLT Sandwich",
+        "immagine" => 'img/dishes/BLT-Sandwich.jpg',
+        "descrizione" => "Un classico sandwich americano composto da bacon croccante, lattuga fresca, pomodoro succoso e maionese su un morbido panino tostato. Semplice ma delizioso, perfetto per una pausa pranzo veloce.",
+        "ingredienti" => "pane, bacon, lattuga, pomodoro, maionese",
+        "prezzo" => 7.99,
+        'ristorante' => 2
+    ],
+    [
+        "nome" => "Turkey Club Sandwich",
+        "immagine" => 'img/dishes/Turkey-ClubSandwich.jpg',
+        "descrizione" => "Un'opzione sana e gustosa per una pausa pranzo leggera. Fette di tacchino arrosto, bacon croccante, lattuga fresca, pomodoro e maionese su un morbido panino. Un classico sandwich americano.",
+        "ingredienti" => "pane, tacchino, bacon, lattuga, pomodoro, maionese",
+        "prezzo" => 9.99,
+        'ristorante' => 2
+    ],
+    [
+        "nome" => "Veggie Sandwich",
+        "immagine" => 'img/dishes/Veggie-Sandwic.jpg',
+        "descrizione" => "Un panino vegetariano ricco di sapore e freschezza. Avocado maturo, lattuga croccante, pomodoro succoso, cetrioli e hummus su un morbido panino integrale. Perfetto per i vegetariani e non solo.",
+        "ingredienti" => "pane integrale, avocado, lattuga, pomodoro, cetrioli, hummus",
+        "prezzo" => 8.99,
+        'ristorante' => 2
+    ],
+    [
+        "nome" => "Grilled Cheese Sandwich",
+        "immagine" => 'img/dishes/Grilled-Cheese-Sandwich.jpg',
+        "descrizione" => "Un comfort food classico e irresistibile. Formaggio fuso tra due fette di pane tostato dorato. Semplice ma delizioso, perfetto per accompagnare una zuppa o da gustare da solo.",
+        "ingredienti" => "pane, formaggio",
+        "prezzo" => 6.50,
+        'ristorante' => 2
+    ],
+    [
+        "nome" => "Tuna Salad Sandwich",
+        "immagine" => 'img/dishes/Tuna-Sandwich.jpg',
+        "descrizione" => "Un panino leggero e salutare con insalata di tonno, lattuga croccante, pomodoro fresco e maionese su un morbido panino integrale. Perfetto per una pausa pranzo rinfrescante.",
+        "ingredienti" => "pane integrale, tonno, lattuga, pomodoro, maionese",
+        "prezzo" => 7.99,
+        'ristorante' => 2
+    ],
+    [
+        'nome' => 'Bacon King',
+        'immagine' => 'img/dishes/burger-bacon-king.jpg',
+        'descrizione' => 'Il Bacon King è un\'icona del Burger King, un panino succulento con doppia porzione di hamburger di manzo, formaggio americano fuso, sei fette di bacon croccante, ketchup e maionese su un morbido panino al sesamo.',
+        'ingredienti' => 'pane al sesamo, hamburger di manzo, formaggio americano, bacon, ketchup, maionese',
+        'prezzo' => 9.99,
+        'ristorante' => 2
+    ],
+    [
+        'nome' => 'Whopper',
+        'immagine' => 'img/dishes/Whopper.jpg',
+        'descrizione' => 'Il Whopper è il panino più famoso del Burger King, composto da un gustoso hamburger di manzo alla griglia, pomodoro fresco, lattuga croccante, cipolla, cetrioli, ketchup, maionese e sottiletta su un morbido panino al sesamo.',
+        'ingredienti' => 'pane al sesamo, hamburger di manzo, pomodoro, lattuga, cipolla, cetrioli, ketchup, maionese, sottiletta',
+        'prezzo' => 7.50,
+        'ristorante' => 2
+    ],
+    [
+        'nome' => 'Big Mac',
+        'immagine' => 'img/dishes/big-mac.jpg',
+        'descrizione' => 'Il Big Mac è uno dei panini più iconici del McDonald\'s, composto da due hamburger di manzo, lattuga, formaggio, salsa speciale, cetrioli, cipolla e sottiletta, serviti su un morbido panino con semi di sesamo.',
+        'ingredienti' => 'pane con semi di sesamo, hamburger di manzo, lattuga, formaggio, salsa speciale, cetrioli, cipolla, sottiletta',
+        'prezzo' => 7.99,
+        'ristorante' => 3
+    ],
+    [
+        'nome' => 'McChicken',
+        'immagine' => 'img/dishes/McChicken.jpg',
+        'descrizione' => 'Il McChicken è un delizioso panino composto da un petto di pollo croccante, lattuga fresca e maionese, servito su un morbido panino con semi di sesamo.',
+        'ingredienti' => 'pane con semi di sesamo, petto di pollo, lattuga, maionese',
+        'prezzo' => 6.99,
+        'ristorante' => 3
+    ],
+    [
+        'nome' => 'Chicken McNuggets (6 pezzi)',
+        'immagine' => 'img/dishes/Chicken-McNuggets.jpg',
+        'descrizione' => 'I Chicken McNuggets sono irresistibili bocconcini di pollo croccante, perfetti da gustare da soli o con una salsa a scelta.',
+        'ingredienti' => 'pollo',
+        'prezzo' => 5.99,
+        'ristorante' => 3
+    ],
+    [
+        'nome' => 'Filet-O-Fish',
+        'immagine' => 'img/dishes/Filet-O-Fish.jpg',
+        'descrizione' => 'Il Filet-O-Fish è un classico panino del McDonald\'s, composto da un filetto di merluzzo impanato, formaggio fuso e salsa tartara, servito su un morbido panino con semi di sesamo.',
+        'ingredienti' => 'pane con semi di sesamo, filetto di merluzzo impanato, formaggio, salsa tartara',
+        'prezzo' => 7.39,
+        'ristorante' => 3
+    ],
+    [
+        'nome' => 'McDouble',
+        'immagine' => 'img/dishes/McDouble.jpg',
+        'descrizione' => 'Il McDouble è un panino gustoso con due hamburger di manzo, formaggio fuso, ketchup, senape, cetrioli e cipolla, servito su un morbido panino con semi di sesamo.',
+        'ingredienti' => 'pane con semi di sesamo, hamburger di manzo, formaggio, ketchup, senape, cetrioli, cipolla',
+        'prezzo' => 6.99,
+        'ristorante' => 3
+    ],
+    [
+        'nome' => 'Big Tasty',
+        'immagine' => 'img/dishes/Big-Tasty.jpg',
+        'descrizione' => 'Il Big Tasty è uno dei preferiti del McDonald\'s, con un succulento hamburger di manzo, formaggio fuso, cetrioli croccanti, cipolle, insalata iceberg e una generosa dose di salsa Big Tasty, il tutto servito su un morbido panino con semi di sesamo.',
+        'ingredienti' => 'pane con semi di sesamo, hamburger di manzo, formaggio fuso, cetrioli, cipolle, insalata iceberg, salsa Big Tasty',
+        'prezzo' => 9.99,
+        'ristorante' => 3
+    ],
+    [
+        'nome' => 'Pizza Capricciosa',
+        'immagine' => 'img/dishes/Pizza-Capricciosa-3.jpg',
+        'descrizione' => 'La pizza Capricciosa è una deliziosa combinazione di mozzarella, prosciutto cotto, funghi, carciofi e olive nere. Un mix di sapori che soddisferà ogni palato.',
+        'ingredienti' => 'mozzarella fresca, prosciutto cotto, funghi, carciofi, olive nere',
+        'prezzo' => 7.50,
+        'ristorante'=> 4
+    ],
+    [
+        'nome' => 'Pizza Tonno e Cipolla',
+        'immagine' => 'img/dishes/Pizza-Tonno-Cipolla.jpg',
+        'descrizione' => 'La pizza Tonno e Cipolla è un mix di sapori marini e dolci. Preparata con mozzarella, tonno, cipolle e olive nere, è una scelta deliziosa per gli amanti della pizza.',
+        'ingredienti' => 'mozzarella fresca, tonno, cipolle, olive nere',
+        'prezzo' => 6.80,
+        'ristorante'=> 4
+    ],
+    [
+        'nome' => 'Pizza Bresaola e Pomodorini',
+        'immagine' => 'img/dishes/Pizza-Bresaola-Pomodorini.jpg', 
+        'descrizione' => 'La pizza Bresaola e Pomodorini è una deliziosa combinazione di ingredienti freschi e gustosi. Preparata con mozzarella fresca, bresaola tagliata sottilmente e pomodorini ciliegia, è una scelta perfetta per chi ama i sapori leggeri e raffinati.',
+        'ingredienti' => 'mozzarella fresca, bresaola, pomodorini ciliegia',
+        'prezzo' => 9.90,
+        'ristorante'=> 4
+    ],
+    [
+        'nome' => 'Insalata Greca',
+        'immagine' => 'img/dishes/Insalata-greca.jpg',
+        'descrizione' => 'L\'Insalata Greca è un piatto fresco e salutare che celebra i sapori della cucina mediterranea. Preparata con pomodori, cetrioli, olive, feta, cipolla rossa, origano e condita con olio d\'oliva e succo di limone, è un\'esplosione di gusto e colore.',
+        'ingredienti' => 'pomodori, cetrioli, olive, feta, cipolla rossa, origano, olio d\'oliva, succo di limone',
+        'prezzo' => 8.50,
+        'ristorante'=> 4
+    ],
+    [
+        'nome' => 'Pasta alla Puttanesca',
+        'immagine' => 'img/dishes/Pasta-Puttanesca.jpg',
+        'descrizione' => 'La Pasta alla Puttanesca è un piatto di origine italiana, ma con forti radici nella tradizione mediterranea. Realizzata con spaghetti, pomodori pelati, olive nere, capperi, aglio e peperoncino, è una vera e propria esplosione di sapori intensi e aromatici.',
+        'ingredienti' => 'spaghetti, pomodori pelati, olive nere, capperi, aglio, peperoncino',
+        'prezzo' => 10.50,
+        'ristorante'=> 4
+    ],
+    [
+        'nome' => 'Pasta all\'Arrabbiata',
+        'immagine' => 'img/dishes/Pasta-Arrabbiata.jpg',
+        'descrizione' => 'La Pasta all\'Arrabbiata è un classico della cucina italiana, con radici profonde nella tradizione mediterranea. Preparata con spaghetti, pomodoro fresco, aglio, peperoncino e prezzemolo, è un piatto dal sapore deciso e piccante, perfetto per gli amanti dei sapori intensi.',
+        'ingredienti' => 'spaghetti, pomodoro fresco, aglio, peperoncino, prezzemolo',
+        'prezzo' => 9.90,
+        'ristorante'=> 4
+    ],
+    [
+        'nome' => 'Pasta alla Norma',
+        'immagine' => 'img/dishes/Pasta_Norma.jpg',
+        'descrizione' => 'La Pasta alla Norma è un piatto tipico della cucina siciliana, ma apprezzato in tutta Italia. Realizzata con spaghetti, pomodoro fresco, melanzane, basilico e ricotta salata grattugiata, è un connubio perfetto di sapori mediterranei e profumi intensi.',
+        'ingredienti' => 'spaghetti, pomodoro fresco, melanzane, basilico, ricotta salata',
+        'prezzo' => 11.50,
+        'ristorante'=> 4
+    ]
+         
 ];

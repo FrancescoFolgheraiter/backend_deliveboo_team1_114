@@ -31,7 +31,7 @@
                                 @endif
                             </div>  
                         </div>
-                        <div class="text-center card w-80 p-4 mx-auto">
+                        <div class="text-center b-white card w-80 p-4 mx-auto">
                             <h3 class="text-shadow">
                                 {{ $dish->description }}
                             </h3>
@@ -55,26 +55,22 @@
                         <div class="text-center">
                             <div class="mb-5">
                                 <div class="mb-5">
-                                    <h3>
-                                        Ristorante
-                                    </h3>
-            
                                     {{-- mi vado a recuperare l'user(ristorante) che corrisponde a quel piatto --}}
-                                    <h4 class="text-color-2">
+                                    <h2 class="text-color-2 text-shadow">
                                         {{ $dish->user->resturant_name }}
-                                    </h4>
+                                    </h2>
                                 </div>
                             </div>
                             <div class="mb-5 px-2">
-                                <h3 class="my-3 text-center">
+                                <h4 class="my-3 text-center text-shadow">
                                     Ingredienti
-                                </h3>
+                                </h4>
                                 <div>
                                     @php
                                         $ingredients = explode(', ', $dish->ingredients);
                                     @endphp
                                     @foreach($ingredients as $ingredient)
-                                        <span class="badge btn-color">
+                                        <span class="badge btn-color text-shadow">
                                             {{ $ingredient }}
                                         </span>
                                     @endforeach
@@ -85,23 +81,23 @@
                             </div>
                             <div class="mb-5">
                                 <div class="mb-5">
-                                    <h3 class="mb-2">
+                                    <h4 class="mb-2 text-shadow">
                                         Prezzo attuale
-                                    </h3>
-                                    <h4 class="text-color-2">
-                                        {{ $dish->price }} €
                                     </h4>
+                                    <h3 class="text-color-2 text-shadow">
+                                        {{ $dish->price }} €
+                                    </h3>
                                 </div>
                             </div>
                         </div>
                         <div class="my-3 d-flex justify-content-around">
                             <div>
-                                <a href="{{ route('admin.dishes.edit', ['dish' => $dish->id]) }}" class="btn btn-warning fw-bolder text-white">
+                                <a href="{{ route('admin.dishes.edit', ['dish' => $dish->id]) }}" class="btn btn-color btn-outline-danger fw-bolder text-shadow text-white">
                                     Modifica
                                 </a>
                             </div>
                             <div>
-                                <a class="btn fw-bolder btn-color btn-outline-danger text-white" data-bs-toggle="modal" data-bs-target="#DishModal{{ $dish->id }}">
+                                <a class="btn fw-bolder btn-color text-shadow btn-outline-danger text-white" data-bs-toggle="modal" data-bs-target="#DishModal{{ $dish->id }}">
                                     Elimina
                                 </a>
                             
@@ -109,7 +105,7 @@
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h1 class="modal-title fs-5" id="DishModalLabel{{ $dish->id }}"><span class="text-danger">Eliminazione</span> del piatto {{ $dish->name }}</h1>
+                                                <h1 class="modal-title fs-5" id="DishModalLabel{{ $dish->id }}"><span class="text-danger">ATTENZIONE!</span></h1>
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body">

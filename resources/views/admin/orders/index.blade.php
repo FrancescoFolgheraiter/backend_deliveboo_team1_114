@@ -15,7 +15,7 @@
                 <h1 class="text-center">
                     Lista degli ordini
                 </h1>
-                <div class="custom-card-table-order">
+                <div class="custom-card-table-index">
                     <!--Tabella visualizzazione contenuti table orders-->
                     <table class="table">
                         <thead >
@@ -37,7 +37,7 @@
                                             {{ $order->address }}
                                         </td>
                                         <td class="text-center">
-                                            {{ $order->date }}
+                                            {{ date('d-m-Y', strtotime($order->date)) }} alle {{ date('H:i:s', strtotime($order->date)) }} 
                                         </td>
                                         <td class="text-center">
                                             {{ $order->total_price }} €

@@ -75,13 +75,6 @@ main{
         text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
     }
     
-    /* ul{
-        list-style-type: none;
-        li{
-
-        }
-    } */
-
     .btn-color{
         background-color: $details;
     }
@@ -98,6 +91,14 @@ main{
 
     img{
        @include image-style-100;
+    }
+}
+.backup-img-box{
+    width: 100%;
+    height: $height-450;
+
+    img{
+       @include image-style-backup;
     }
 }
 .logo-img-box{
@@ -168,6 +169,12 @@ main{
 }
 .custom-card-table-order{
     @include custom-card-style-6;
+}
+.custom-card-table-index{
+    @include custom-card-style-7;
+}
+.custom-card-index-dishes{
+    @include custom-card-style-8;
 }
 
 //modifica ai check della registrazione
@@ -242,6 +249,7 @@ main{
     -webkit-transition: 0.5s ease-out;
     transition: 0.5s ease-out;
     overflow: visible;
+    border: 1px solid gray;
 }
 
 .food-card:hover {

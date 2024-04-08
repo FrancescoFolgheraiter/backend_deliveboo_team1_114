@@ -30,36 +30,38 @@
                                     <h2 class="text-center mb-4">
                                         Ordini di oggi
                                     </h2>
-                                    <table class="table text-center table-auto">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col">Cliente</th>
-                                                <th scope="col">Indirizzo</th>
-                                                <th scope="col" class="text-center">Data dell'ordine</th>
-                                                <th scope="col" class="text-center">Valore dell'ordine</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            @foreach ($orders as $order)
-                                            <tr>
-                                                <th>
-                                                    <a href="{{ route('admin.orders.show', ['order' => $order->id]) }}" class="text-color-3">
-                                                        {{ $order->name }} {{ $order->surname }}
-                                                    </a>
-                                                </th>
-                                                <td>
-                                                    {{ $order->address }}
-                                                </td>
-                                                <td class="text-center">
-                                                    {{ $order->date }}
-                                                </td>
-                                                <td class="text-center">
-                                                    {{ $order->total_price }} €
-                                                </td>
-                                            </tr>
-                                            @endforeach
-                                        </tbody>
-                                    </table>
+                                    <div class="custom-card-table-order">
+                                        <table class="table text-center table-auto">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Cliente</th>
+                                                    <th scope="col">Indirizzo</th>
+                                                    <th scope="col" class="text-center">Data dell'ordine</th>
+                                                    <th scope="col" class="text-center">Valore dell'ordine</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach ($orders as $order)
+                                                <tr>
+                                                    <th>
+                                                        <a href="{{ route('admin.orders.show', ['order' => $order->id]) }}" class="text-color-3">
+                                                            {{ $order->name }} {{ $order->surname }}
+                                                        </a>
+                                                    </th>
+                                                    <td>
+                                                        {{ $order->address }}
+                                                    </td>
+                                                    <td class="text-center">
+                                                        {{ date('d-m-Y', strtotime($order->date)) }} alle {{ date('H:i:s', strtotime($order->date)) }} 
+                                                    </td>
+                                                    <td class="text-center">
+                                                        {{ $order->total_price }} €
+                                                    </td>
+                                                </tr>
+                                                @endforeach
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 @endif
                             </div>   
                         </div>

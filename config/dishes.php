@@ -881,6 +881,475 @@ return [
         'ingredienti' => 'spaghetti, pomodoro fresco, melanzane, basilico, ricotta salata',
         'prezzo' => 11.50,
         'ristorante'=> 4
-    ]
-         
+    ],
+    [
+        'nome' => 'Spaghetti ai Frutti di Mare',
+        'immagine' => 'img/dishes/Spaghetti-Frutti-di-Mare.jpg',
+        'descrizione' => 'Gli spaghetti ai frutti di mare sono un classico della cucina italiana, ricchi di sapore e profumi marini. Preparati con una selezione di frutti di mare freschi, aglio, prezzemolo e peperoncino, sono un piatto che porta il gusto del mare direttamente sulla tua tavola.',
+        'ingredienti' => 'spaghetti, frutti di mare freschi, aglio, prezzemolo, peperoncino',
+        'prezzo' => 15.50,
+        'ristorante'=> 5
+    ],
+    [
+        'nome' => 'Grigliata Mista di Pesce',
+        'immagine' => 'img/dishes/Grigliata-Pesce.jpg',
+        'descrizione' => 'La grigliata mista di pesce è una deliziosa selezione di pesce fresco alla griglia, perfetta per gli amanti del mare. Con una varietà di pesci come gamberi, calamari, e spigole, serviti con una spruzzata di limone e erbe aromatiche, questa grigliata soddisferà ogni palato.',
+        'ingredienti' => 'gamberi, calamari, spigole, limone, erbe aromatiche',
+        'prezzo' => 18.50,
+        'ristorante'=> 5
+    ],
+    [
+        'nome' => 'Risotto ai Frutti di Mare',
+        'immagine' => 'img/dishes/Risotto-Frutti-di-Mare.jpg',
+        'descrizione' => 'Il risotto ai frutti di mare è un piatto cremoso e ricco, perfetto per i buongustai amanti del pesce. Preparato con riso Carnaroli, cozze, vongole, gamberi e calamari, cotto lentamente in un brodo di pesce aromatico, questo piatto ti porterà in viaggio lungo le coste italiane con ogni boccone.',
+        'ingredienti' => 'riso Carnaroli, cozze, vongole, gamberi, calamari, brodo di pesce aromatico',
+        'prezzo' => 16.90,
+        'ristorante'=> 5
+    ],
+    [
+        'nome' => 'Salmone alla Griglia con Salsa di Agrumi',
+        'immagine' => 'img/dishes/Salmone-Griglia-Agrumi.jpg',
+        'descrizione' => 'Il salmone alla griglia con salsa di agrumi è un piatto elegante e saporito, perfetto per chi ama i sapori freschi e leggermente fruttati. Il salmone fresco è grigliato alla perfezione e servito con una deliziosa salsa preparata con succo di agrumi, erbe aromatiche e un tocco di pepe nero.',
+        'ingredienti' => 'salmone fresco, agrumi (limone, arancia), erbe aromatiche, pepe nero',
+        'prezzo' => 19.90,
+        'ristorante'=> 5
+    ],
+    [
+        'nome' => 'Zuppa di Pesce alla Livornese',
+        'immagine' => 'img/dishes/Zuppa-Pesce-Livornese.jpg',
+        'descrizione' => 'La zuppa di pesce alla Livornese è un piatto ricco e avvolgente, perfetto per le fredde serate invernali. Preparata con una selezione di pesce misto, pomodoro fresco, aglio, prezzemolo e un tocco di peperoncino, questa zuppa è un tripudio di sapori del mare.',
+        'ingredienti' => 'pesce misto (seppie, gamberi, cozze, vongole), pomodoro fresco, aglio, prezzemolo, peperoncino',
+        'prezzo' => 17.50,
+        'ristorante'=> 5
+    ],
+    [
+        'nome' => 'Brisket BBQ Plate',
+        'immagine' => 'img/dishes/Brisket-BBQ.jpg',
+        'descrizione' => 'Un piatto classico di barbecue americano, con fettine di brisket lentamente affumicate e glassate con salsa barbecue fatta in casa. Servito con contorni di mais alla griglia e coleslaw fresca.',
+        'ingredienti' => 'brisket, salsa barbecue, mais, cavolo cappuccio, carote, maionese',
+        'prezzo' => 14.99,
+        'ristorante'=> 6
+    ],
+    [
+        'nome' => 'Southern Fried Chicken Sandwich',
+        'immagine' => 'img/dishes/Southern-Fried-Chicken-Sandwich.jpg',
+        'descrizione' => 'Un sandwich succulento con pollo croccante fritto secondo la tradizione del sud degli Stati Uniti. Guarnito con lattuga fresca, pomodori, sottaceti e maionese, servito su un morbido panino al sesamo.',
+        'ingredienti' => 'petto di pollo, farina di mais, lattuga, pomodori, sottaceti, maionese, panino al sesamo',
+        'prezzo' => 12.50,
+        'ristorante'=> 6
+    ],
+    [
+        'nome' => 'Smoked Pork Ribs',
+        'immagine' => 'img/dishes/Smoked-Pork-Ribs.jpg',
+        'descrizione' => 'Costine di maiale affumicate a bassa temperatura per ore fino a raggiungere una tenerezza perfetta. Glasate con salsa barbecue dolce e servite con patate al forno e fagioli alla texana.',
+        'ingredienti' => 'costine di maiale, salsa barbecue, patate, fagioli, pepe nero, aglio, cipolle',
+        'prezzo' => 16.99,
+        'ristorante'=> 6
+    ],
+    [
+        'nome' => 'Texas Chili con Carne',
+        'immagine' => 'img/dishes/Texas-Chili-con-Carne.jpg',
+        'descrizione' => 'Un piatto robusto e piccante, con carne macinata di manzo cotta lentamente con peperoncini, pomodori e spezie texane. Servito con una spruzzata di cipolle verdi fresche e formaggio cheddar grattugiato.',
+        'ingredienti' => 'carne di manzo macinata, peperoncini, pomodori, cipolle, aglio, peperoncino in polvere, formaggio cheddar',
+        'prezzo' => 13.99,
+        'ristorante'=> 6
+    ],
+    [
+        'nome' => 'Pulled Pork Sandwich',
+        'immagine' => 'img/dishes/Pulled-Pork-Sandwich.jpg',
+        'descrizione' => 'Un panino succulento con carne di maiale "pulled" lentamente cotta e sfilacciata, condita con salsa barbecue dolce. Servito su un morbido panino e accompagnato da sottaceti e cipolle in agrodolce.',
+        'ingredienti' => 'carne di maiale, salsa barbecue, panino, sottaceti, cipolle',
+        'prezzo' => 13.50,
+        'ristorante'=> 6
+    ],
+    [
+        'nome' => 'BBQ Beef Brisket Sandwich',
+        'immagine' => 'img/dishes/BBQ-Beef-Brisket-Sandwich.jpg',
+        'descrizione' => 'Un sandwich abbondante con fettine di brisket di manzo affumicato, condite con salsa barbecue e servite su un panino rustico. Accompagnato da cipolle rosolate e peperoncini.',
+        'ingredienti' => 'brisket di manzo, salsa barbecue, panino rustico, cipolle, peperoncini',
+        'prezzo' => 15.99,
+        'ristorante'=> 6
+    ],
+    [
+        'nome' => 'BBQ Bacon Cheeseburger',
+        'immagine' => 'img/dishes/BBQ-Bacon-Cheeseburger.jpg',
+        'descrizione' => 'Un hamburger succulento con carne macinata di manzo, formaggio cheddar, bacon croccante e salsa barbecue. Servito su un panino tostato e accompagnato da patatine fritte.',
+        'ingredienti' => 'carne macinata di manzo, formaggio cheddar, bacon, salsa barbecue, panino tostato, patatine fritte',
+        'prezzo' => 14.75,
+        'ristorante'=> 6
+    ],
+    [
+        'nome' => 'BBQ Chicken Wings',
+        'immagine' => 'img/dishes/BBQ-Chicken-Wings.jpg',
+        'descrizione' => 'Ali di pollo croccanti cotte alla griglia e glassate con salsa barbecue piccante. Servite con bastoncini di sedano e salsa ranch per un sapore autentico americano.',
+        'ingredienti' => 'ali di pollo, salsa barbecue, sedano, salsa ranch',
+        'prezzo' => 11.25,
+        'ristorante'=> 6
+    ],
+    [
+        'nome' => 'Calzone Napoletano',
+        'immagine' => 'img/dishes/Calzone-Napoletano.jpg',
+        'descrizione' => 'Il Calzone Napoletano è una specialità campana amata da tutti gli amanti della pizza. Realizzato con impasto soffice ripieno di pomodoro fresco, mozzarella, prosciutto cotto e ricotta, è una esplosione di gusto in ogni morso.',
+        'ingredienti' => 'impasto per pizza, pomodoro fresco, mozzarella, prosciutto cotto, ricotta',
+        'prezzo' => 12.50,
+        'ristorante'=> 7
+    ],
+    [
+        'nome' => 'Pizza Rucola',
+        'immagine' => 'img/dishes/Pizza_Rucola.jpg',
+        'descrizione' => 'La Pizza Rucola è una deliziosa variante della pizza classica. Realizzata con pomodoro fresco, mozzarella di bufala, rucola fresca e scaglie di grana, è una esplosione di freschezza e sapore che conquista ogni palato.',
+        'ingredienti' => 'pomodoro fresco, mozzarella di bufala, rucola fresca, scaglie di grana',
+        'prezzo' => 10.50,
+        'ristorante'=> 7
+    ],
+    [
+        'nome' => 'Sushi Dragon Roll',
+        'immagine' => 'img/dishes/Sushi-Dragon-Roll.jpg',
+        'descrizione' => 'Il Sushi Dragon Roll è un\'opera d\'arte culinaria che incanta non solo il palato ma anche gli occhi. Realizzato con un mix di riso sushi, avocado, gamberi tempura, anguilla grigliata e una guarnizione di salsa teriyaki e maionese giapponese, questo roll offre una combinazione unica di sapori e consistenze.',
+        'ingredienti' => 'riso sushi, avocado, gamberi tempura, anguilla grigliata, salsa teriyaki, maionese giapponese',
+        'prezzo' => 14.90,
+        'ristorante' => 8
+    ],
+    [
+        'nome' => 'Pollo Kung Pao',
+        'immagine' => 'img/dishes/Pollo-Kung-Pao.jpg',
+        'descrizione' => 'Il Pollo Kung Pao è un classico della cucina cinese, amato per il suo equilibrio di sapori piccanti, dolci e salati. Preparato con pezzi di pollo marinato, arachidi tostate, peperoncini secchi, peperoni e cipolle, questo piatto è una festa per i sensi.',
+        'ingredienti' => 'pollo, arachidi, peperoncini secchi, peperoni, cipolle',
+        'prezzo' => 12.50,
+        'ristorante' => 8
+    ],
+    [
+        'nome' => 'Tempura Maki Roll',
+        'immagine' => 'img/dishes/Tempura-Maki-Roll.jpg',
+        'descrizione' => 'Il Tempura Maki Roll è un\'avventura croccante e gustosa. Questo roll è composto da un nucleo di gamberi tempura avvolto in riso sushi e alga nori croccante, servito con salsa di immersione speciale e guarnito con semi di sesamo tostati.',
+        'ingredienti' => 'riso sushi, gamberi tempura, alga nori, salsa di immersione, semi di sesamo',
+        'prezzo' => 13.50,
+        'ristorante' => 8
+    ],
+    [
+        'nome' => 'Anatra all\'arancia',
+        'immagine' => 'img/dishes/Anatra-all-arancia.jpg',
+        'descrizione' => 'Un classico della cucina cinese reinterpretato con gusto. L\'anatra all\'arancia è una deliziosa combinazione di carne d\'anatra croccante, caramellata con una salsa all\'arancia aromatica e servita con verdure croccanti. Un piatto ricco di sapori e tradizione.',
+        'ingredienti' => 'anatra, salsa all\'arancia, verdure miste',
+        'prezzo' => 16.90,
+        'ristorante' => 8
+    ],
+    [
+        'nome' => 'Pizza Salsiccia',
+        'immagine' => 'img/dishes/Pizza-Salsiccia.jpg',
+        'descrizione' => 'Esplora la Pizza Salsiccia, un tripudio di sapori italiani. Con una base di pomodoro fresco e mozzarella di bufala, è arricchita con salsiccia saporita, cipolla e peperoncini, offrendo una esperienza gustativa indimenticabile.',
+        'ingredienti' => 'pomodoro fresco, mozzarella di bufala, salsiccia, cipolla, peperoncini',
+        'prezzo' => 10.50,
+        'ristorante' => 9
+    ],
+    [
+        'nome' => 'Pizza Rucola',
+        'immagine' => 'img/dishes/Pizza-Rucola-2.jpg',
+        'descrizione' => 'Scopri la Pizza Rucola, una combinazione fresca e leggera. La base di pomodoro e mozzarella è completata con prosciutto crudo di Parma, rucola fresca e scaglie di parmigiano, regalandoti una deliziosa armonia di sapori.',
+        'ingredienti' => 'pomodoro fresco, mozzarella, prosciutto crudo di Parma, rucola, parmigiano',
+        'prezzo' => 12.90,
+        'ristorante' => 9
+    ],
+    [
+        'nome' => 'Pizza Parmigiana',
+        'immagine' => 'img/dishes/Pizza-Parmigiana.jpg',
+        'descrizione' => 'Assapora la Pizza Parmigiana, un omaggio al piatto tradizionale italiano. Con una base di melanzane grigliate, pomodoro fresco e mozzarella, è arricchita con basilico fresco e scaglie di parmigiano.',
+        'ingredienti' => 'melanzane grigliate, pomodoro fresco, mozzarella, basilico, parmigiano',
+        'prezzo' => 11.50,
+        'ristorante' => 9
+    ],
+    [
+        'nome' => 'Pad Thai al Tofu',
+        'immagine' => 'img/dishes/Pad-Thai-Tofu.jpg',
+        'descrizione' => 'Il Pad Thai al Tofu è un piatto tradizionale della cucina thailandese, noto per la sua combinazione di sapori dolci, salati, e piccanti. Realizzato con tagliolini di riso saltati in padella con tofu, uova, germogli di soia, arachidi tritate e lime, è una prelibatezza ricca di gusto e tradizione.',
+        'ingredienti' => 'tagliolini di riso, tofu, uova, germogli di soia, arachidi, lime',
+        'prezzo' => 13.50,
+        'ristorante' => 10
+    ],
+    [
+        'nome' => 'Tajine di Agnello con Prugne e Mandorle',
+        'immagine' => 'img/dishes/Tajine-Agnello-Prugne-Mandorle.jpg',
+        'descrizione' => 'Il Tajine di Agnello con Prugne e Mandorle è un piatto iconico della cucina marocchina, noto per la sua combinazione di sapori speziati e dolci. Preparato con carne d\'agnello cotta lentamente in una tajine con prugne, mandorle, cipolle, zenzero e cannella, è un\'esplosione di aromi e delicatezza.',
+        'ingredienti' => 'carne d\'agnello, prugne secche, mandorle, cipolle, zenzero, cannella',
+        'prezzo' => 17.00,
+        'ristorante' =>10
+    ],
+    [
+        'nome' => 'Ramen Giapponese con Maiale alla Tonkotsu',
+        'immagine' => 'img/dishes/Ramen-Giapponese-Maiale-Tonkotsu.jpg',
+        'descrizione' => 'Il Ramen Giapponese con Maiale alla Tonkotsu è un classico della cucina giapponese, noto per la sua brodo cremoso e ricco di sapore. Questo piatto presenta noodles ramen cotti al dente, immersi in un brodo a base di ossa di maiale e miso, arricchito con fettine di maiale cotto lentamente, uovo marinato, cipolla verde e alga nori. È un pasto confortante e appagante, perfetto per soddisfare le voglie di cibo confortevole con un tocco esotico.',
+        'ingredienti' => 'noodles ramen, maiale, ossa di maiale, miso, uovo marinato, cipolla verde, alga nori',
+        'prezzo' => 14.50,
+        'ristorante' => 10
+    ],
+    [
+        'nome' => 'Couscous Marocchino con Verdure e Pollo',
+        'immagine' => 'img/dishes/Couscous-Marocchino-Verdure-Pollo.jpg',
+        'descrizione' => 'Il Couscous Marocchino con Verdure e Pollo è un piatto classico della cucina del Nord Africa, ricco di sapori e profumi esotici. Il couscous, composto da semola di grano duro cotta al vapore, è servito con un mix di verdure grigliate come carote, zucchine e peperoni, oltre a pezzi di pollo speziato e succulento. È un pasto abbondante e appagante che incanta i sensi.',
+        'ingredienti' => 'couscous, pollo, carote, zucchine, peperoni, spezie marocchine',
+        'prezzo' => 16.50,
+        'ristorante' => 10
+    ],
+    [
+        'nome' => 'Paella de Marisco',
+        'immagine' => 'img/dishes/Paella-de-Marisco.jpg',
+        'descrizione' => 'La Paella de Marisco è un piatto tradizionale della cucina spagnola, ricco di sapori del mare. Preparata con riso, gamberi, calamari, cozze, vongole e una miscela di spezie, è una festa per il palato.',
+        'ingredienti' => 'riso, gamberi, calamari, cozze, vongole, spezie',
+        'prezzo' => 15.99,
+        'ristorante'=> 11
+    ],
+    [
+        'nome' => 'Gazpacho Andaluz',
+        'immagine' => 'img/dishes/Gazpacho-Andaluz.jpg',
+        'descrizione' => 'Il Gazpacho Andaluz è una zuppa fredda tipica della cucina spagnola, perfetta per le calde giornate estive. Realizzata con pomodori maturi, peperoni, cetrioli, aglio, olio d oliva e aceto, è una deliziosa esplosione di freschezza.',
+        'ingredienti' => 'pomodori, peperoni, cetrioli, aglio, olio d\'oliva, aceto',
+        'prezzo' => 9.99,
+        'ristorante'=> 11
+    ],
+    [
+        'nome' => 'Bacalao a la Vizcaína',
+        'immagine' => 'img/dishes/Bacalao-a-la-Vizcaina.jpg',
+        'descrizione' => 'Il Bacalao a la Vizcaína è un piatto tradizionale della cucina basca, preparato con baccalà, peperoni, pomodori, cipolle, aglio e paprika. È un piatto ricco e succulento che celebra i sapori del mare.',
+        'ingredienti' => 'baccalà, peperoni, pomodori, cipolle, aglio, paprika',
+        'prezzo' => 17.50,
+        'ristorante'=> 11
+    ],
+    [
+        'nome' => 'Caldeirada de Peixe',
+        'immagine' => 'img/dishes/Caldeirada-de-Peixe.jpg',
+        'descrizione' => 'La Caldeirada de Peixe è una zuppa di pesce tipica della cucina portoghese, ricca di sapore e tradizione. Preparata con una varietà di pesci, patate, pomodori, cipolle e prezzemolo, è un piatto confortante e nutriente.',
+        'ingredienti' => 'pesci vari, patate, pomodori, cipolle, prezzemolo',
+        'prezzo' => 16.50,
+        'ristorante'=> 11
+    ],
+    [
+        'nome' => 'Pulpo a la Gallega',
+        'immagine' => 'img/dishes/Pulpo-a-la-Gallega.jpg',
+        'descrizione' => 'Il Pulpo a la Gallega è un piatto tipico della cucina galiziana, caratterizzato da polpo cotto, patate, olio d oliva, sale e paprika. È un piatto semplice ma delizioso che celebra la freschezza del mare.',
+        'ingredienti' => 'polpo, patate, olio d\'oliva, sale, paprika',
+        'prezzo' => 14.99,
+        'ristorante'=> 11
+    ],
+    [
+        'nome' => 'Crispy Chicken Sandwich',
+        'immagine' => 'img/dishes/Crispy-Chicken-Sandwich.jpg',
+        'descrizione' => 'Il Crispy Chicken Sandwich è un opzione deliziosa per chi ama il pollo croccante. Con petto di pollo impanato e fritto, servito su un morbido panino con maionese, lattuga e pomodori freschi, è una scelta che soddisfa tutti i palati.',
+        'ingredienti' => 'petto di pollo, pangrattato, maionese, lattuga, pomodori',
+        'prezzo' => 8.99,
+        'ristorante'=> 12
+    ],
+    [
+        'nome' => 'Texas BBQ Burger',
+        'immagine' => 'img/dishes/Texas-Cheeseburger.jpg',
+        'descrizione' => 'Il Texas BBQ Burger è  un succulento hamburger di manzo, formaggio cheddar fuso, bacon affumicato, cipolla caramellata e salsa barbecue, questo panino ti porterà direttamente nel cuore del Texas.',
+        'ingredienti' => 'hamburger di manzo, formaggio cheddar, bacon, cipolla, salsa barbecue',
+        'prezzo' => 9.99,
+        'ristorante'=> 12
+    ],
+    [
+        'nome' => 'Pulled Pork Class',
+        'immagine' => 'img/dishes/BBQ-Pulled-Pork-Sandwich.jpg',
+        'descrizione' => 'Il Pulled Pork Class è un icona del sud degli Stati Uniti. Con carne di maiale lentamente cotta e sfilacciata, condita con la nostra esclusiva salsa barbecue e servita su un morbido panino, questo panino è una delizia per i sensi.',
+        'ingredienti' => 'carne di maiale, salsa barbecue, panino',
+        'prezzo' => 11.99,
+        'ristorante'=> 12
+    ],
+    [
+        'nome' => 'Pizza Mediterranea',
+        'immagine' => 'img/dishes/Pizza-Mediterranea.jpg',
+        'descrizione' => 'La Pizza Mediterranea si ispira alla cucina mediterranea. Con una base di pomodoro fresco e mozzarella, è arricchita con olive nere, pomodori secchi, feta, origano e basilico.',
+        'ingredienti' => 'pomodoro fresco, mozzarella, olive nere, pomodori secchi, feta, origano, basilico',
+        'prezzo' => 12.99,
+        'ristorante'=> 13
+    ],
+    [
+        'nome' => 'Pizza del Pescatore',
+        'immagine' => 'img/dishes/Pizza-del-Pescatore.jpg',
+        'descrizione' => 'La Pizza del Pescatore è un omaggio ai sapori del mare. Con una base di pomodoro fresco e mozzarella, è generosamente guarnita con gamberi, cozze, vongole, calamari e una spruzzata di prezzemolo fresco.',
+        'ingredienti' => 'pomodoro fresco, mozzarella, gamberi, cozze, vongole, calamari, prezzemolo fresco',
+        'prezzo' => 16.99,
+        'ristorante'=> 13
+    ],
+    [
+        'nome' => 'Hamburger Tex-Mex',
+        'immagine' => 'img/dishes/Hamburger-Tex-Mex.jpg',
+        'descrizione' => 'Hamburger Tex-Mex è una deliziosa creazione che unisce il gusto succulento di un hamburger con i sapori speziati della cucina messicana. Realizzato con carne macinata di manzo condita con spezie texane, guacamole fresco, formaggio cheddar fuso, pomodori e lattuga, è un piatto che soddisferà i palati più esigenti.',
+        'ingredienti' => 'carne macinata di manzo, spezie texane, guacamole, formaggio cheddar, pomodori, lattuga',
+        'prezzo' => 12.99,
+        'ristorante'=> 14
+    ],
+    [
+        'nome' => 'Costine di Maiale Salsa BBQ',
+        'immagine' => 'img/dishes/Costine-di-Maiale-Salsa-BBQ.jpg',
+        'descrizione' => 'Le Costine di Maiale BBQ sono un classico dei ristoranti americani, irresistibilmente succulente e ricoperte di salsa BBQ fatta in casa. Le costine vengono cotte lentamente fino a diventare tenere e aromatiche, pronte per essere gustate con le dita o con un contorno di patatine fritte e cole slaw.',
+        'ingredienti' => 'costine di maiale, salsa BBQ, spezie, zucchero di canna',
+        'prezzo' => 18.99,
+        'ristorante'=> 14
+    ],
+    [
+        'nome' => 'Fajitas di Pollo',
+        'immagine' => 'img/dishes/Fajitas-di-Pollo.jpg',
+        'descrizione' => 'Le Fajitas di Pollo sono un piatto messicano che porta gioia a ogni boccone. Fette di pollo marinato vengono grigliate e servite con peperoni e cipolle saltati in padella, guacamole, panna acida, formaggio grattugiato e tortillas calde.',
+        'ingredienti' => 'pollo, peperoni, cipolle, guacamole, panna acida, formaggio, tortillas',
+        'prezzo' => 16.50,
+        'ristorante'=> 14
+    ],
+    [
+        'nome' => 'Chili con Carne',
+        'immagine' => 'img/dishes/Chili-con-Carne.jpg',
+        'descrizione' => 'Il Chili con Carne è un piatto rustico e saporito che si presta perfettamente alla cucina americana e messicana. Carne macinata di manzo viene cotta a fuoco lento con fagioli rossi, pomodori, peperoncini, cipolle e una miscela di spezie, creando un piatto caldo e avvolgente, perfetto da gustare con un po’ di pane di mais o tortillas.',
+        'ingredienti' => 'carne macinata di manzo, fagioli rossi, pomodori, peperoncini, cipolle, spezie',
+        'prezzo' => 14.00,
+        'ristorante'=> 14
+    ],
+    [
+        'nome' => 'Ribs alla Texana',
+        'immagine' => 'img/dishes/Ribs-alla-Texana.jpg',
+        'descrizione' => 'Le Ribs alla Texana sono un piatto iconico della cucina texana, caratterizzato dalla carne di maiale succosa e tenera, marinata con una salsa barbecue robusta e affumicata, cotta a fuoco lento fino a quando non si stacca facilmente dall osso. Servite con un lato di fagioli al forno e pane di mais per un pasto che soddisferà ogni carnivoro.',
+        'ingredienti' => 'costine di maiale, salsa barbecue, spezie, zucchero di canna',
+        'prezzo' => 19.60,
+        'ristorante'=> 14
+    ],
+    [
+        'nome' => 'Burger Tex-Mex Salsa BBQ',
+        'immagine' => 'img/dishes/Burger-Tex-Mex-Salsa-BBQ.jpg',
+        'descrizione' => 'Il Burger Tex-Mex è un hamburger ispirato alla cucina texana e messicana. Con carne di manzo grillata, formaggio piccante, guacamole fresco e salsa di peperoncino, questo piatto è un viaggio di sapori audaci e succulenti.',
+        'ingredienti' => 'pane per hamburger, carne di manzo, formaggio piccante, guacamole, salsa di peperoncino',
+        'prezzo' => 12.39,
+        'ristorante'=> 15
+    ],
+    [
+        'nome' => 'Tacos al Pastor',
+        'immagine' => 'img/dishes/Tacos-al-Pastor.jpg',
+        'descrizione' => 'I Tacos al Pastor sono un classico della cucina messicana. Preparati con carne di maiale marinata, cotta lentamente su uno spiedo verticale, e serviti in morbide tortillas di mais con cipolla, coriandolo fresco e salsa di ananas, sono un tripudio di sapori tradizionali.',
+        'ingredienti' => 'carne di maiale, tortillas di mais, cipolla, coriandolo, salsa di ananas',
+        'prezzo' => 9.99,
+        'ristorante'=> 15
+    ],
+    [
+        'nome' => 'Ribs BBQ ',
+        'immagine' => 'img/dishes/Ribs-BBQ.jpg',
+        'descrizione' => 'Le BBQ Ribs sono costine di maiale cotte lentamente e glassate con salsa barbecue dolce e affumicata. Con una perfetta combinazione di dolcezza, affumicato e succulenza, queste costine sono un must per gli amanti della cucina americana.',
+        'ingredienti' => 'costine di maiale, salsa barbecue',
+        'prezzo' => 18.50,
+        'ristorante'=> 15
+    ],
+    [
+        'nome' => 'Nachos Supreme',
+        'immagine' => 'img/dishes/Nachos-Supreme.jpg',
+        'descrizione' => 'I Nachos Supreme sono un piatto di origine messicana, perfetto per condividere. Con nachos croccanti coperti di formaggio fuso, fagioli neri, jalapenos, guacamole, panna acida e salsa piccante.',
+        'ingredienti' => 'nachos, formaggio fuso, fagioli neri, jalapenos, guacamole, panna acida, salsa piccante',
+        'prezzo' => 10.99,
+        'ristorante'=> 15
+    ],
+    [
+        'nome' => 'Pizza Gourmet al Tartufo',
+        'immagine' => 'img/dishes/Pizza-Gourmet-al-Tartufo.jpg',
+        'descrizione' => 'La Pizza Gourmet al Tartufo è una perfetta combinazione di sapori. La base della pizza è arricchita con una salsa al tartufo nero, e poi guarnita con mozzarella di bufala, funghi porcini, prosciutto crudo e scaglie di tartufo fresco.',
+        'ingredienti' => 'salsa al tartufo nero, mozzarella di bufala, funghi porcini, prosciutto crudo, tartufo fresco',
+        'prezzo' => 20.00,
+        'ristorante'=> 16
+    ],
+    [
+        'nome' => 'Pizza Mediterranea Rivisitata',
+        'immagine' => 'img/dishes/Pizza-Mediterranea-Rivisitata.jpg',
+        'descrizione' => 'Con pomodori secchi, olive nere, feta greca, basilico fresco e un filo di olio extravergine di oliva, questa pizza è un viaggio culinario nel cuore della costa mediterranea.',
+        'ingredienti' => 'pomodori secchi, olive nere, feta greca, basilico fresco, olio extravergine di oliva',
+        'prezzo' => 17.50,
+        'ristorante'=> 16
+    ],
+    [
+        'nome' => 'Pulled Pork Sandwich BBQ',
+        'immagine' => 'img/dishes/Pulled-Pork-Sandwich-BBQ.jpg',
+        'descrizione' => 'Il Pulled Pork Sandwich BBQ è un classico della cucina barbecue americana. Carne di maiale lentamente cotta e tirata, condita con salsa barbecue e servita in un morbido panino, è una delizia succosa e saporita.',
+        'ingredienti' => 'carne di maiale, salsa barbecue, panino',
+        'prezzo' => 12.00,
+        'ristorante' => 17
+    ],
+    [
+        'nome' => 'BBQ Brisket Sandwich',
+        'immagine' => 'img/dishes/BBQ-Brisket-Sandwich.jpg',
+        'descrizione' => 'Il BBQ Brisket Sandwich presenta fettine di brisket di manzo affumicato e cotto lentamente, immerse in salsa barbecue e racchiuse in un panino robusto. È un piatto ricco e soddisfacente.',
+        'ingredienti' => 'brisket di manzo, salsa barbecue, panino',
+        'prezzo' => 14.29,
+        'ristorante' => 17
+    ],
+    [
+        'nome' => 'Smoked Sausage Sandwich',
+        'immagine' => 'img/dishes/Smoked-Sausage-Sandwich.jpg',
+        'descrizione' => 'Lo Smoked Sausage Sandwich propone salsicce affumicate grigliate e condite con cipolle caramellate e senape, servite in un panino tostato.',
+        'ingredienti' => 'salsicce affumicate, cipolle, senape, panino',
+        'prezzo' => 11.00,
+        'ristorante' => 17
+    ],
+    [
+        'nome' => 'BBQ Chicken Sandwich',
+        'immagine' => 'img/dishes/BBQ-Chicken-Sandwich.jpg',
+        'descrizione' => 'Il BBQ Chicken Sandwich presenta petti di pollo grigliati e rivestiti con salsa barbecue, pomodoro, lattuga e cipolla rossa, serviti in un morbido panino. È una scelta deliziosa e succulenta.',
+        'ingredienti' => 'petti di pollo, salsa barbecue, pomodoro, lattuga, cipolla rossa, panino',
+        'prezzo' => 11.39,
+        'ristorante' => 17
+    ],
+    [
+        'nome' => 'BBQ Rib Sandwich',
+        'immagine' => 'img/dishes/BBQ-Rib-Sandwich.jpg',
+        'descrizione' => 'Il BBQ Rib Sandwich offre costine di maiale affumicate e ricoperte di salsa barbecue, servite tra due fette di pane tostato. È una vera delizia per gli amanti della carne.',
+        'ingredienti' => 'costine di maiale, salsa barbecue, pane tostato',
+        'prezzo' => 16.99,
+        'ristorante' => 17
+    ],
+    [
+        'nome' => 'Roll Dragon',
+        'immagine' => 'img/dishes/roll-dragon.jpg',
+        'descrizione' => 'Il Dragon Roll è un rotolo di sushi rivestito di avocado, con un ripieno di gamberi tempura, sashimi di tonno e una salsa dolce di unagi (anguilla). È un piatto gustoso e visivamente impressionante.',
+        'ingredienti' => 'riso, alga nori, gamberi tempura, avocado, tonno, unagi (anguilla), salsa dolce',
+        'prezzo' => 19.50,
+        'ristorante' => 18
+    ],
+    [
+        'nome' => 'Roll Rainbow',
+        'immagine' => 'img/dishes/roll-rainbow.jpg',
+        'descrizione' => 'Il Rainbow Roll è un rotolo di sushi composto da una varietà di sashimi colorati disposti sopra un rivestimento di riso e alga nori. È una festa per gli occhi e per il palato, con una combinazione di sapore fresco e texture croccanti.',
+        'ingredienti' => 'riso, alga nori, salmone, tonno, avocado, gamberetti, sashimi vari, salsa ponzu',
+        'prezzo' => 22.99,
+        'ristorante' => 18
+    ],
+    [
+        'nome' => 'Panino Caprese',
+        'immagine' => 'img/dishes/Panino-Caprese.jpg',
+        'descrizione' => 'Il Panino Caprese è un classico italiano con pomodoro fresco, mozzarella di bufala, basilico e condimento balsamico.',
+        'ingredienti' => 'pomodoro fresco, mozzarella di bufala, basilico, condimento balsamico',
+        'prezzo' => 12.30,
+        'ristorante' => 19
+    ],
+    [
+        'nome' => 'Panino alla Mediterranea',
+        'immagine' => 'img/dishes/Panino-alla-Mediterranea.jpg',
+        'descrizione' => 'Il Panino alla Mediterranea unisce olive nere, pomodori secchi, mozzarella fresca, rucola e pesto, tutto avvolto in un morbido panino. Un viaggio di gusto attraverso i sapori della Mediterranea.',
+        'ingredienti' => 'olive nere, pomodori secchi, mozzarella fresca, rucola, pesto',
+        'prezzo' => 13.99,
+        'ristorante' => 19
+    ],
+    [
+        'nome' => 'Panino di Parma',
+        'immagine' => 'img/dishes/Panino-di-Parma.jpg',
+        'descrizione' => 'Il Panino di Parma è un omaggio alla tradizione italiana con prosciutto di Parma, rucola fresca, pomodori secchi e formaggio Grana Padano, tutto insaporito da un tocco di olio di oliva. Un autentico piacere gustativo.',
+        'ingredienti' => 'prosciutto di Parma, rucola fresca, pomodori secchi, formaggio Grana Padano, olio di oliva',
+        'prezzo' => 14.50,
+        'ristorante' => 19
+    ],
+    [
+        'nome' => 'Panino Vegetariano Mediterraneo',
+        'immagine' => 'img/dishes/Panino-Vegetariano-Mediterraneo.jpg',
+        'descrizione' => 'Il Panino Vegetariano Mediterraneo è una festa di sapori con melanzane grigliate, zucchine, peperoni arrostiti, formaggio di capra e pesto, tutto racchiuso in un morbido panino. Una delizia per i palati vegetariani e non solo.',
+        'ingredienti' => 'melanzane grigliate, zucchine, peperoni arrostiti, formaggio di capra, pesto',
+        'prezzo' => 9.59,
+        'ristorante' => 19
+    ],
+    
+    
+    
+    
+    
+           
 ];

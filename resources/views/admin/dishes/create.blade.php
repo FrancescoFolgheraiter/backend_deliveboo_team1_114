@@ -5,7 +5,7 @@
 @section('main-content')
 <div class="custom-container">
     <div class="custom-card-create p-3">
-        <h2 class="text-center text-color-3">
+        <h2 class="text-center text-shadow text-color-3">
             Aggiungi un nuovo piatto
         </h2>
         <form action="{{ route('admin.dishes.store')}}" method="POST" enctype="multipart/form-data">
@@ -103,7 +103,7 @@
                         </div>
                     </div>
                     <div class="d-flex justify-content-center pt-3">
-                        <button type="submit" class="btn btn-color btn-outline-danger text-white fw-bolder w-25 ">
+                        <button type="submit" class="btn btn-color btn-outline-danger text-shadow text-white fw-bolder w-25 ">
                             + Aggiungi
                         </button>
                     </div>

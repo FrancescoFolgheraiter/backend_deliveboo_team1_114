@@ -71,51 +71,47 @@
         <div class="col-3">
             <div class="mb-4">
                 <div class="card p-3">
-                    <h5 class="text-center">
+                    <h5 class="text-center text-shadow">
                         Totale ordini giornalieri
                     </h5>
-                    <h3 class="text-center fw-bolder text-color-2">
+                    <h3 class="text-center fw-bolder text-color-2 text-shadow">
                         {{ $orders->count() }} ordini effettuati
                     </h3>
                 </div>
             </div>
-            <div class="card vh-card px-2">
-                <div class="card mt-2 bg-color-2">
-                    <div class="text-center mb-3">
-                        <h5 class="text-center my-3">
-                            Aggiungi un nuovo piatto al tuo ristorante
-                        </h5>
-                        <a href="{{ route('admin.dishes.create') }}" class="btn btn-color btn-outline-danger text-white fw-bolder">
-                            <i class="fa-solid fa-plus"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="mt-4">
-                    <h5 class="text-center mb-2">
-                        Tipologià del tuo ristorante
-                    </h5>
-                    <div class="text-center">
-                        @foreach ($user->Types as $type)
-                            <span class="badge btn-color">
-                                {{ $type->name }}
-                            </span>
-                        @endforeach
-                    </div>
-                </div>
+            <div class="card vh-card">
                 <div>
-                    <h5 class="text-center mt-5">
-                        Immagine attuale del tuo ristorante
-                    </h5>
                     <div class="user-img-box mx-auto mb-4">
                         <img src="/storage/{{ $user->resturant_image  }}" alt="{{ $user->resturant_name }}">
                     </div>
                 </div>
-                <div class="text-center mb-4">
-                    <!--permette il rindirizzamento per poter modificare la relazione user-types-->
-                    <a href="{{ route('admin.dashboard.editUser')}}" class="btn btn-color btn-outline-danger text-white fw-bolder">
-                        Modifica
-                    </a> 
-                </div> 
+                <div class="custom-card-user mb-4">
+                    <div class="mt-4">
+                        <h5 class="text-center mb-2 text-shadow">
+                            Tipologià del tuo ristorante
+                        </h5>
+                        <div class="text-center">
+                            @foreach ($user->Types as $type)
+                                <span class="badge btn-color text-shadow">
+                                    {{ $type->name }}
+                                </span>
+                            @endforeach
+                        </div>
+                    </div>
+                    <div class="mt-5">
+                        <div class="text-center mb-4">
+                            <!--permette il rindirizzamento per poter modificare la relazione user-types-->
+                            <a href="{{ route('admin.dashboard.editUser')}}" class="btn btn-color text-shadow btn-outline-danger text-white fw-bolder">
+                                Modifica
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center my-4">
+                    <a href="{{ route('admin.dishes.create') }}" class="btn btn-color text-shadow btn-outline-danger text-white fw-bolder w-90">
+                        {{-- <i class="fa-solid fa-plus"></i>  --}}Aggiungi un nuovo piatto
+                    </a>
+                </div>
             </div>
         </div>
     </div>

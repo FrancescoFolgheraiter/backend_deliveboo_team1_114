@@ -876,7 +876,7 @@ return [
     ],
     [
         'nome' => 'Pasta alla Norma',
-        'immagine' => 'img/dishes/Pasta_Norma.jpg',
+        'immagine' => 'img/dishes/Pasta-Norma.jpg',
         'descrizione' => 'La Pasta alla Norma è un piatto tipico della cucina siciliana, ma apprezzato in tutta Italia. Realizzata con spaghetti, pomodoro fresco, melanzane, basilico e ricotta salata grattugiata, è un connubio perfetto di sapori mediterranei e profumi intensi.',
         'ingredienti' => 'spaghetti, pomodoro fresco, melanzane, basilico, ricotta salata',
         'prezzo' => 11.50,

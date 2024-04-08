@@ -100,6 +100,14 @@ main{
        @include image-style-100;
     }
 }
+.backup-img-box{
+    width: 100%;
+    height: $height-450;
+
+    img{
+       @include image-style-backup;
+    }
+}
 .logo-img-box{
     width: 100%;
     height: $height-350;
@@ -242,6 +250,7 @@ main{
     -webkit-transition: 0.5s ease-out;
     transition: 0.5s ease-out;
     overflow: visible;
+    border: 1px solid gray;
 }
 
 .food-card:hover {

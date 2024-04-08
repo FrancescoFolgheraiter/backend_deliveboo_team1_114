@@ -13,6 +13,10 @@
                             <div class="img-box mx-auto">
                                 <img src="/storage/{{ $dish->image }}" alt="{{ $dish->name }}">
                             </div>
+                        @else
+                            <div class="backup-img-box mx-auto">
+                                <img src="/image/User/deliveboo-logo.png" alt="{{ $dish->name }}">
+                            </div>
                         @endif
                         <h1 class="text-center text-color-2 text-shadow">
                             {{ $dish->name }}
@@ -45,12 +49,9 @@
             
             <div class="card my-aside-card">
                 <div>
-                    {{-- se l'img non è null, fai vedere l'img del piatto --}}
-                    @if ($dish->image != null)
-                        <div class="logo-img-box mx-auto position-relative">
-                            <img src="/image/User/deliveboo-logo.png" alt="Logo DeliveBoo">
-                        </div>
-                    @endif
+                    <div class="logo-img-box mx-auto position-relative">
+                        <img src="/image/User/deliveboo-logo.png" alt="Logo DeliveBoo">
+                    </div>
                     <div class="position-absolute bottom-0">
                         <div class="text-center">
                             <div class="mb-5">

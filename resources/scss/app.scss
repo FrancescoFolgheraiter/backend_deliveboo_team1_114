@@ -166,6 +166,9 @@ main{
 .custom-card-order{
     @include custom-card-style-5;
 }
+.custom-card-table-order{
+    @include custom-card-style-6;
+}
 
 //modifica ai check della registrazione
 .form-check-input {

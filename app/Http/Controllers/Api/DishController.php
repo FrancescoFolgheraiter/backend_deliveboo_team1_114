@@ -24,7 +24,7 @@ class DishController extends Controller
             ], 400);
         }
         //prendo l'utente che mi è stato richiesto dal db
-        $restaurantId = User::where('name_restaurant', $request->input('name'))->value('id');
+        $restaurantId = User::where('resturant_name', $request->input('name'))->value('id');
         //Verifico che la ricerca del ristorante sia andata a buon fine
         if (!$restaurantId) {
             return response()->json([
@@ -34,6 +34,7 @@ class DishController extends Controller
         }
         //prendo i piatti di quell'utente
         $dishes = Dish::where('user_id', $restaurantId)->get();
+
 
         //tramite questa funzione ritorno il file json con al struttura delineata nelle []
         return response()->json([

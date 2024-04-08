@@ -22,9 +22,19 @@ body {
 
 main{
     height: 100%;
+
     .my-user-card{
         height: 80vh;
         overflow-y: auto;
+
+        .card{
+            border: none;
+        }
+    }
+    .my-order-card{
+        height: 80vh;
+        overflow-y: auto;
+        position: relative;
 
         .card{
             border: none;
@@ -55,6 +65,10 @@ main{
 
     .text-color-3{
         color: $aside;
+    }
+
+    .text-color-4{
+        color: $background;
     }
 
     .text-shadow {
@@ -148,6 +162,9 @@ main{
 }
 .custom-card-user{
     @include custom-card-style-4;
+}
+.custom-card-order{
+    @include custom-card-style-5;
 }
 
 //modifica ai check della registrazione

@@ -5,7 +5,7 @@
 @section('main-content')
     <div class="row">
         <div class="col-9">
-            <div class="card my-user-card">
+            <div class="card logo-background my-order-card">
                 <div class="card-body d-flex justify-content-center">
                     <div class="row w-100">
                         <div class="col-md-9 col-12 d-flex w-100">
@@ -14,33 +14,35 @@
                                     <h2 class="text-center mb-3">
                                         Piatti ordinati
                                     </h2>
-                                    <!--Tabella visualizzazione contenuti table dishes-->
-                                    <table class="table">
-                                        <thead >
-                                            <tr>
-                                                <th scope="col" class="text-start">Nome</th>
-                                                <th scoper="col">Quantità</th>
-                                                <th scope="col" class="text-center">Prezzo</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            @foreach ($order->dishes as $dish)
-                                                    <tr>
-                                                        <th scope="row" class="text-start">
-                                                            {{ $dish->name }}
-                                                        </th>
-                                                        <td>
-                                                            {{-- qui viene preso il dato dalla tebella pivot --}}
-                                                            {{ $dish->pivot->quantity }}
-                                                        </td>
-                                                        <td class="text-center">
-                                                            {{ $dish->price }}
-                                                        </td>
-                                                    </tr>
-                                            @endforeach
-                                        </tbody>
-                                    </table>
-                                    {{-- fine gestione tabella piatti  --}}
+                                    <div class="card custom-card-register">
+                                        <!--Tabella visualizzazione contenuti table dishes-->
+                                        <table class="table">
+                                            <thead >
+                                                <tr>
+                                                    <th scope="col" class="text-start">Nome</th>
+                                                    <th scoper="col">Quantità</th>
+                                                    <th scope="col" class="text-center">Prezzo</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach ($order->dishes as $dish)
+                                                        <tr>
+                                                            <th scope="row" class="text-start">
+                                                                {{ $dish->name }}
+                                                            </th>
+                                                            <td>
+                                                                {{-- qui viene preso il dato dalla tebella pivot --}}
+                                                                {{ $dish->pivot->quantity }}
+                                                            </td>
+                                                            <td class="text-center">
+                                                                {{ $dish->price }}
+                                                            </td>
+                                                        </tr>
+                                                @endforeach
+                                            </tbody>
+                                        </table>
+                                        {{-- fine gestione tabella piatti  --}}
+                                    </div>
                                 </div>            
                             </div>   
                         </div>
@@ -51,60 +53,67 @@
         </div>
         <div class="col-3">
             
-            <div class="card my-user-card px-2">
-                <div class="text-center my-3">
-                    <h3>
-                        Ordinato da 
-                    </h3>
-                    <h2>
-                        <span class="text-color-2 fw-bolder">{{ $order->name }} {{ $order->surname }}</span>
-                    </h2>  
-                </div>
-                <div class="mt-4 text-center">
-                    <div class="mb-5">
-                        <h4 class="mb-2">
-                            Ordinato in data 
-                        </h4>
-                        <h3 class="text-color-2 fw-bolder">
-                            {{ $order->date }}
-                        </h3>
+            <div class="card my-user-card p-1">
+                <div class="custom-card-order mt-4 text-center">
+                    <div class="text-center my-3">
+                        <h3>
+                            <span class="text-color-3 text-shadow fw-bolder">{{ $order->name }} {{ $order->surname }}</span>
+                        </h3>  
                     </div>
-                    <div class="mb-5">
-                        <div>
-                            <h4 class="mb-2">
-                                Indirizzo dell'ordine
+                    <div class="mt-4 text-center">
+                        <div class="mb-2">
+                            <h5 class="mb-2">
+                                Ordinato il
+                            </h5>
+                            <h4 class="text-color-3 text-shadow fw-bolder">
+                                {{ date('d-m-Y', strtotime($order->date)) }}
                             </h4>
-                            <h3 class="text-color-2 fw-bolder">
+                        </div>
+                        <div class="mb-5">
+                            <h5 class="mb-2">
+                                Alle ore
+                            </h5>
+                            <h4 class="text-color-3 text-shadow fw-bolder">
+                                {{ date('H:i:s', strtotime($order->date)) }}
+                            </h4>
+                        </div>
+                    </div>                 
+                    <div class="mb-4">
+                        <div>
+                            <h5 class="mb-2">
+                                Indirizzo dell'ordine
+                            </h5>
+                            <h4 class="text-color-3 text-shadow fw-bolder">
                                 {{ $order->address }}
-                            </h3>
+                            </h4>
                         </div>
                     </div>
-                    <div class="mb-5">
+                    <div class="mb-4">
                         <div>
-                            <h4 class="mb-2">
+                            <h5 class="mb-2">
                                 Numero di telefono
-                            </h4>
-                            <h3 class="text-color-2 fw-bolder">
+                            </h5>
+                            <h4 class="text-color-3 text-shadow fw-bolder">
                                 +39 {{ $order->phone_number }}
-                            </h3>
+                            </h4>
                         </div>
                     </div>
                     <div>
                         <div class="mb-5">
-                            <h4 class="mb-2">
+                            <h5 class="mb-2">
                                 Valore dell'ordine
-                            </h4>
-                            <h3 class="text-color-2 fw-bolder">
+                            </h5>
+                            <h4 class="text-color-3 text-shadow fw-bolder">
                                 {{ $order->total_price }} €
-                            </h3>
+                            </h4>
                         </div>
     
-                        <div class="mb-5">
-                            <h4>
+                        <div class="m-5">
+                            <h5>
                                 Note lasciate dal cliente
-                            </h4>
+                            </h5>
                             @if (!empty($order->note))
-                                <h5 class="text-color-2 fw-bolder">
+                                <h5 class="text-color-3 text-shadow fw-bolder">
                                     {{ $order->note }}
                                 </h5>
                             @else

@@ -13,7 +13,7 @@ class TypeController extends Controller
     public function index()
     {
         $types = Type::with(['users' => function ($query) {
-            $query->select('id', 'resturant_name', 'address', 'email');
+            $query->select('id', 'resturant_name', 'address', 'email','resturant_image');
         }])->paginate(10);
 
         return response()->json([

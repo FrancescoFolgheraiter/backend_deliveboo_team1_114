@@ -18,7 +18,7 @@
                     Statistiche
                 </h1>
                 <!--Grafico vendite 2024-->
-                <div class=" m-auto w-75 ">
+                <div class=" m-auto ">
                     {!! $chart->render() !!}
                 </div>
             </div>

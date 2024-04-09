@@ -105,6 +105,13 @@
                                         </u>
                                     </div>
                                 </div>
+                                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body text-color-2 fw-bolder">
+                                        <u>
+                                            <a class="nav-link" href="{{ route('admin.statistics.dishesSales') }}">Totale piatti venduti</a>
+                                        </u>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

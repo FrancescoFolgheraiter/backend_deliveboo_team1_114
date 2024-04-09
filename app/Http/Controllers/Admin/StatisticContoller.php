@@ -45,7 +45,7 @@ class StatisticContoller extends Controller
         $chart = app()->chartjs
         ->name('salesCurrentYear')
         ->type('line')
-        ->size(['width' => 400, 'height' => 200])
+        ->size(['width' => 700, 'height' => 350])
         ->labels($labels)
         ->datasets([
             [
@@ -103,7 +103,7 @@ class StatisticContoller extends Controller
         $chart = app()->chartjs
         ->name('totalSales')
         ->type('line')
-        ->size(['width' => 400, 'height' => 200])
+        ->size(['width' => 700, 'height' => 350])
         ->labels($labels)
         ->datasets([
             [

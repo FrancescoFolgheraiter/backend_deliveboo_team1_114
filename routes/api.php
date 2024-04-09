@@ -33,7 +33,8 @@ Route::name('api.')->group(function() {
 
     //Rotta per Index delle mie api TypeColtroller che permettono di far visualizzare i tipi
     Route::resource('types', ApiTypeController::class)->only([
-        'index'
+        'index',
+        'show'
     ]);
 
     //Rotta per il salvataggio dei dati dell'UI che effettua un ordine

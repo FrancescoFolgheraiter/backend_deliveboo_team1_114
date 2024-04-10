@@ -1,6 +1,6 @@
 @extends('layouts.guest')
 
-@section('page-title', 'Login')
+@section('page-title', 'Accedi')
 
 @section('main-content')
     <div class="custom-container">

@@ -1,5 +1,7 @@
 @extends('layouts.guest')
 
+@section('page-title', 'Welcome')
+
 @section('main-content')
     <div class="custom-container">
         <div class="custom-card-welcome text-center p-3">

@@ -101,9 +101,8 @@
                             </div>
                         </div>
                     </div>
-            
                     <div class="mt-4">
-                        <button type="submit" class="btn button-color fw-bolder text-white">
+                        <button type="submit" class="btn button-color fw-bolder text-white" data-bs-toggle="modal" data-bs-target="#customModal">
                             Registrati
                         </button>
         
@@ -115,6 +114,22 @@
                     </div>
                 </form>
             </div>
+            <div class="modal fade" id="customModal" tabindex="-1" aria-labelledby="customModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title text-color-2" id="customModalLabel">ATTENZIONE!</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p id="errorMessage"></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-color btn-outline-danger text-white" data-bs-dismiss="modal">Chiudi</button>
+                        </div>
+                    </div>
+                </div>
+            </div>            
         </div>
     </div>
 
@@ -132,22 +147,30 @@
                     break;
                 }
             }
-            //se una delle due verifiche va a buon fine interrompo l'evento di submit
-            if (!checked || password !== confirmPassword) {
+            //imposto i messaggi di errore in base a quello che non ho selezionato
+            let errorMessage = '';
+            if (!checked && password !== confirmPassword) {
+                errorMessage = 'Le password non corrispondono e devi selezionare almeno un tipo.';
+            } else if (!checked) {
+                errorMessage = 'Seleziona almeno un tipo.';
+            } else if (password !== confirmPassword) {
+                errorMessage = 'Le password non corrispondono.';
+            }
+            //se ho un messaggio di errore, faccio vedere il modal in pagina
+            if (errorMessage) {
                 event.preventDefault();
+                document.getElementById('customModal').classList.add('show');
+                document.getElementById('customModal').style.display = 'block';
+                document.getElementById('errorMessage').innerText = errorMessage;
             }
-            //messaggi personalizzati 
-            if(!checked && password !== confirmPassword){
-                alert('Selezionare almeno un tipo e le password non corrispondono.');
-            }
-            else if(!checked){
-                alert('Seleziona almeno un tipo');
-            }
-            else{
-                alert('Le password non corrispondono.');
-            }
-            
         });
-    </script>
+        //chiudo il modal da bottone o da X
+        document.getElementById('customModal').addEventListener('click', function(event) {
+            if (event.target.dataset.bsDismiss === 'modal') {
+                document.getElementById('customModal').classList.remove('show');
+                document.getElementById('customModal').style.display = 'none';
+            }
+        });
+    </script>    
 @endsection
 

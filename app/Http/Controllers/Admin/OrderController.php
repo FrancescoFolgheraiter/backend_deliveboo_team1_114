@@ -15,20 +15,41 @@ class OrderController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(request $request)
     {
-        $user = auth()->user();
+         // Verifica se la richiesta non contiene parametri
+        if (empty($request->all())) {
 
-        // filtro gli ordini in base all'utente loggato
-        $orders = Order::whereHas('dishes', function ($query) {
-
-            // scope molto particolari
             $user = auth()->user();
+    
+            // filtro gli ordini in base all'utente loggato
+            $orders = Order::whereHas('dishes', function ($query) {
+                // scope molto particolari
+                $user = auth()->user();
+                $query->where('user_id', $user->id);
+            })->orderBy('date')->get();
+    
+            return view('admin.orders.index', compact('orders','user'));
+        }
+        else{
+            $data= $request->validate([
+                'from_date' => 'date|required',
+                'to_date' => 'date|required'
+            ]);
+            
+            // Filtra gli ordini compresi tra le date specificate
+            $orders = Order::whereHas('dishes', function ($query) use ($data) {
+                $user = auth()->user();
+                $query->where('user_id', $user->id);
+                $query->whereBetween('date', [$data['from_date'], $data['to_date']]);
+            })->orderBy('date')->get();
 
-            $query->where('user_id', $user->id);
-        })->orderBy('date')->get();
+            // Passa gli ordini filtrati alla vista
+            $user = auth()->user();
+            return view('admin.orders.index', compact('orders', 'user'));
+            }
 
-        return view('admin.orders.index', compact('orders','user'));
+        
     }
 
     /**

@@ -15,6 +15,9 @@
 // importo loading.scss
 @import './loading.scss';
 
+// importo socials.scss
+@import './socials.scss';
+
 body {
     background-color: $background;
     overflow: hidden;
@@ -157,6 +160,9 @@ main{
     .button-color{
         background-color: $details;
     }
+}
+.custom-card-welcome{
+    @include custom-card-style-9;
 }
 .custom-card-create{
     @include custom-card-style-3;

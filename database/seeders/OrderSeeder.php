@@ -53,6 +53,7 @@ class OrderSeeder extends Seeder
                 }
                 //------------fine gestione popolamento $order->note--------
                 $order->total_price = 0;
+                $order->date = '2024-01-01 12:00:00';
                 $order->name = $customer['nome'];
                 $order->surname = $customer['cognome'];
                 $order->address = $customer['indirizzo'];

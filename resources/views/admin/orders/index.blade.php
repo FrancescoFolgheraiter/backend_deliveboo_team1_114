@@ -20,11 +20,21 @@
                 <form action="{{ route('admin.orders.index') }}" method="GET" class="d-flex justify-content-around ">
                     <div>
                         <label for="">Da:</label>
-                        <input type="date" id="from_date" name="from_date">
+                        <input type="date" id="from_date" name="from_date" >
+                        @error('from_date')
+                            <div class="alert alert-danger">
+                                {{ $message }}
+                            </div>
+                        @enderror
                     </div>
                     <div>
                         <label for="">a:</label>
                         <input type="date" id="to_date" name="to_date">
+                        @error('to_date')
+                            <div class="alert alert-danger">
+                                {{ $message }}
+                            </div>
+                        @enderror
                     </div>
                     <div>
                         <button type="submit">Filtra</button>

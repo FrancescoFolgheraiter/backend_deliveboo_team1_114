@@ -17,14 +17,14 @@
                 </h1>
                 <hr>
                 <h4>Filtra gli ordini</h4>
-                <form action=""  class="d-flex justify-content-around ">
+                <form action="{{ route('admin.orders.index') }}" method="GET" class="d-flex justify-content-around ">
                     <div>
                         <label for="">Da:</label>
-                        <input type="date">
+                        <input type="date" id="from_date" name="from_date">
                     </div>
                     <div>
                         <label for="">a:</label>
-                        <input type="date">
+                        <input type="date" id="to_date" name="to_date">
                     </div>
                     <div>
                         <button type="submit">Filtra</button>

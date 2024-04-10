@@ -15,6 +15,21 @@
                 <h1 class="text-center">
                     Lista degli ordini
                 </h1>
+                <hr>
+                <h4>Filtra gli ordini</h4>
+                <form action=""  class="d-flex justify-content-around ">
+                    <div>
+                        <label for="">Da:</label>
+                        <input type="date">
+                    </div>
+                    <div>
+                        <label for="">a:</label>
+                        <input type="date">
+                    </div>
+                    <div>
+                        <button type="submit">Filtra</button>
+                    </div>
+                </form>
                 <div class="custom-card-table-index">
                     <!--Tabella visualizzazione contenuti table orders-->
                     <table class="table">

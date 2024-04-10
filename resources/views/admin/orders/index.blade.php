@@ -17,7 +17,7 @@
                 </h1>
                 <hr>
                 <h4>Filtra gli ordini</h4>
-                <form action="{{ route('admin.orders.index') }}" method="GET" class="d-flex justify-content-around ">
+                <form id="filterForm" action="{{ route('admin.orders.index') }}" method="GET" class="d-flex justify-content-around ">
                     <div>
                         <label for="">Da:</label>
                         <input type="date" id="from_date" name="from_date" >
@@ -38,6 +38,7 @@
                     </div>
                     <div>
                         <button type="submit">Filtra</button>
+                        <button type="reset" onclick="resetForm()">Clear</button>
                     </div>
                 </form>
                 <div class="custom-card-table-index">
@@ -82,6 +83,12 @@
     </div>
 </div>
 
-
+<script>
+    //script che mi permette di resettare la query 
+    function resetForm() {
+        document.getElementById("filterForm").reset();
+        window.location.href = "{{ route('admin.orders.index') }}";
+    }
+</script>
 
 @endsection

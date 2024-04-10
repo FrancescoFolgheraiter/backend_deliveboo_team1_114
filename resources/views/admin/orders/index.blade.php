@@ -18,11 +18,11 @@
                 <hr>
                 <h4>Filtra gli ordini</h4>
                 {{-- form per il filtraggio di ordini, reindirizza alla rotta index del controller Order --}}
-                <form id="filterForm" action="{{ route('admin.orders.index') }}" method="GET" class="d-flex flex-column align-items-center mb-3">
+                <form id="filterForm" action="{{ route('admin.orders.index') }}" method="GET" class="d-flex flex-column align-items-center mb-3" onsubmit="return validateDates()">
                     <div class="d-flex mb-3">
                         <div class="m-3">
                             <label for="">Da:</label>
-                            <input type="date" id="from_date" name="from_date" >
+                            <input type="date" id="from_date" name="from_date" required required value="{{ isset($date['from_date']) ? $date['from_date'] : '' }}" max="{{ date('Y-m-d') }}">
                             @error('from_date')
                                 <div class="alert alert-danger">
                                     {{ $message }}
@@ -31,7 +31,7 @@
                         </div>
                         <div class="m-3">
                             <label for="">a:</label>
-                            <input type="date" id="to_date" name="to_date">
+                            <input type="date" id="to_date" name="to_date" required value="{{ isset($date['to_date']) ? $date['to_date'] : '' }}" max="{{ date('Y-m-d') }}">
                             @error('to_date')
                                 <div class="alert alert-danger">
                                     {{ $message }}
@@ -91,6 +91,24 @@
     function resetForm() {
         document.getElementById("filterForm").reset();
         window.location.href = "{{ route('admin.orders.index') }}";
+    }
+    //script che mi permette una validazione front end per esperienza utente
+    //che il filtraggio delle date sia fatto bene
+    function validateDates() {
+        var fromDate = new Date(document.getElementById('from_date').value);
+        var toDate = new Date(document.getElementById('to_date').value);
+        var today = new Date();
+
+        if (fromDate > today || toDate > today) {
+            alert('Le date non possono superare la data odierna.');
+            return false;
+        }
+
+        if (fromDate > toDate) {
+            alert('La data di inizio non può essere successiva alla data di fine.');
+            return false;
+        }
+        return true;
     }
 </script>
 

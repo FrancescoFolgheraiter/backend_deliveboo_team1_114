@@ -43,10 +43,9 @@ class OrderController extends Controller
                 $query->where('user_id', $user->id);
                 $query->whereBetween('date', [$date['from_date'], $date['to_date']]);
             })->orderBy('date')->get();
-
             // Passa gli ordini filtrati alla vista
             $user = auth()->user();
-            return view('admin.orders.index', compact('orders', 'user'));
+            return view('admin.orders.index', compact('orders','user','date'));
             }
 
         

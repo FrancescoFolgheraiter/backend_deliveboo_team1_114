@@ -46,19 +46,19 @@
                                 </label>
                             </div>
                 
-                            <div class="mt-4">
+                            <div class="my-4">
                                 <button class="btn button-color fw-bolder text-white" type="submit">
-                                    Log in
+                                    Accedi
                                 </button>
-                
-                                <div class="mt-3 pb-3">
-                                    @if (Route::has('password.request'))
-                                        <a href="{{ route('password.request') }}" class="link-light">
-                                            {{ __('Forgot your password?') }}
-                                        </a>
-                                    @endif
-                                </div>
                             </div>
+
+                            {{-- <div class="mt-3 pb-3">
+                                @if (Route::has('password.request'))
+                                    <a href="{{ route('password.request') }}" class="link-light">
+                                        {{ __('Forgot your password?') }}
+                                    </a>
+                                @endif
+                            </div> --}}
                         </div>
                     </div>
                 </form>

@@ -17,24 +17,27 @@
                 </h1>
                 <hr>
                 <h4>Filtra gli ordini</h4>
-                <form id="filterForm" action="{{ route('admin.orders.index') }}" method="GET" class="d-flex justify-content-around ">
-                    <div>
-                        <label for="">Da:</label>
-                        <input type="date" id="from_date" name="from_date" >
-                        @error('from_date')
-                            <div class="alert alert-danger">
-                                {{ $message }}
-                            </div>
-                        @enderror
-                    </div>
-                    <div>
-                        <label for="">a:</label>
-                        <input type="date" id="to_date" name="to_date">
-                        @error('to_date')
-                            <div class="alert alert-danger">
-                                {{ $message }}
-                            </div>
-                        @enderror
+                {{-- form per il filtraggio di ordini, reindirizza alla rotta index del controller Order --}}
+                <form id="filterForm" action="{{ route('admin.orders.index') }}" method="GET" class="d-flex flex-column align-items-center mb-3">
+                    <div class="d-flex mb-3">
+                        <div class="m-3">
+                            <label for="">Da:</label>
+                            <input type="date" id="from_date" name="from_date" >
+                            @error('from_date')
+                                <div class="alert alert-danger">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+                        </div>
+                        <div class="m-3">
+                            <label for="">a:</label>
+                            <input type="date" id="to_date" name="to_date">
+                            @error('to_date')
+                                <div class="alert alert-danger">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+                        </div>
                     </div>
                     <div>
                         <button type="submit">Filtra</button>

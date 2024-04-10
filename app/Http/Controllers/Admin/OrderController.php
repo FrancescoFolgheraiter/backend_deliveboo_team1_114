@@ -32,16 +32,16 @@ class OrderController extends Controller
             return view('admin.orders.index', compact('orders','user'));
         }
         else{
-            $data= $request->validate([
+            $date= $request->validate([
                 'from_date' => 'date|required',
                 'to_date' => 'date|required'
             ]);
             
             // Filtra gli ordini compresi tra le date specificate
-            $orders = Order::whereHas('dishes', function ($query) use ($data) {
+            $orders = Order::whereHas('dishes', function ($query) use ($date) {
                 $user = auth()->user();
                 $query->where('user_id', $user->id);
-                $query->whereBetween('date', [$data['from_date'], $data['to_date']]);
+                $query->whereBetween('date', [$date['from_date'], $date['to_date']]);
             })->orderBy('date')->get();
 
             // Passa gli ordini filtrati alla vista

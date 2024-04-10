@@ -12,38 +12,53 @@
                 {{ session('error') }}
             </div>
             @endif
-                <h1 class="text-center">
+                <h1 class="text-center mb-4">
                     Lista degli ordini
                 </h1>
-                <hr>
-                <h4>Filtra gli ordini</h4>
-                {{-- form per il filtraggio di ordini, reindirizza alla rotta index del controller Order --}}
-                <form id="filterForm" action="{{ route('admin.orders.index') }}" method="GET" class="d-flex flex-column align-items-center mb-3" onsubmit="return validateDates()">
-                    <div class="d-flex mb-3">
-                        <div class="m-3">
-                            <label for="">Da:</label>
-                            <input type="date" id="from_date" name="from_date" required required value="{{ isset($date['from_date']) ? $date['from_date'] : '' }}" max="{{ date('Y-m-d') }}">
-                            @error('from_date')
-                                <div class="alert alert-danger">
-                                    {{ $message }}
+                <div class="filter d-flex justify-content-center align-items-center">
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed d-flex justify-content-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFilter" aria-expanded="true" aria-controls="collapseFilter">
+                                    <h4 class="text-dark me-5">
+                                        Filtra gli ordini 
+                                    </h4>
+                                </button>
+                            </h2>
+                            <div id="collapseFilter" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    {{-- form per il filtraggio di ordini, reindirizza alla rotta index del controller Order --}}
+                                    <form id="filterForm" action="{{ route('admin.orders.index') }}" method="GET" class="d-flex flex-column align-items-center mb-3" onsubmit="return validateDates()">
+                                        <div class="d-flex mb-2">
+                                            <div class="m-3 d-flex flex-column">
+                                                <label class="form-label text-center" for="from_date">Da:</label>
+                                                <input type="date" id="from_date" class="form-control" name="from_date" required required value="{{ isset($date['from_date']) ? $date['from_date'] : '' }}" max="{{ date('Y-m-d') }}">
+                                                @error('from_date')
+                                                    <div class="alert alert-danger">
+                                                        {{ $message }}
+                                                    </div>
+                                                @enderror
+                                            </div>
+                                            <div class="m-3 d-flex flex-column">
+                                                <label class="form-label text-center" for="to_date">a:</label>
+                                                <input type="date" id="to_date" class="form-control" name="to_date" required value="{{ isset($date['to_date']) ? $date['to_date'] : '' }}" max="{{ date('Y-m-d') }}">
+                                                @error('to_date')
+                                                    <div class="alert alert-danger">
+                                                        {{ $message }}
+                                                    </div>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <button type="submit" class="btn btn-color btn-outline-danger text-white">Filtra</button>
+                                            <button type="reset" class="btn btn-color btn-outline-danger text-white" onclick="resetForm()">Clear</button>
+                                        </div>
+                                    </form>
                                 </div>
-                            @enderror
-                        </div>
-                        <div class="m-3">
-                            <label for="">a:</label>
-                            <input type="date" id="to_date" name="to_date" required value="{{ isset($date['to_date']) ? $date['to_date'] : '' }}" max="{{ date('Y-m-d') }}">
-                            @error('to_date')
-                                <div class="alert alert-danger">
-                                    {{ $message }}
-                                </div>
-                            @enderror
+                            </div>
                         </div>
                     </div>
-                    <div>
-                        <button type="submit">Filtra</button>
-                        <button type="reset" onclick="resetForm()">Clear</button>
-                    </div>
-                </form>
+                </div>
                 <div class="custom-card-table-index">
                     <!--Tabella visualizzazione contenuti table orders-->
                     <table class="table">

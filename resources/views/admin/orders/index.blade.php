@@ -15,13 +15,13 @@
                 <h1 class="text-center mb-4">
                     Lista degli ordini
                 </h1>
-                <div class="filter d-flex justify-content-center align-items-center">
-                    <div class="accordion" id="accordionExample">
+                <div class="filter">
+                    <div  id="accordionExample">
                         <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed d-flex justify-content-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFilter" aria-expanded="true" aria-controls="collapseFilter">
-                                    <h4 class="text-dark me-5">
-                                        Filtra gli ordini 
+                            <h2 class="accordion-header text-center">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFilter" aria-expanded="true" aria-controls="collapseFilter">
+                                    <h4 class="text-dark ms-3">
+                                        <a href="#" class="text-color-2"><i class="fa-solid fa-filter"></i> Filtra gli ordini</a> 
                                     </h4>
                                 </button>
                             </h2>
@@ -50,7 +50,7 @@
                                             </div>
                                         </div>
                                         <div>
-                                            <button type="submit" class="btn btn-color btn-outline-danger text-white">Filtra</button>
+                                            <button type="submit" class="btn btn-color btn-outline-danger text-white" data-bs-toggle="modal" data-bs-target="#customModal">Filtra</button>
                                             <button type="reset" class="btn btn-color btn-outline-danger text-white" onclick="resetForm()">Clear</button>
                                         </div>
                                     </form>
@@ -98,6 +98,22 @@
                 </div>
             </div>
         </div>
+        <div class="modal fade" id="customModal" tabindex="-1" aria-labelledby="customModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-color-2" id="customModalLabel">ATTENZIONE!</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" onclick="closeModal()" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p id="errorMessage"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-color btn-outline-danger text-white" data-bs-dismiss="modal" onclick="closeModal()">Chiudi</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -107,6 +123,18 @@
         document.getElementById("filterForm").reset();
         window.location.href = "{{ route('admin.orders.index') }}";
     }
+    //funzione che mi permette di mostrare un messaggio e di selezionare 
+    // il modal
+    function showModal(message) {
+        document.getElementById('errorMessage').innerHTML = message;
+        document.getElementById('customModal').classList.add('show');
+        document.getElementById('customModal').style.display = 'block';
+    }
+    //funzione che mi permette di chiudere il modal tramite button o X
+    function closeModal() {
+        document.getElementById('customModal').classList.remove('show');
+        document.getElementById('customModal').style.display = 'none';
+    }
     //script che mi permette una validazione front end per esperienza utente
     //che il filtraggio delle date sia fatto bene
     function validateDates() {
@@ -115,12 +143,12 @@
         var today = new Date();
 
         if (fromDate > today || toDate > today) {
-            alert('Le date non possono superare la data odierna.');
+            showModal('Le date non possono superare la data odierna.');
             return false;
         }
 
         if (fromDate > toDate) {
-            alert('La data di inizio non può essere successiva alla data di fine.');
+            showModal('La data di inizio non può essere successiva alla data di fine.');
             return false;
         }
         return true;

@@ -31,7 +31,7 @@
                         </p>
                     </div>
                     <div class="flex-grow-1 d-flex justify-content-center align-items-center">
-                        <div class="accordion" id="accordionExample">
+                        <div  id="accordionExample">
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
                                     <button class="accordion-button collapsed fw-bolder" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">

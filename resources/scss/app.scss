@@ -112,6 +112,14 @@ main{
        @include image-style-100;
     }
 }
+.guest-header-logo{
+    width: 90px;
+    height: 90px;
+
+    img{
+        @include image-style-logo;
+    }
+}
 .user-img-box{
     max-width: $max-width-500;
 

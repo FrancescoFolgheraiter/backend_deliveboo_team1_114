@@ -15,7 +15,7 @@
     </head>
     <body>
         <header>
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <nav class="navbar navbar-expand-lg bg-white">
                 <div class="container">
                     
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,7 +24,11 @@
                     <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarText">
                         <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link" href="http://localhost:5174">LOGO</a>
+                                <a class="nav-link" href="http://localhost:5174">
+                                    <div class="guest-header-logo">
+                                        <img src="/image/User/logo deliveboo1.png" alt="LOGO">
+                                    </div>
+                                </a>
                             </li>
                         </ul>
                         <ul class="navbar-nav ml-auto mb-2 mb-lg-0">

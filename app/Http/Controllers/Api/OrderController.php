@@ -27,7 +27,7 @@ class OrderController extends Controller
             'surname' =>$validatedData['params']['surname'],
             'date' => $currentDate,
             'total_price'=>$validatedData['params']['total_price'],
-            'note'=>$validatedData['params']['total_price'],
+            'note'=>$validatedData['params']['note'],
             'address' =>$validatedData['params']['address'],
             'phone_number' =>$validatedData['params']['phone_number'],
         ]);

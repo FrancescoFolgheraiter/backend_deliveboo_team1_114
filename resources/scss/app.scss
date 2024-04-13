@@ -190,6 +190,9 @@ main{
 .custom-card-index-dishes{
     @include custom-card-style-8;
 }
+.custom-card-stats{
+    @include custom-card-style-10;
+}
 
 //modifica ai check della registrazione
 .form-check-input {

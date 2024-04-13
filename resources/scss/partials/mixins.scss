@@ -120,6 +120,21 @@
     -o-box-shadow: 0px 2px 46px 0px #6B6B6B;
     box-shadow: 0px 2px 46px 0px #6B6B6B;
 }
+//mixin utilizzato per la card delle statistiche
+@mixin custom-card-style-10{
+    width: 1000px; 
+    height: 800px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: $utility;
+    padding: 10px;
+    -webkit-box-shadow: 0px 2px 46px 0px #6B6B6B;
+    -moz-box-shadow: 0px 2px 46px 0px #6B6B6B;
+    -o-box-shadow: 0px 2px 46px 0px #6B6B6B;
+    box-shadow: 0px 2px 46px 0px #6B6B6B;
+}
 
 @mixin image-style-logo{
     width: 100%;

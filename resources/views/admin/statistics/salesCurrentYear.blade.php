@@ -7,19 +7,21 @@
 
 <div class="row">
     <div class="col">
-        <div class="card p-2">
-            {{-- catch di errore --}}
-            @if(session('error'))
-            <div class="alert alert-danger">
-                {{ session('error') }}
-            </div>
-            @endif
-                <h1 class="text-center">
-                    Statistiche
-                </h1>
-                <!--Grafico vendite 2024-->
-                <div class=" m-auto ">
-                    {!! $chart->render() !!}
+        <div class="custom-container">
+            <div class="custom-card-stats d-flex align-items-center flex-column p-3">
+                {{-- catch di errore --}}
+                @if(session('error'))
+                <div class="alert alert-danger">
+                    {{ session('error') }}
+                </div>
+                @endif
+                    <h1 class="text-center">
+                        Statistiche
+                    </h1>
+                    <!--Grafico vendite 2024-->
+                    <div class="m-auto">
+                        {!! $chart->render() !!}
+                    </div>
                 </div>
             </div>
         </div>

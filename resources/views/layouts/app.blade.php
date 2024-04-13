@@ -36,7 +36,7 @@
                                 <h2 class="accordion-header">
                                     <button class="accordion-button collapsed fw-bolder" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                         <h4 class="text-shadow-2">
-                                            <i class="fa-solid fa-user-gear"></i><span class="ms-3">Pagina Utente</span>
+                                            <i class="fa-solid fa-user-gear"></i><span class="ms-3">Utente</span>
                                         </h4>
                                     </button>
                                 </h2>
@@ -52,7 +52,7 @@
                                 <h2 class="accordion-header">
                                     <button class="accordion-button fw-bolder collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                         <h4 class="text-shadow-2">
-                                            <i class="fa-solid fa-utensils"></i><span class="ms-3">I Tuoi Piatti</span>
+                                            <i class="fa-solid fa-utensils"></i><span class="ms-3">Piatti</span>
                                         </h4>
                                     </button>
                                 </h2>
@@ -71,7 +71,7 @@
                                 <h2 class="accordion-header">
                                     <button class="accordion-button fw-bolder collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                         <h4 class="text-shadow-2">
-                                            <i class="fa-solid fa-arrow-down-a-z"></i><span class="ms-3">I Tuoi Ordini</span>
+                                            <i class="fa-solid fa-arrow-down-a-z"></i><span class="ms-3">Ordini</span>
                                         </h4>
                                     </button>
                                 </h2>

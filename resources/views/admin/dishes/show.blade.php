@@ -49,10 +49,10 @@
             
             <div class="card my-aside-card">
                 <div>
-                    <div class="logo-img-box mx-auto position-relative">
+                    <div class="logo-img-box">
                         <img src="/image/User/deliveboo-logo.png" alt="Logo DeliveBoo">
                     </div>
-                    <div class="position-absolute bottom-0">
+                    <div>
                         <div class="text-center">
                             <div class="mb-5">
                                 <div class="mb-5">
@@ -76,9 +76,6 @@
                                         </span>
                                     @endforeach
                                 </div>
-                                {{-- <div>
-                                    {{ $dish->ingredients }}
-                                </div> --}}
                             </div>
                             <div class="mb-5">
                                 <div class="mb-5">

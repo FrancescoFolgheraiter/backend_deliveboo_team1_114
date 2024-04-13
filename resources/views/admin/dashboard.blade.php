@@ -31,7 +31,7 @@
                                         Ordini di oggi
                                     </h2>
                                     <div class="custom-card-table-order">
-                                        <table class="table text-center table-auto">
+                                        <table class="table text-center table-auto table-hover">
                                             <thead>
                                                 <tr>
                                                     <th scope="col">Cliente</th>
@@ -42,12 +42,10 @@
                                             </thead>
                                             <tbody>
                                                 @foreach ($orders as $order)
-                                                <tr>
-                                                    <th>
-                                                        <a href="{{ route('admin.orders.show', ['order' => $order->id]) }}" class="text-color-3">
-                                                            {{ $order->name }} {{ $order->surname }}
-                                                        </a>
-                                                    </th>
+                                                <tr onclick="window.location='{{ route('admin.orders.show', ['order' => $order->id]) }}'">
+                                                    <td>
+                                                        {{ $order->name }} {{ $order->surname }}
+                                                    </td>
                                                     <td>
                                                         {{ $order->address }}
                                                     </td>

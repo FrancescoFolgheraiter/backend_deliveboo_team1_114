@@ -324,3 +324,10 @@ main{
     border: 1px solid lightgray;
     border-radius: var(--bs-card-border-radius);
 }
+
+.table-hover tbody tr:hover {
+    transform: translateY(-3px);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+

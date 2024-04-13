@@ -16,33 +16,33 @@
     <body>
         <div class="row g-0">
             <div class="col-2">
-                <aside class="p-3 d-flex flex-column text-white">
-                    <div class="top-aside d-flex flex-column align-items-center">
-                        <div class="mt-3">
-                            <div class="img-rounded">
+                <aside class=" pb-3 d-flex flex-column text-white">
+                    <div class="top-aside">
+                        <div class="d-flex justify-content-end">
+                            <div class="img-aside-restaurant">
                                 <img src="/storage/{{ $user->resturant_image }}" alt="{{ $user->name }}">
                             </div>
                         </div>
-                        <h1 class="text-center mt-3">
+                        <h1 class="ps-3 mt-3 text-shadow-2">
                             {{ $user->resturant_name }}
                         </h1>
-                        <p class="fw-bolder text-center text-color">
+                        <p class="ps-3 fw-bolder text-color">
                             {{ $user->address }}
                         </p>
                     </div>
-                    <div class="flex-grow-1 d-flex justify-content-center align-items-center">
-                        <div  id="accordionExample">
+                    <div class="flex-grow-1 d-flex align-items-center ps-3">
+                        <div id="accordionExample">
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
                                     <button class="accordion-button collapsed fw-bolder" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        <h4>
-                                            <a class="nav-link" href="{{ route('admin.dashboard') }}">Pagina Utente</a>
+                                        <h4 class="text-shadow-2">
+                                            <i class="fa-solid fa-user-gear"></i><span class="ms-3">Utente</span>
                                         </h4>
                                     </button>
                                 </h2>
                                 <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body text-color-2 fw-bolder">
-                                        <u>
+                                    <div class="accordion-body fw-bolder">
+                                        <u class="text-decoration-none">
                                             <a class="nav-link" href="{{ route('admin.dashboard') }}">Il Tuo Locale</a>
                                         </u>
                                     </div>
@@ -51,17 +51,17 @@
                             <div class="accordion-item mt-5">
                                 <h2 class="accordion-header">
                                     <button class="accordion-button fw-bolder collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        <h4>
-                                            <a class="nav-link" href="{{ route('admin.dishes.index') }}">I Tuoi Piatti</a>
+                                        <h4 class="text-shadow-2">
+                                            <i class="fa-solid fa-utensils"></i><span class="ms-3">Piatti</span>
                                         </h4>
                                     </button>
                                 </h2>
                                 <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body text-color-2 fw-bolder">
-                                        <u>
+                                    <div class="accordion-body fw-bolder">
+                                        <u class="text-decoration-none">
                                             <a class="nav-link" href="{{ route('admin.dishes.index') }}">Vedi I Tuoi Piatti</a>
                                         </u>
-                                        <u>
+                                        <u class="text-decoration-none">
                                             <a class="nav-link" href="{{ route('admin.dishes.create') }}">Aggiungi un piatto</a>
                                         </u>
                                     </div>
@@ -70,14 +70,14 @@
                             <div class="accordion-item mt-5">
                                 <h2 class="accordion-header">
                                     <button class="accordion-button fw-bolder collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        <h4>
-                                            <a class="nav-link" href="{{ route('admin.orders.index') }}">I Tuoi Ordini</a>
+                                        <h4 class="text-shadow-2">
+                                            <i class="fa-solid fa-arrow-down-a-z"></i><span class="ms-3">Ordini</span>
                                         </h4>
                                     </button>
                                 </h2>
                                 <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body text-color-2 fw-bolder">
-                                        <u>
+                                    <div class="accordion-body fw-bolder">
+                                        <u class="text-decoration-none">
                                             <a class="nav-link" href="{{ route('admin.orders.index') }}">Vedi I Tuoi Ordini</a>
                                         </u>
                                     </div>
@@ -86,28 +86,28 @@
                             <div class="accordion-item mt-5">
                                 <h2 class="accordion-header">
                                     <button class="accordion-button fw-bolder collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                        <h4>
-                                            <a class="nav-link" href="{{ route('admin.orders.index') }}">Statistiche</a>
+                                        <h4 class="text-shadow-2">
+                                            <i class="fa-solid fa-chart-simple"></i><span class="ms-3">Statistiche</span>
                                         </h4>
                                     </button>
                                 </h2>
                                 <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body text-color-2 fw-bolder">
-                                        <u>
+                                    <div class="accordion-body fw-bolder">
+                                        <u class="text-decoration-none">
                                             <a class="nav-link" href="{{ route('admin.statistics.salesCurrentYear') }}">Vendite anno corrente</a>
                                         </u>
                                     </div>
                                 </div>
                                 <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body text-color-2 fw-bolder">
-                                        <u>
+                                    <div class="accordion-body fw-bolder">
+                                        <u class="text-decoration-none">
                                             <a class="nav-link" href="{{ route('admin.statistics.totalSales') }}">Totale vendite</a>
                                         </u>
                                     </div>
                                 </div>
                                 <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body text-color-2 fw-bolder">
-                                        <u>
+                                    <div class="accordion-body fw-bolder">
+                                        <u class="text-decoration-none">
                                             <a class="nav-link" href="{{ route('admin.statistics.dishesSales') }}">Totale piatti venduti</a>
                                         </u>
                                     </div>
@@ -115,24 +115,24 @@
                             </div>
                         </div>
                     </div>
-                    <div class="bottom-aside">
+                    <div class="bottom-aside ps-3">
                         <div class="mb-3">
-                            <h5 class="mb-0">
+                            <h5 class="mb-0 text-shadow-2">
                                 Partita Iva:
                             </h5>
-                            <span class="text-color-2 fw-bolder">
+                            <span class="fw-bolder">
                                 {{ $user->vat_number }}
                             </span>
                         </div>
                         <div>
-                            <h5 class="mb-0">
+                            <h5 class="mb-0 text-shadow-2">
                                 Utente creato in data:
                             </h5>
                             @php
                             //prendo solo la data tramite explode lasciando perdere l'orario di creazione
                                $date = explode(" ", $user->created_at);
                             @endphp
-                            <div class="text-color-2 fw-bolder">
+                            <div class="fw-bolder">
                                 {{ $date[0]}}
                             </div>
                         </div>
@@ -143,7 +143,7 @@
                 <header>
                     <nav class="navbar navbar-expand-lg bg-body-tertiary px-5 py-2">
                         <div>
-                            <input type="search" placeholder=" Cerca..." class="form-control">
+                            LOGO DELIVEBOO
                         </div>
                         <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarText">
                             <form method="POST" action="{{ route('logout') }}">

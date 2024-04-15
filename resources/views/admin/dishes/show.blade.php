@@ -35,6 +35,11 @@
                                 @endif
                             </div>  
                         </div>
+                        <div class="d-flex justify-content-center">
+                            <button id="toggler-aside" class="badge btn-color p-2 navbar-toggler d-lg-none text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offCanvasDishes" aria-controls="offCanvasDishes" aria-label="Toggle navigation">
+                                Visualizza i dettagli
+                            </button>
+                        </div>
                         <div class="text-center b-white card w-80 p-4 mx-auto">
                             <h3 class="text-shadow">
                                 {{ $dish->description }}
@@ -45,7 +50,94 @@
                 </div>
             </div>
         </div>
-        <div class="col-3 d-flex flex-column justify-content-between">
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offCanvasDishes" aria-labelledby="offCanvasDishesLabel">
+            <div class="offcanvas-header">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body d-flex flex-column justify-content-center">
+                <div class="my-aside-card">
+                    <div class="d-flex justify-content-center flex-column">
+                        <div class="text-center">
+                            <div class="mb-5">
+                                <div class="mb-5">
+                                    {{-- mi vado a recuperare l'user(ristorante) che corrisponde a quel piatto --}}
+                                    <h1 class="text-white text-shadow">
+                                        {{ $dish->user->resturant_name }}
+                                    </h1>
+                                </div>
+                            </div>
+                            <div class="mb-5 px-2">
+                                <h4 class="my-3 text-center text-shadow">
+                                    Ingredienti
+                                </h4>
+                                <div>
+                                    @php
+                                        $ingredients = explode(', ', $dish->ingredients);
+                                    @endphp
+                                    @foreach($ingredients as $ingredient)
+                                        <span class="badge btn-color text-shadow">
+                                            {{ $ingredient }}
+                                        </span>
+                                    @endforeach
+                                </div>
+                            </div>
+                            <div class="mb-5">
+                                <div class="mb-5">
+                                    <h4 class="mb-2 text-shadow">
+                                        Prezzo attuale
+                                    </h4>
+                                    <h3 class="text-white text-shadow">
+                                        {{ $dish->price }} €
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="my-3 d-flex flex-column justify-content-center align-items-center">
+                            <div class="mb-3">
+                                <a href="{{ route('admin.dishes.edit', ['dish' => $dish->id]) }}" class="btn btn-color btn-outline-danger fw-bolder text-shadow text-white">
+                                    Modifica
+                                </a>
+                            </div>
+                            <div>
+                                <a class="btn fw-bolder btn-color text-shadow btn-outline-danger text-white" data-bs-toggle="modal" data-bs-target="#DishModal{{ $dish->id }}">
+                                    Elimina
+                                </a>
+                            
+                                <div class="modal fade" id="DishModal{{ $dish->id }}" tabindex="-1" aria-labelledby="DishModalLabel{{ $dish->id }}" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="DishModalLabel{{ $dish->id }}"><span class="text-danger">ATTENZIONE!</span></h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                Sei sicuro di voler eliminare {{ $dish->name }}?
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-dark fw-bolder" data-bs-dismiss="modal">Annulla</button>
+                                                <form action="{{ route('admin.dishes.destroy', ['dish' => $dish->id]) }}" method="POST">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button type="submit" class="btn btn-danger fw-bolder">
+                                                        Elimina
+                                                    </button>
+                                                    @error('name')
+                                                        <div class="alert alert-danger">
+                                                            {{ $message }}
+                                                        </div>
+                                                    @enderror
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
             
             <div class="card my-aside-card">
                 <div>

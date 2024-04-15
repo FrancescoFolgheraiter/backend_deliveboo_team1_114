@@ -42,7 +42,7 @@ class DishSeeder extends Seeder
             $newDish->description = $dish['descrizione'];
             $newDish->ingredients = $dish['ingredienti'];
             $newDish->price = $dish['prezzo'];
-            $newDish->visible = fake()->boolean();
+            $newDish->visible = 1;
             $newDish->user_id = $dish['ristorante'];
             $newDish->image = $dish['immagine'];
             $newDish->save();

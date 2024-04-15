@@ -336,3 +336,42 @@ main{
     cursor: pointer;
 }
 
+@media (max-width: 1024px) {
+    #responsive-aside h1,
+    #responsive-aside img,
+    #responsive-aside p, 
+    #responsive-aside .bottom-aside {
+        display: none;
+    }
+    #responsive-aside {
+        width: 100%;  
+        text-align: center; 
+    }
+    .col-2 {
+        flex: 0 0 auto;
+        max-width: 80px;
+    }
+    .col-10 {
+        flex: 1;
+    }
+    #responsive-aside .accordion-button .text-shadow-2 {
+        font-size: 0;
+    }
+    #responsive-aside .accordion-button .fa-solid {
+        font-size: 24px;
+        margin-bottom: 60px;
+    }
+    #total-daily-orders{
+        display: none;
+    }
+    .vh-card{
+        height: 80vh;
+
+        .my-4{
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+
+}
+

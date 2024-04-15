@@ -5,7 +5,7 @@
 @section('main-content')
     <div class="row">
         <div class="col-9">
-            <div class="card logo-background my-order-card">
+            <div class="card my-order-card">
                 <div class="card-body d-flex justify-content-center">
                     <div class="row w-100">
                         <div class="col-md-9 col-12 d-flex w-100">
@@ -14,6 +14,11 @@
                                     <h2 class="text-center text-shadow mb-3">
                                         Piatti ordinati
                                     </h2>
+                                    <div class="d-flex justify-content-center">
+                                        <button id="toggler-aside" class="navbar-toggler d-lg-none badge mb-3 btn-color text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offCanvasOrder" aria-controls="offCanvasOrder" aria-label="Toggle navigation">
+                                            Visualizza dettagli cliente
+                                        </button>
+                                    </div>
                                     <div class="custom-card-table-order">
                                         <!--Tabella visualizzazione contenuti table dishes-->
                                         <table class="table">
@@ -48,6 +53,83 @@
                         </div>
                     </div>
                     <!--fine contenuto principale di interazione utente-->
+                </div>
+            </div>
+        </div>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offCanvasOrder" aria-labelledby="offCanvasOrderLabel">
+            <div class="offcanvas-header">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body d-flex flex-column justify-content-center">
+                <div class="my-user-card p-1">
+                    <div class="mt-4 text-center">
+                        <div class="text-center my-3">
+                            <h3>
+                                <span class="text-white text-shadow fw-bolder">{{ $order->name }} {{ $order->surname }}</span>
+                            </h3>  
+                        </div>
+                        <div class="mt-4 text-center">
+                            <div class="mb-2">
+                                <h5 class="mb-2">
+                                    Ordinato il
+                                </h5>
+                                <h4 class="text-white text-shadow fw-bolder">
+                                    {{ date('d-m-Y', strtotime($order->date)) }}
+                                </h4>
+                            </div>
+                            <div class="mb-5">
+                                <h5 class="mb-2">
+                                    Alle ore
+                                </h5>
+                                <h4 class="text-white text-shadow fw-bolder">
+                                    {{ date('H:i:s', strtotime($order->date)) }}
+                                </h4>
+                            </div>
+                        </div>                 
+                        <div class="mb-4">
+                            <div>
+                                <h5 class="mb-2">
+                                    Indirizzo dell'ordine
+                                </h5>
+                                <h4 class="text-white text-shadow fw-bolder">
+                                    {{ $order->address }}
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <div>
+                                <h5 class="mb-2">
+                                    Numero di telefono
+                                </h5>
+                                <h4 class="text-white text-shadow fw-bolder">
+                                    +39 {{ $order->phone_number }}
+                                </h4>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="mb-5">
+                                <h5 class="mb-2">
+                                    Valore dell'ordine
+                                </h5>
+                                <h4 class="text-white text-shadow fw-bolder">
+                                    {{ $order->total_price }} €
+                                </h4>
+                            </div>
+        
+                            <div class="m-5">
+                                <h5>
+                                    Note lasciate dal cliente
+                                </h5>
+                                @if (!empty($order->note))
+                                    <h5 class="text-white text-shadow fw-bolder">
+                                        {{ $order->note }}
+                                    </h5>
+                                @else
+                                    <p class="text-white">Il cliente non ha lasciato note.</p>
+                                @endif
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

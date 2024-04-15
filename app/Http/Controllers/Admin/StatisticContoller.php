@@ -34,6 +34,13 @@ class StatisticContoller extends Controller
         ->groupBy('year', 'month')
         ->get();
 
+        //controllo se ho dei dati con cui poter far vedere i grafici nel caso non li abbia blocco la funzione
+        if ($orders->isEmpty()) {
+            // Se non ci sono ordini, restituisci solo la vista senza il grafico
+            $user = auth()->user();
+            return view('admin.statistics.salesCurrentYear', compact('user'));
+        }
+
         $totalPrice = [];
         //il foreach mi permette di estrapolare i mesi e il totale dei prezzi
         //per successivamente utilizzarli con chartjs        
@@ -92,6 +99,13 @@ class StatisticContoller extends Controller
         ->groupBy('year', 'month')
         ->get();
 
+        //controllo se ho dei dati con cui poter far vedere i grafici nel caso non li abbia blocco la funzione
+        if ($orders->isEmpty()) {
+            // Se non ci sono ordini, restituisci solo la vista senza il grafico
+            $user = auth()->user();
+            return view('admin.statistics.salesCurrentYear', compact('user'));
+        }
+
         $totalPrice = [];
         //il foreach mi permette di estrapolare i mesi e il totale dei prezzi
         //per successivamente utilizzarli con chartjs        
@@ -145,6 +159,15 @@ class StatisticContoller extends Controller
             ->where('users.id', $userId)
             ->groupBy('dishes.name')
             ->get();
+
+        
+        //controllo se ho dei dati con cui poter far vedere i grafici nel caso non li abbia blocco la funzione
+        if ($totalDishes->isEmpty()) {
+            // Se non ci sono ordini, restituisci solo la vista senza il grafico
+            $user = auth()->user();
+            return view('admin.statistics.salesCurrentYear', compact('user'));
+        }
+
         //manipolazione dati
         $nameDishes=[];
         $dataDishes=[];

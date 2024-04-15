@@ -27,16 +27,22 @@ class TypeController extends Controller
         //prendo in input i tipi da filtrare tramite i parametri della 
         //richiesta API
         $types = $request->input('types');
+
         //filtro gli utenti per il tipo 
         $users = User::whereHas('types', function ($query) use ($types) {
             $query->whereIn('name', $types);
         },'=',count($types))->get();
+        //seconda parte di query che mi permette di caricare 
+        //ogni type di un utente
+        foreach ($users as $user) {
+            $user->load('types');
+        }
 
         return response()->json([
             'code' => 200,
             'message' => 'ok',
             'data' => [
-                'types' => $users
+                'users' => $users
             ]
         ]);
     }

@@ -19,7 +19,7 @@
                         Statistiche
                     </h1>
                     <!--Grafico vendite 2024-->
-                    <div class="m-auto">
+                    <div id="chart-container" class="m-auto">
                         @if(isset($chart))
                             @if($chart)
                                 {!! $chart->render() !!}

@@ -10,6 +10,11 @@
                     <div class="row w-100">
                         <div class="col-md-9 col-12 d-flex w-100">
                             <div class="flex-grow-1">
+                                <div class="d-flex justify-content-end">
+                                    <button id="toggler-aside" class="navbar-toggler d-lg-none mt-3 text-color-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offCanvasUser" aria-controls="offCanvasUser" aria-label="Toggle navigation">
+                                        <i class="fa-solid fa-chevron-left fa-2x"></i>
+                                    </button>
+                                </div>
                                 @if ($orders->isEmpty())
                                     <h3 class="text-center py-4">
                                         Non sono stati ancora effettuati ordini al tuo locale in data odierna.
@@ -62,6 +67,57 @@
                                     </div>
                                 @endif
                             </div>   
+                        </div>
+                    </div>
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offCanvasUser" aria-labelledby="offCanvasUserLabel">
+                        <div class="offcanvas-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body d-flex flex-column">
+                            <div class="mb-4">
+                                <div class="p-3">
+                                    <h5 class="text-center text-shadow">
+                                        Totale ordini giornalieri
+                                    </h5>
+                                    <h3 class="text-center fw-bolder text-color-2 text-shadow">
+                                        {{ $orders->count() }} ordini effettuati
+                                    </h3>
+                                </div>
+                            </div>
+                            <div>
+                                <div>
+                                    <div class="user-img-box mx-auto mb-4">
+                                        <img src="/storage/{{ $user->resturant_image  }}" alt="{{ $user->resturant_name }}">
+                                    </div>
+                                </div>
+                                <div class="mb-4">
+                                    <div class="mt-4">
+                                        <h5 class="text-center mb-2 text-shadow">
+                                            Tipologia del tuo ristorante
+                                        </h5>
+                                        <div class="text-center">
+                                            @foreach ($user->Types as $type)
+                                                <span class="badge btn-color text-shadow">
+                                                    {{ $type->name }}
+                                                </span>
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                    <div class="mt-5">
+                                        <div class="text-center mb-4">
+                                            <!--permette il rindirizzamento per poter modificare la relazione user-types-->
+                                            <a href="{{ route('admin.dashboard.editUser')}}" class="btn btn-color text-shadow btn-outline-danger text-white fw-bolder">
+                                                Modifica
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-center my-5">
+                                    <a href="{{ route('admin.dishes.create') }}" class="btn btn-color text-shadow btn-outline-danger text-white fw-bolder w-90">
+                                        {{-- <i class="fa-solid fa-plus"></i>  --}}Aggiungi un nuovo piatto
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <!--fine contenuto principale di interazione utente-->

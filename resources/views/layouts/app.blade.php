@@ -16,7 +16,7 @@
     <body>
         <div class="row g-0">
             <div class="col-2">
-                <aside class=" pb-3 d-flex flex-column text-white">
+                <aside id="responsive-aside" class=" pb-3 d-flex flex-column text-white">
                     <div class="top-aside">
                         <div class="d-flex justify-content-end">
                             <div class="img-aside-restaurant">
@@ -142,7 +142,7 @@
             <div class="col-10">
                 <header>
                     <nav class="navbar navbar-expand-lg bg-body-tertiary px-5 py-2">
-                        <div>
+                        <div class="d-none d-lg-block">
                             LOGO DELIVEBOO
                         </div>
                         <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarText">

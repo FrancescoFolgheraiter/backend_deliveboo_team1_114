@@ -70,7 +70,7 @@
         </div>
         <div class="col-3">
             <div class="mb-4">
-                <div class="card p-3">
+                <div id="total-daily-orders" class="card p-3">
                     <h5 class="text-center text-shadow">
                         Totale ordini giornalieri
                     </h5>

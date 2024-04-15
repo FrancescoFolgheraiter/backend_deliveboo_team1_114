@@ -11,7 +11,7 @@
         @foreach ($user->dishes as $dish)
             @if ($dish->delete == null)
                 {{-- stampo solo nel caso delete non sia valorizzata //soft delete --}}
-                <div class="col-lg-2 col-md-6 mb-4">
+                <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 col-12 mb-4">
                     @if ($dish->image == null)
                         <div class="food-card" style="background-image: url('/image/User/deliveboo-logo.png');">
                     @else

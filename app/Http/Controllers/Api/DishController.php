@@ -33,7 +33,9 @@ class DishController extends Controller
             ], 404);
         }
         //prendo i piatti di quell'utente
-        $dishes = Dish::where('user_id', $restaurant->id)->get();
+        $dishes = Dish::where('user_id', $restaurant->id)
+                        ->where('visible', 1)
+                        ->get();
 
         //tramite questa funzione ritorno il file json con al struttura delineata nelle []
         return response()->json([

@@ -38,7 +38,7 @@ class StatisticContoller extends Controller
         if ($orders->isEmpty()) {
             // Se non ci sono ordini, restituisci solo la vista senza il grafico
             $user = auth()->user();
-            return view('admin.statistics.salesCurrentYear', compact('user'));
+            return view('admin.statistics.index', compact('user'));
         }
 
         $totalPrice = [];
@@ -78,7 +78,7 @@ class StatisticContoller extends Controller
             ]
         ]);
 
-        return view('admin.statistics.salesCurrentYear', compact('chart','user'));
+        return view('admin.statistics.index', compact('chart','user'));
     }
 
     public function totalSales()
@@ -103,7 +103,7 @@ class StatisticContoller extends Controller
         if ($orders->isEmpty()) {
             // Se non ci sono ordini, restituisci solo la vista senza il grafico
             $user = auth()->user();
-            return view('admin.statistics.salesCurrentYear', compact('user'));
+            return view('admin.statistics.index', compact('user'));
         }
 
         $totalPrice = [];
@@ -143,7 +143,7 @@ class StatisticContoller extends Controller
             ]
         ]);
 
-        return view('admin.statistics.salesCurrentYear', compact('chart','user'));
+        return view('admin.statistics.index', compact('chart','user'));
     }
 
     public function dishesSales()
@@ -165,7 +165,7 @@ class StatisticContoller extends Controller
         if ($totalDishes->isEmpty()) {
             // Se non ci sono ordini, restituisci solo la vista senza il grafico
             $user = auth()->user();
-            return view('admin.statistics.salesCurrentYear', compact('user'));
+            return view('admin.statistics.index', compact('user'));
         }
 
         //manipolazione dati
@@ -201,6 +201,6 @@ class StatisticContoller extends Controller
         ->options([
         ]);
         $user = auth()->user();
-        return view('admin.statistics.salesCurrentYear', compact('chart','user'));
+        return view('admin.statistics.index', compact('chart','user'));
     }
 }

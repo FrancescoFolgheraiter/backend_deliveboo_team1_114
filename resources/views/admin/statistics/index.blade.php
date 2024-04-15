@@ -20,7 +20,15 @@
                     </h1>
                     <!--Grafico vendite 2024-->
                     <div class="m-auto">
-                        {!! $chart->render() !!}
+                        @if(isset($chart))
+                            @if($chart)
+                                {!! $chart->render() !!}
+                            @else
+                                <div class="text-center">Troppi pochi dati per creare un grafico</div>
+                            @endif
+                        @else
+                            <div class="text-center">Troppi pochi dati per creare un grafico</div>
+                        @endif
                     </div>
                 </div>
             </div>

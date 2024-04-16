@@ -58,6 +58,7 @@ class OrderSeeder extends Seeder
                 $order->surname = $customer['cognome'];
                 $order->address = $customer['indirizzo'];
                 $order->phone_number = $customer['numero_di_telefono'];
+                $order->processed = 1;
                 $order->save();
             };
         }

@@ -102,7 +102,7 @@
                         </div>
                     </div>
                     <div class="mt-4">
-                        <button type="submit" class="btn button-color fw-bolder text-white" data-bs-toggle="modal" data-bs-target="#customModal">
+                        <button id="register-button" type="submit" class="btn button-color fw-bolder text-white">
                             Registrati
                         </button>
         

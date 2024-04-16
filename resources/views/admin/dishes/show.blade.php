@@ -99,19 +99,19 @@
                                 </a>
                             </div>
                             <div>
-                                <a class="btn fw-bolder btn-color text-shadow btn-outline-danger text-white" data-bs-toggle="modal" data-bs-target="#DishModal{{ $dish->id }}">
+                                <a class="btn fw-bolder btn-color text-shadow btn-outline-danger text-white" data-bs-toggle="modal" data-bs-target="#customModal{{ $dish->id }}">
                                     Elimina
                                 </a>
                             
-                                <div class="modal fade" id="DishModal{{ $dish->id }}" tabindex="-1" aria-labelledby="DishModalLabel{{ $dish->id }}" aria-hidden="true">
+                                <div class="modal fade" id="customModal{{ $dish->id }}" tabindex="-1" aria-labelledby="customModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h1 class="modal-title fs-5" id="DishModalLabel{{ $dish->id }}"><span class="text-danger">ATTENZIONE!</span></h1>
+                                                <h5 class="modal-title text-color-2" id="customModalLabel">ATTENZIONE!</h5>
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
-                                            <div class="modal-body">
-                                                Sei sicuro di voler eliminare {{ $dish->name }}?
+                                            <div class="modal-body text-dark">
+                                                Sei sicuro di voler eliminare <span class="text-color-2 fw-bolder">{{ $dish->name }}</span>?
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-dark fw-bolder" data-bs-dismiss="modal">Annulla</button>

@@ -154,7 +154,7 @@
                                     </h2>
                                 </div>
                             </div>
-                            <div class="mb-5 px-2">
+                            <div class="mb-3 px-2">
                                 <h4 class="my-3 text-center text-shadow">
                                     Ingredienti
                                 </h4>
@@ -180,7 +180,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="my-3 d-flex justify-content-around">
+                        <div class="my-2 d-flex justify-content-around">
                             <div>
                                 <a href="{{ route('admin.dishes.edit', ['dish' => $dish->id]) }}" class="btn btn-color btn-outline-danger fw-bolder text-shadow text-white">
                                     Modifica

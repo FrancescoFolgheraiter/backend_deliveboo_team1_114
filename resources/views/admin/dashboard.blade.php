@@ -43,6 +43,7 @@
                                                     <th scope="col">Indirizzo</th>
                                                     <th scope="col" class="text-center">Data dell'ordine</th>
                                                     <th scope="col" class="text-center">Valore dell'ordine</th>
+                                                    <th scope="col" class="text-center">Ordine evaso</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -59,6 +60,15 @@
                                                     </td>
                                                     <td class="text-center">
                                                         {{ $order->total_price }} €
+                                                    </td>
+                                                    <td class="text-center" >
+                                                        <div class="{{ $order->processed == 0 ? 'badge rounded-pill bg-color' : '' }}">
+                                                            @if ($order->processed==1)
+                                                                Si
+                                                            @else
+                                                                No
+                                                            @endif
+                                                        </div>
                                                     </td>
                                                 </tr>
                                                 @endforeach

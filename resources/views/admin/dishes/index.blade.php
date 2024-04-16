@@ -7,6 +7,12 @@
     I Tuoi Piatti
 </h1>
 <div class="custom-card-index-dishes">
+    {{-- catch di errore --}}
+    @if(session('error'))
+    <div class="alert alert-danger">
+        {{ session('error') }}
+    </div>
+    @endif
     <div class="row">
         @foreach ($user->dishes as $dish)
             @if ($dish->delete == null)

@@ -76,7 +76,7 @@ class DishController extends Controller
             return view('admin.dishes.show', compact('dish', 'user'));
         }
         else{
-            return redirect()->route('admin.dishes.index')->with('error', 'Non sei autorizzato a visualizzare questo ordine.');
+            return redirect()->route('admin.dishes.index')->with('error', 'Non sei autorizzato a visualizzare questo piatto.');
         }
     
     }
@@ -94,7 +94,7 @@ class DishController extends Controller
             return view('admin.dishes.edit', compact('dish', 'user'));
         }
         else{
-            return redirect()->route('admin.dishes.index')->with('error', 'Non sei autorizzato a visualizzare questo ordine.');
+            return redirect()->route('admin.dishes.index')->with('error', 'Non sei autorizzato a visualizzare questo piatto');
         }
     }
 

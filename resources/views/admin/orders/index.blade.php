@@ -11,6 +11,10 @@
             <div class="alert alert-danger">
                 {{ session('error') }}
             </div>
+            @elseif(session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
             @endif
                 <h1 class="text-center mb-4">
                     Storico degli ordini

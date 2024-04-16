@@ -133,7 +133,7 @@
                                 <form action="{{ route('admin.orders.update', ['order' => $order->id]) }}" method="POST"> 
                                     @csrf
                                     @method('PUT')
-                                    <button  type="submit"  class="text-shadow fw-bolder">
+                                    <button  type="submit"  class="btn text-white fw-bolder btn-outline-danger bg-color">
                                         Evadi ordine
                                     </button>
                                 </form>
@@ -219,7 +219,7 @@
                             <form action="{{ route('admin.orders.update', ['order' => $order->id]) }}" method="POST"> 
                                 @csrf
                                 @method('PUT')
-                                <button  type="submit"  class="text-shadow fw-bolder">
+                                <button  type="submit"  class="btn text-white fw-bolder btn-outline-danger bg-color">
                                     Evadi ordine
                                 </button>
                             </form>

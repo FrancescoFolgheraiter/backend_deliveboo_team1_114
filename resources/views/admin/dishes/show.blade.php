@@ -36,9 +36,44 @@
                             </div>  
                         </div>
                         <div class="d-flex justify-content-center">
-                            <button id="toggler-aside" class="badge btn-color p-2 navbar-toggler d-lg-none text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offCanvasDishes" aria-controls="offCanvasDishes" aria-label="Toggle navigation">
+                            <button id="toggler-aside" class="badge btn-color p-2 me-2 navbar-toggler d-lg-none text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offCanvasDishes" aria-controls="offCanvasDishes" aria-label="Toggle navigation">
                                 Visualizza i dettagli
                             </button>
+                            <button class="badge btn-color d-lg-none p-2 navbar-toggler text-white" type="button" data-bs-toggle="modal" data-bs-target="#customModal1{{ $dish->id }}">
+                                Elimina il seguente piatto
+                            </button>
+                        
+                            <div class="modal fade" id="customModal1{{ $dish->id }}" tabindex="-1" aria-labelledby="customModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title text-color-2" id="customModalLabel">ATTENZIONE!</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body text-dark">
+                                            Sei sicuro di voler eliminare <span class="text-color-2 fw-bolder">{{ $dish->name }}</span>?
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-dark fw-bolder" data-bs-dismiss="modal">Annulla</button>
+                                            <form action="{{ route('admin.dishes.destroy', ['dish' => $dish->id]) }}" method="POST">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="btn btn-danger fw-bolder">
+                                                    Elimina
+                                                </button>
+                                                @error('name')
+                                                    <div class="alert alert-danger">
+                                                        {{ $message }}
+                                                    </div>
+                                                @enderror
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            
                         </div>
                         <div class="text-center b-white card w-80 p-4 mx-auto">
                             <h3 class="text-shadow">
@@ -97,40 +132,6 @@
                                 <a href="{{ route('admin.dishes.edit', ['dish' => $dish->id]) }}" class="btn btn-color btn-outline-danger fw-bolder text-shadow text-white">
                                     Modifica
                                 </a>
-                            </div>
-                            <div>
-                                <a class="btn fw-bolder btn-color text-shadow btn-outline-danger text-white" data-bs-toggle="modal" data-bs-target="#customModal{{ $dish->id }}">
-                                    Elimina
-                                </a>
-                            
-                                <div class="modal fade" id="customModal{{ $dish->id }}" tabindex="-1" aria-labelledby="customModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title text-color-2" id="customModalLabel">ATTENZIONE!</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body text-dark">
-                                                Sei sicuro di voler eliminare <span class="text-color-2 fw-bolder">{{ $dish->name }}</span>?
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-dark fw-bolder" data-bs-dismiss="modal">Annulla</button>
-                                                <form action="{{ route('admin.dishes.destroy', ['dish' => $dish->id]) }}" method="POST">
-                                                    @csrf
-                                                    @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger fw-bolder">
-                                                        Elimina
-                                                    </button>
-                                                    @error('name')
-                                                        <div class="alert alert-danger">
-                                                            {{ $message }}
-                                                        </div>
-                                                    @enderror
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>

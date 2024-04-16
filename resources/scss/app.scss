@@ -348,11 +348,12 @@ main{
     transition: var(--bs-offcanvas-transition);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 992px) {
     aside h1,
     aside img,
     aside p,
     aside .accordion-button,
+    aside .accordion-body,
     aside .text-shadow-2,
     aside .bottom-aside {
         display: none;

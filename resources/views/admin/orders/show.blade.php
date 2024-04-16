@@ -128,6 +128,17 @@
                                     <p class="text-white">Il cliente non ha lasciato note.</p>
                                 @endif
                             </div>
+                            <div class="mb-5">
+                                @if ($order->processed==0)
+                                <form action="{{ route('admin.orders.update', ['order' => $order->id]) }}" method="POST"> 
+                                    @csrf
+                                    @method('PUT')
+                                    <button  type="submit"  class="text-shadow fw-bolder">
+                                        Evadi ordine
+                                    </button>
+                                </form>
+                                @endif
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -200,6 +211,18 @@
                                 </h5>
                             @else
                                 <p class="text-muted">Il cliente non ha lasciato note.</p>
+                            @endif
+                        </div>
+
+                        <div class="mb-5">
+                            @if ($order->processed==0)
+                            <form action="{{ route('admin.orders.update', ['order' => $order->id]) }}" method="POST"> 
+                                @csrf
+                                @method('PUT')
+                                <button  type="submit"  class="text-shadow fw-bolder">
+                                    Evadi ordine
+                                </button>
+                            </form>
                             @endif
                         </div>
                     </div>

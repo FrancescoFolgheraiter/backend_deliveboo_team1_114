@@ -11,9 +11,13 @@
             <div class="alert alert-danger">
                 {{ session('error') }}
             </div>
+            @elseif(session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
             @endif
                 <h1 class="text-center mb-4">
-                    Lista degli ordini
+                    Storico degli ordini
                 </h1>
                 <div class="filter">
                     <div  id="accordionExample">
@@ -68,6 +72,7 @@
                                 <th scope="col" class="text-center">Indirizzo</th>
                                 <th scope="col" class="text-center">Data dell'ordine</th>
                                 <th scope="col" class="text-center">Valore dell'ordine</th>
+                                <th scope="col" class="text-center">Ordine evaso</th>
                                 <th colspan="3" class="text-center"scope="col">Azioni</th>
                             </tr>
                         </thead>
@@ -85,6 +90,15 @@
                                         </td>
                                         <td class="text-center">
                                             {{ $order->total_price }} €
+                                        </td>
+                                        <td class="text-center" >
+                                            <div class="{{ $order->processed == 0 ? 'badge rounded-pill bg-color' : '' }}">
+                                                @if ($order->processed==1)
+                                                    Si
+                                                @else
+                                                    No
+                                                @endif
+                                            </div>
                                         </td>
                                         <td class="text-center">
                                             <a href="{{ route('admin.orders.show', ['order' => $order->id]) }}" class="btn btn-xs btn-color btn-outline-danger text-white me-2 fw-bolder">

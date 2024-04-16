@@ -97,7 +97,13 @@ class OrderController extends Controller
      */
     public function update(Request $request, Order $order)
     {
-        //
+        if ($order->processed == 0) {
+            $order->processed = !$order->processed;
+            $order->save();
+            return redirect()->route('admin.orders.index')->with('success', 'Stato dell\'ordine aggiornato con successo.');
+        } else {
+            return redirect()->route('admin.orders.index');
+        }
     }
 
     /**

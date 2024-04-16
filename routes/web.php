@@ -35,6 +35,7 @@ Route::prefix('admin')
     Route::resource('orders', AdminOrderController::class)->only([
         'index',
         'show',
+        'update'
     ]);
     //rotta per la pagina di statistiche del corrente anno
     Route::get('statistics/salesCurrentYear', [AdminStatisticController::class, 'salesCurrentYear'])->name('statistics.salesCurrentYear');

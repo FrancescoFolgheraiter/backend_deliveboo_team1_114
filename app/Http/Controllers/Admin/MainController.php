@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use App\Models\type;
 use App\Models\User;
 use App\Models\Dish;
+use App\Models\Order;
 
 // Helpers
 use Illuminate\Support\Facades\Storage;
@@ -22,18 +23,19 @@ class MainController extends Controller
         $types = Type::all();
         $dishes = $user->dishes;
 
-        //istazio una collezzione che andrò a riempire con gli singoli piatti
-        $orders = collect();
-        
-        //recupero la data odierna
-        $today = Carbon::today();
+        // Ottieni la data odierna
+        $currentDate = now();
 
-        foreach ($dishes as $dish) {
-            //qui aggiungo ogmi volta con merge un istanza dentro una collezzione
-            //filtrando per WHERE date = data di oggi
-            $orders = $orders->merge($dish->orders()->whereDate('date', $today)->orderBy('date')->get());
-        }
+        // Filtra gli ordini in base all'utente loggato e alla data odierna
+        $orders = Order::whereHas('dishes', function ($query) use ($user) {
+            $query->where('user_id', $user->id);
+        })
+        ->whereDate('date', $currentDate) // Filtra per la data odierna
+        ->orderByDesc('date') // Ordina per data decrescente
+        ->get();
+
         return view('admin.dashboard', compact('user','types','orders'));
+        
     }
     //funzione di reindirizzamento sull'edit di user esclusivo per type
     public function editUser(){

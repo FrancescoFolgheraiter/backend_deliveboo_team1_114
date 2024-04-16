@@ -135,8 +135,8 @@
         </div>
         <div class="col-3">
             
-            <div class="card my-user-card p-1">
-                <div class="custom-card-order mt-4 text-center">
+            <div class="card my-user-card d-flex flex-column align-items-center justify-content-center">
+                <div class="custom-card-order text-center">
                     <div class="text-center my-3">
                         <h3>
                             <span class="text-color-3 text-shadow fw-bolder">{{ $order->name }} {{ $order->surname }}</span>

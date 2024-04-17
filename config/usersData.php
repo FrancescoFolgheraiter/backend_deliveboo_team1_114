@@ -18,12 +18,12 @@ return  [
     [
         'name' => 'Da Albert', // Pizzeria 4
         'image' => 'img/user/da_albert.jpg',
-        'types' => ['Pizzeria','Meditteranea']
+        'types' => ['Pizzeria','Mediterranea']
     ],
     [
         'name' => 'Korallo', // Pesce 5
         'image' => 'img/user/korallo.jpg',
-        'types' => ['Pesce','Meditteranea']
+        'types' => ['Pesce','Mediterranea']
     ],
     [
         'name' => 'RoadMouse', // BBQ 6
@@ -33,7 +33,7 @@ return  [
     [
         'name' => 'StefanoPizza', // Pizzeria 7
         'image' => 'img/user/stefanopizza.jpg',
-        'types' => ['Pizzeria','Meditteranea']
+        'types' => ['Pizzeria','Mediterranea']
     ],
     [
         'name' => 'Cinatown', // Cinese 8
@@ -43,7 +43,7 @@ return  [
     [
         'name' => 'Da Mario', // Pizzeria 9
         'image' => 'img/user/da_mario.jpg',
-        'types' => ['Pizzeria','Meditteranea']
+        'types' => ['Pizzeria','Mediterranea']
     ],
     [
         'name' => 'Fork', // Etnica 10
@@ -93,7 +93,7 @@ return  [
     [
         'name' => 'La Bella Italia', // Paninoteca 19
         'image' => 'img/user/bellaItalia.jpg',
-        'types' => ['Paninoteca','Meditteranea']
+        'types' => ['Paninoteca','Mediterranea']
     ],
     [
         'name' => 'Sushi Palace', // Sushi 20

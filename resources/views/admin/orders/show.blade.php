@@ -68,6 +68,17 @@
                                 <span class="text-white text-shadow fw-bolder">{{ $order->name }} {{ $order->surname }}</span>
                             </h3>  
                         </div>
+                        <div class="mb-5">
+                            @if ($order->processed==0)
+                            <form action="{{ route('admin.orders.update', ['order' => $order->id]) }}" method="POST"> 
+                                @csrf
+                                @method('PUT')
+                                <button  type="submit"  class="btn text-white fw-bolder btn-outline-danger bg-color">
+                                    Evadi ordine
+                                </button>
+                            </form>
+                            @endif
+                        </div>
                         <div class="mt-4 text-center">
                             <div class="mb-2">
                                 <h5 class="mb-2">
@@ -128,17 +139,6 @@
                                     <p class="text-white">Il cliente non ha lasciato note.</p>
                                 @endif
                             </div>
-                            <div class="mb-5">
-                                @if ($order->processed==0)
-                                <form action="{{ route('admin.orders.update', ['order' => $order->id]) }}" method="POST"> 
-                                    @csrf
-                                    @method('PUT')
-                                    <button  type="submit"  class="btn text-white fw-bolder btn-outline-danger bg-color">
-                                        Evadi ordine
-                                    </button>
-                                </form>
-                                @endif
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -152,6 +152,17 @@
                         <h3>
                             <span class="text-color-3 text-shadow fw-bolder">{{ $order->name }} {{ $order->surname }}</span>
                         </h3>  
+                    </div>
+                    <div class="mb-2">
+                        @if ($order->processed==0)
+                        <form action="{{ route('admin.orders.update', ['order' => $order->id]) }}" method="POST"> 
+                            @csrf
+                            @method('PUT')
+                            <button  type="submit"  class="btn text-white fw-bolder btn-outline-danger bg-color">
+                                Evadi ordine
+                            </button>
+                        </form>
+                        @endif
                     </div>
                     <div class="mt-4 text-center">
                         <div class="mb-2">
@@ -202,28 +213,33 @@
                         </div>
     
                         <div class="m-5">
-                            <h5>
+                            <button id="toggler-aside" class="btn text-white fw-bolder btn-outline-danger bg-color" type="button" data-bs-toggle="offcanvas" data-bs-target="#offCanvasNotes" aria-controls="offCanvasNotes" aria-label="Toggle navigation">
                                 Note lasciate dal cliente
-                            </h5>
-                            @if (!empty($order->note))
-                                <h5 class="text-color-3 text-shadow fw-bolder">
-                                    {{ $order->note }}
-                                </h5>
-                            @else
-                                <p class="text-muted">Il cliente non ha lasciato note.</p>
-                            @endif
-                        </div>
-
-                        <div class="mb-5">
-                            @if ($order->processed==0)
-                            <form action="{{ route('admin.orders.update', ['order' => $order->id]) }}" method="POST"> 
-                                @csrf
-                                @method('PUT')
-                                <button  type="submit"  class="btn text-white fw-bolder btn-outline-danger bg-color">
-                                    Evadi ordine
-                                </button>
-                            </form>
-                            @endif
+                            </button>
+                            <div class="offcanvas offcanvas-end" tabindex="-1" id="offCanvasNotes" aria-labelledby="offCanvasNotesLabel">
+                                <div class="offcanvas-header">
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                </div>
+                                <div class="offcanvas-body d-flex flex-column justify-content-center">
+                                    <div class="my-aside-card">
+                                        <div class="d-flex justify-content-center flex-column">
+                                            <div class="text-center">
+                                                <div class="mb-5">
+                                                    <div class="mb-5">
+                                                        @if (!empty($order->note))
+                                                            <h5 class="text-white text-shadow fw-bolder">
+                                                                {{ $order->note }}
+                                                            </h5>
+                                                        @else
+                                                            <p class="text-white">Il cliente non ha lasciato note.</p>
+                                                        @endif
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

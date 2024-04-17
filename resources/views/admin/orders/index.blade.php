@@ -54,7 +54,7 @@
                                             </div>
                                         </div>
                                         <div>
-                                            <button type="submit" class="btn btn-color btn-outline-danger text-white" data-bs-toggle="modal" data-bs-target="#customModal">Filtra</button>
+                                            <button type="submit" class="btn btn-color btn-outline-danger text-white">Filtra</button>
                                             <button type="reset" class="btn btn-color btn-outline-danger text-white" onclick="resetForm()">Clear</button>
                                         </div>
                                     </form>

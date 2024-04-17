@@ -4,14 +4,179 @@
 
 @section('main-content')
     <div class="row">
-        <div class="col">
-            <div class="card">
-                <div class="card-body">
-                    <h1 class="text-center text-success">
-                        Sei loggato!
-                    </h1>
-                    <br>
-                    La dashboard è una pagina privata (protetta dal middleware)
+        <div class="col-9">
+            <div class="card my-user-card">
+                <div class="card-body d-flex justify-content-center">
+                    <div class="row w-100">
+                        <div class="col-md-9 col-12 d-flex w-100">
+                            <div class="flex-grow-1">
+                                <div class="d-flex justify-content-end">
+                                    <button id="toggler-aside" class="navbar-toggler d-lg-none mt-3 text-color-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offCanvasUser" aria-controls="offCanvasUser" aria-label="Toggle navigation">
+                                        <i class="fa-solid fa-chevron-left fa-2x"></i>
+                                    </button>
+                                </div>
+                                @if ($orders->isEmpty())
+                                    <h3 class="text-center py-4">
+                                        Non sono stati ancora effettuati ordini al tuo locale in data odierna.
+                                    </h3>
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <div class="loader">
+                                            <div class="panWrapper">
+                                                <div class="pan">
+                                                    <div class="food"></div>
+                                                    <div class="panBase"></div>
+                                                    <div class="panHandle"></div>
+                                                </div>
+                                                <div class="panShadow"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @else
+                                    <h2 class="text-center mb-4">
+                                        Ordini di oggi
+                                    </h2>
+                                    <div class="custom-card-table-order">
+                                        <table class="table text-center table-auto table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Cliente</th>
+                                                    <th scope="col">Indirizzo</th>
+                                                    <th scope="col" class="text-center">Data dell'ordine</th>
+                                                    <th scope="col" class="text-center">Valore dell'ordine</th>
+                                                    <th scope="col" class="text-center">Ordine evaso</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach ($orders as $order)
+                                                <tr onclick="window.location='{{ route('admin.orders.show', ['order' => $order->id]) }}'">
+                                                    <td>
+                                                        {{ $order->name }} {{ $order->surname }}
+                                                    </td>
+                                                    <td>
+                                                        {{ $order->address }}
+                                                    </td>
+                                                    <td class="text-center">
+                                                        {{ date('d-m-Y', strtotime($order->date)) }} alle {{ date('H:i:s', strtotime($order->date)) }} 
+                                                    </td>
+                                                    <td class="text-center">
+                                                        {{ $order->total_price }} €
+                                                    </td>
+                                                    <td class="text-center" >
+                                                        <div class="{{ $order->processed == 0 ? 'badge rounded-pill bg-color' : '' }}">
+                                                            @if ($order->processed==1)
+                                                                Si
+                                                            @else
+                                                                No
+                                                            @endif
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                @endforeach
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                @endif
+                            </div>   
+                        </div>
+                    </div>
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offCanvasUser" aria-labelledby="offCanvasUserLabel">
+                        <div class="offcanvas-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body d-flex flex-column">
+                            <div class="mb-4">
+                                <div class="p-3">
+                                    <h5 class="text-center text-shadow">
+                                        Totale ordini giornalieri
+                                    </h5>
+                                    <h3 class="text-center fw-bolder text-color-2 text-shadow">
+                                        {{ $orders->count() }} ordini effettuati
+                                    </h3>
+                                </div>
+                            </div>
+                            <div>
+                                <div>
+                                    <div class="user-img-box mx-auto mb-4">
+                                        <img src="/storage/{{ $user->resturant_image  }}" alt="{{ $user->resturant_name }}">
+                                    </div>
+                                </div>
+                                <div class="mb-4">
+                                    <div class="mt-4">
+                                        <h5 class="text-center mb-2 text-shadow">
+                                            Tipologia del tuo ristorante
+                                        </h5>
+                                        <div class="text-center">
+                                            @foreach ($user->Types as $type)
+                                                <span class="badge btn-color text-shadow">
+                                                    {{ $type->name }}
+                                                </span>
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                    <div class="mt-5">
+                                        <div class="text-center mb-4">
+                                            <!--permette il rindirizzamento per poter modificare la relazione user-types-->
+                                            <a href="{{ route('admin.dashboard.editUser')}}" class="btn btn-color text-shadow btn-outline-danger text-white fw-bolder">
+                                                Modifica
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-center my-5">
+                                    <a href="{{ route('admin.dishes.create') }}" class="btn btn-color text-shadow btn-outline-danger text-white fw-bolder w-90">
+                                        {{-- <i class="fa-solid fa-plus"></i>  --}}Aggiungi un nuovo piatto
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--fine contenuto principale di interazione utente-->
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="mb-4">
+                <div id="total-daily-orders" class="card p-3">
+                    <h5 class="text-center text-shadow">
+                        Totale ordini giornalieri
+                    </h5>
+                    <h3 class="text-center fw-bolder text-color-2 text-shadow">
+                        {{ $orders->count() }} ordini effettuati
+                    </h3>
+                </div>
+            </div>
+            <div class="card vh-card">
+                <div>
+                    <div class="user-img-box mx-auto mb-4">
+                        <img src="/storage/{{ $user->resturant_image  }}" alt="{{ $user->resturant_name }}">
+                    </div>
+                </div>
+                <div class="custom-card-user mb-4">
+                    <div class="mt-4">
+                        <h5 class="text-center mb-2 text-shadow">
+                            Tipologià del tuo ristorante
+                        </h5>
+                        <div class="text-center">
+                            @foreach ($user->Types as $type)
+                                <span class="badge btn-color text-shadow">
+                                    {{ $type->name }}
+                                </span>
+                            @endforeach
+                        </div>
+                    </div>
+                    <div class="mt-5">
+                        <div class="text-center mb-4">
+                            <!--permette il rindirizzamento per poter modificare la relazione user-types-->
+                            <a href="{{ route('admin.dashboard.editUser')}}" class="btn btn-color text-shadow btn-outline-danger text-white fw-bolder">
+                                Modifica
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center my-4">
+                    <a href="{{ route('admin.dishes.create') }}" class="btn btn-color text-shadow btn-outline-danger text-white fw-bolder w-90">
+                        {{-- <i class="fa-solid fa-plus"></i>  --}}Aggiungi un nuovo piatto
+                    </a>
                 </div>
             </div>
         </div>

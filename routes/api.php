@@ -3,6 +3,12 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
+//importazione controller API Project
+use App\Http\Controllers\Api\DishController as ApiDishController;
+use App\Http\Controllers\Api\TypeController as ApiTypeController;
+use App\Http\Controllers\Api\OrderController as ApiOrderController;
+
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -14,6 +20,25 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::name('api.')->group(function() {
+    
+    Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+        return $request->user();
+    });
+    //Rotta per Index e show delle mie api DishColtroller che permettono di far visualizzare i cibi
+    Route::resource('dishes', ApiDishController::class)->only([
+        'index',
+        'show'
+    ]);
+
+    //Rotta per Index delle mie api TypeColtroller che permettono di far visualizzare i tipi
+    Route::resource('types', ApiTypeController::class)->only([
+        'index',
+        'show'
+    ]);
+
+    //Rotta per il salvataggio dei dati dell'UI che effettua un ordine
+    ROute::resource('orders', ApiOrderController::class)->only([
+        'store'
+    ]);
 });

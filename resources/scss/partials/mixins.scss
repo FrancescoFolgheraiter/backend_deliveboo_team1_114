@@ -1,0 +1,201 @@
+// importo tutte le variabili SCSS
+@import './variables.scss';
+
+@mixin custom-container-style{
+    height: 85vh;
+    display: flex;
+    align-items: center;
+}
+//mixin utilizzato per la card di registrazione
+@mixin custom-card-style-1{
+    width: $width-1000; 
+    margin: 0 auto;
+    border-radius: 15px;
+    background-color: $utility;
+    -webkit-box-shadow: 0px 2px 46px 0px #6B6B6B;
+    -moz-box-shadow: 0px 2px 46px 0px #6B6B6B;
+    -o-box-shadow: 0px 2px 46px 0px #6B6B6B;
+    box-shadow: 0px 2px 46px 0px #6B6B6B;
+}
+//mixin utilizzato per la card di login
+@mixin custom-card-style-2{
+    width: $width-500; 
+    margin: 0 auto;
+    border-radius: 15px;
+    background-color: $utility;
+    -webkit-box-shadow: 0px 2px 46px 0px #6B6B6B;
+    -moz-box-shadow: 0px 2px 46px 0px #6B6B6B;
+    -o-box-shadow: 0px 2px 46px 0px #6B6B6B;
+    box-shadow: 0px 2px 46px 0px #6B6B6B;
+}
+//mixin utilizzato per la card di create
+@mixin custom-card-style-3{
+    width: $width-800; 
+    margin: 0 auto;
+    border-radius: 15px;
+    background-color: $utility;
+    -webkit-box-shadow: 0px 2px 46px 0px #6B6B6B;
+    -moz-box-shadow: 0px 2px 46px 0px #6B6B6B;
+    -o-box-shadow: 0px 2px 46px 0px #6B6B6B;
+    box-shadow: 0px 2px 46px 0px #6B6B6B;
+}
+//mixin utilizzato per la card di aside user
+@mixin custom-card-style-4 {
+    width: 90%; 
+    max-width: 320px; 
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: $utility;
+    -webkit-box-shadow: 0px 2px 46px 0px #6B6B6B;
+    -moz-box-shadow: 0px 2px 46px 0px #6B6B6B;
+    -o-box-shadow: 0px 2px 46px 0px #6B6B6B;
+    box-shadow: 0px 2px 46px 0px #6B6B6B;
+}
+//mixin utilizzato per la card di aside order
+@mixin custom-card-style-5{
+    width: $width-320; 
+    height: 650px;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: $utility;
+    -webkit-box-shadow: 0px 2px 46px 0px #6B6B6B;
+    -moz-box-shadow: 0px 2px 46px 0px #6B6B6B;
+    -o-box-shadow: 0px 2px 46px 0px #6B6B6B;
+    box-shadow: 0px 2px 46px 0px #6B6B6B;
+}
+//mixin utilizzato per la card di table order
+@mixin custom-card-style-6{
+    width: 100%; 
+    min-height: 600px;
+    margin: 0 auto;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    background-color: $utility;
+    padding: 10px;
+    /* -webkit-box-shadow: 0px 2px 46px 0px #6B6B6B;
+    -moz-box-shadow: 0px 2px 46px 0px #6B6B6B;
+    -o-box-shadow: 0px 2px 46px 0px #6B6B6B;
+    box-shadow: 0px 2px 46px 0px #6B6B6B; */
+}
+//mixin utilizzato per la card di table order index
+@mixin custom-card-style-7{
+    width: 100%; 
+    height: auto;
+    margin: 0 auto;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    background-color: $utility;
+    padding: 10px;
+    /* -webkit-box-shadow: 0px 2px 46px 0px #6B6B6B;
+    -moz-box-shadow: 0px 2px 46px 0px #6B6B6B;
+    -o-box-shadow: 0px 2px 46px 0px #6B6B6B;
+    box-shadow: 0px 2px 46px 0px #6B6B6B; */
+}
+//mixin utilizzato per la card di dishes index
+@mixin custom-card-style-8{
+    width: 100%; 
+    height: 80vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: $background;
+    padding: 10px;
+    /* -webkit-box-shadow: 0px 2px 46px 0px #6B6B6B;
+    -moz-box-shadow: 0px 2px 46px 0px #6B6B6B;
+    -o-box-shadow: 0px 2px 46px 0px #6B6B6B;
+    box-shadow: 0px 2px 46px 0px #6B6B6B; */
+}
+//mixin utilizzato per la card di welcome page
+@mixin custom-card-style-9{
+    width: $width-500; 
+    height: 50vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin: auto;
+    border-radius: 10px;
+    background-color: $utility;
+    padding: 10px;
+    -webkit-box-shadow: 0px 2px 46px 0px #6B6B6B;
+    -moz-box-shadow: 0px 2px 46px 0px #6B6B6B;
+    -o-box-shadow: 0px 2px 46px 0px #6B6B6B;
+    box-shadow: 0px 2px 46px 0px #6B6B6B;
+}
+//mixin utilizzato per la card delle statistiche
+@mixin custom-card-style-10{
+    width: 1000px; 
+    height: 80vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: $utility;
+    padding: 10px;
+    -webkit-box-shadow: 0px 2px 46px 0px #6B6B6B;
+    -moz-box-shadow: 0px 2px 46px 0px #6B6B6B;
+    -o-box-shadow: 0px 2px 46px 0px #6B6B6B;
+    box-shadow: 0px 2px 46px 0px #6B6B6B;
+}
+
+@mixin image-style-logo{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@mixin image-style-100{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0)); 
+}
+
+@mixin image-style-backup{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0)); 
+}
+
+@mixin image-style-100-230{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+}
+
+@mixin image-style-edit{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 1px 23px -1px #BFBFBF;
+    -moz-box-shadow: 0px 1px 23px -1px #BFBFBF;
+    -o-box-shadow: 0px 1px 23px -1px #BFBFBF;
+    box-shadow: 0px 1px 23px -1px #BFBFBF;
+}
+
+@mixin image-style-edit-user{
+    width: 350px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 1px 23px -1px #BFBFBF;
+    -moz-box-shadow: 0px 1px 23px -1px #BFBFBF;
+    -o-box-shadow: 0px 1px 23px -1px #BFBFBF;
+    box-shadow: 0px 1px 23px -1px #BFBFBF;
+}
+
+@mixin image-style-aside-user{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0)); 
+}
+

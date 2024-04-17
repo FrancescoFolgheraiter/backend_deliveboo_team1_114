@@ -1,5 +1,380 @@
 @import "~bootstrap/scss/bootstrap";
 
+// importo tutte le variabili SCSS
+@import './partials/variables.scss';
+
+// importo tutti i mixins SCSS
+@import './partials/mixins.scss';
+
+// importo details.scss
+@import './details.scss';
+
+// importo scrollbar.scss
+@import './scrollbar.scss';
+
+// importo loading.scss
+@import './loading.scss';
+
+// importo socials.scss
+@import './socials.scss';
+
 body {
-    background-color: lightslategray;
+    background-color: $background;
+    overflow: hidden;
 }
+
+main{
+    height: 100%;
+
+    .my-user-card{
+        height: 80vh;
+        overflow-y: auto;
+
+        .card{
+            border: none;
+        }
+    }
+    .my-order-card{
+        height: 80vh;
+        overflow-y: auto;
+        position: relative;
+
+        .card{
+            border: none;
+        }
+    }
+    .my-aside-card{
+        height: 80vh;
+        
+    }
+    .vh-card{
+        height: 66vh;
+    }
+    .bg-color{
+        background-color: $details;
+    }
+
+    .bg-color-2{
+        background-color: $background;
+    }
+
+    .bg-color-3{
+        background-color: $bg-color-3;
+    }
+
+    .text-color-2{
+        color: $details;
+    }
+
+    .text-color-3{
+        color: $aside;
+    }
+
+    .text-color-4{
+        color: $background;
+    }
+
+    .text-shadow {
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    }
+
+    .btn-color{
+        background-color: $details;
+    }
+    .btn-outline-danger{
+        --bs-btn-border-color: none;
+    }
+}
+.custom-container{
+    @include custom-container-style;
+}
+.img-box{
+    width: 100%;
+    height: $height-450;
+
+    img{
+       @include image-style-100;
+    }
+}
+.backup-img-box{
+    width: 100%;
+    height: $height-450;
+
+    img{
+       @include image-style-backup;
+    }
+}
+.logo-img-box{
+    width: 100%;
+    height: $height-350;
+
+    img{
+       @include image-style-100;
+    }
+}
+.guest-header-logo{
+    width: 90px;
+    height: 90px;
+
+    img{
+        @include image-style-logo;
+    }
+}
+.user-img-box{
+    max-width: $max-width-500;
+
+    img{
+       @include image-style-100-230;
+    }
+}
+.edit-img-box{
+    max-width: $max-width-500;
+
+    img{
+        @include image-style-edit;
+    }
+}
+.edit-user-img-box{
+    
+    img{
+        @include image-style-edit-user;
+    }
+}
+
+.custom-card-register{
+    @include custom-card-style-1;
+    //container dei tipi di locale
+    .container-types{
+        background-color: #ece2e2;
+        border-radius: 15px;
+        width:75%;
+        margin:0 auto;
+        border:1px solid gray;
+    }
+
+    .text-color{
+        color: $text;
+    }
+    .button-color{
+        background-color: $details;
+    }
+}
+.custom-card-login{
+    @include custom-card-style-2;
+
+    .text-color{
+        color: $text;
+    }
+    .button-color{
+        background-color: $details;
+    }
+}
+.custom-card-welcome{
+    @include custom-card-style-9;
+}
+.custom-card-create{
+    @include custom-card-style-3;
+}
+.custom-card-user{
+    @include custom-card-style-4;
+}
+.custom-card-order{
+    @include custom-card-style-5;
+}
+.custom-card-table-order{
+    @include custom-card-style-6;
+}
+.custom-card-table-index{
+    @include custom-card-style-7;
+}
+.custom-card-index-dishes{
+    @include custom-card-style-8;
+}
+.custom-card-stats{
+    @include custom-card-style-10;
+}
+
+//modifica ai check della registrazione
+.form-check-input {
+    box-shadow: none !important;;
+    &:checked {
+        background-color: $details; 
+        border:1px solid black;
+    }
+}
+
+.row .col-2{
+
+    aside{
+        height: 100vh;
+        background-color: $aside;
+
+        /* h1{
+            color: $details;
+        } */
+        .text-shadow-2 {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Modifica qui: aumenta l'opacità */
+        }
+        .text-color-2{
+            color: $details;
+        }
+
+        .top-aside{
+            
+            .text-color{
+                color: $background;
+            }
+        }
+    }
+}
+
+.img-aside-restaurant{
+    max-height: 300px;
+    width: 100%;
+
+    img{
+        @include image-style-aside-user;
+    }
+}
+
+.navbar {
+    .form-control {
+        box-shadow: none !important;
+        border: none;
+        &:checked {
+            background-color: $details; 
+            border:1px solid black;
+        }
+    }
+}
+
+
+.food-card {
+    width: 220px;
+    height: 280px;
+    border-radius: 17px;
+    background: transparent;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    -webkit-transition: 0.5s ease-out;
+    transition: 0.5s ease-out;
+    overflow: visible;
+    border: 1px solid gray;
+}
+
+.food-card:hover {
+    border: 1px solid $aside;
+    -webkit-box-shadow: 10px 5px 18px 0 rgba(255, 255, 255, 0.877);
+    box-shadow: 10px 5px 18px 0 rgba(255, 255, 255, 0.877);
+    transform: scale(1.05);
+    
+}
+
+.overlay{
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.food-card:hover .overlay{
+    opacity: 1;
+}
+
+.user-card-body:hover{
+    width: 100%;
+    height: 100%;
+    border: 1px solid transparent;
+    border-radius: 17px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+// modifiche sulla card di bootstrap
+.card{
+    --bs-card-spacer-y: 1rem;
+    --bs-card-spacer-x: 1rem;
+    --bs-card-title-spacer-y: 0.5rem;
+    --bs-card-title-color: ;
+    --bs-card-subtitle-color: ;
+    --bs-card-border-width: var(--bs-border-width);
+    --bs-card-border-color: var(--bs-border-color-translucent);
+    --bs-card-border-radius: var(--bs-border-radius);
+    --bs-card-box-shadow: ;
+    --bs-card-inner-border-radius: calc(var(--bs-border-radius) - (var(--bs-border-width)));
+    --bs-card-cap-padding-y: 0.5rem;
+    --bs-card-cap-padding-x: 1rem;
+    --bs-card-cap-bg: rgba(var(--bs-body-color-rgb), 0.03);
+    --bs-card-cap-color: ;
+    --bs-card-height: ;
+    --bs-card-color: ;
+    --bs-card-bg: var(--bs-body-bg);
+    --bs-card-img-overlay-padding: 1rem;
+    --bs-card-group-margin: 0.75rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    height: var(--bs-card-height);
+    color: var(--bs-body-color);
+    word-wrap: break-word;
+    background-color: var(--bs-card-bg);
+    background-clip: border-box;
+    border: 1px solid lightgray;
+    border-radius: var(--bs-card-border-radius);
+}
+
+.table-hover tbody tr:hover {
+    transform: translateY(-3px);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+#chart-container {     
+    max-width: 100%;     
+    overflow: hidden; 
+}
+
+.offcanvas {
+    position: fixed;
+    bottom: 0;
+    z-index: var(--bs-offcanvas-zindex);
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    color: white;
+    visibility: hidden;
+    background-color: $aside;
+    background-clip: padding-box;
+    outline: 0;
+    transition: var(--bs-offcanvas-transition);
+}
+
+@media (max-width: 992px) {
+    aside h1,
+    aside img,
+    aside p,
+    aside .accordion-button,
+    aside .accordion-body,
+    aside .text-shadow-2,
+    aside .bottom-aside {
+        display: none;
+    }
+    #responsive-aside {
+        width: 100%;  
+        text-align: center; 
+    }
+    .col-2 {
+        flex: 0 0 auto;
+        max-width: 80px;
+    }
+    .col-3 {
+        display: none;
+    }
+    .col-10 {
+        flex: 1;
+    }
+    .col-9{
+        flex: 1;
+    }
+
+}
+

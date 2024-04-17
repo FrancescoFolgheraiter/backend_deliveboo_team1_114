@@ -18,9 +18,12 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
+        'resturant_name',
         'email',
         'password',
+        'address',
+        'vat_number',
+        'resturant_image'
     ];
 
     /**
@@ -42,4 +45,19 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    /*
+        Relationships
+    */
+    // Many-to-Many con Type
+    public function Types()
+    {
+        return $this->belongsToMany(Type::class);
+    }
+
+    // One-to-Many con Dish
+    public function dishes() 
+    {
+        return $this->hasMany(Dish::class);
+    }
 }

@@ -1,0 +1,36 @@
+// importo tutte le variabili SCSS
+@import './partials/variables.scss';
+
+// importo tutti i mixins SCSS
+@import './partials/mixins.scss';
+
+/*
+
+    SCROLLBAR  
+
+*/
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: white;
+    padding: 2px;
+    border-radius: 80px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(161, 160, 160); 
+    padding: 2px;
+    border-radius: 80px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: gray; 
+    padding: 2px;
+}

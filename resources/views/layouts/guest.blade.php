@@ -5,50 +5,36 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>@yield('page-title') | {{ config('app.name', 'Laravel') }}</title>
+        <title>@yield('page-title') | {{ 'DeliveBoo' }}</title>
+
+        {{-- Font Awesome --}}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
         <!-- Scripts -->
         @vite('resources/js/app.js')
     </head>
     <body>
         <header>
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <nav class="navbar navbar-expand-lg bg-white">
                 <div class="container">
-                    <a class="navbar-brand" href="/">Template laravel guest</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarText">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            @auth
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('admin.dashboard') }}">Dashboard</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Link 2</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Link 3</a>
-                                </li>
-                            @else
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">Login</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">Register</a>
-                                </li>
-                            @endauth
+                    <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarText">
+                        <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="http://localhost:5174">
+                                    <div class="guest-header-logo">
+                                        <img src="/image/User/logo deliveboo1.png" alt="LOGO">
+                                    </div>
+                                </a>
+                            </li>
                         </ul>
-
-                        @auth
-                            <form method="POST" action="{{ route('logout') }}">
-                                @csrf
-
-                                <button type="submit" class="btn btn-outline-danger">
-                                    Log Out
-                                </button>
-                            </form>
-                        @endauth
+                       {{--  <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">Accedi</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('register') }}">Registrati</a>
+                            </li>
+                        </ul> --}}
                     </div>
                 </div>
             </nav>

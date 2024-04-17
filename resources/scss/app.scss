@@ -113,8 +113,8 @@ main{
     }
 }
 .guest-header-logo{
-    width: 90px;
-    height: 90px;
+    max-width: 180px;
+    max-height: 180px;
 
     img{
         @include image-style-logo;

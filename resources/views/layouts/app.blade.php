@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
+        <link rel="icon" href="/image/User/logoremove.png" type="image/png">
 
         {{-- Font Awesome --}}
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -271,7 +272,11 @@
                 <header>
                     <nav class="navbar navbar-expand-lg bg-body-tertiary px-5 py-2">
                         <div class="d-none d-lg-block">
-                            LOGO DELIVEBOO
+                            <a class="nav-link" href="http://localhost:5174">
+                                <div class="guest-header-logo">
+                                    <img src="/image/User/soloscrittalogo.png" alt="LOGO">
+                                </div>
+                            </a>
                         </div>
                         <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarText">
                             <form method="POST" action="{{ route('logout') }}">

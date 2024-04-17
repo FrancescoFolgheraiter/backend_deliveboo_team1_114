@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
+        <link rel="icon" href="/image/User/logoremove.png" type="image/png">
 
         <title>@yield('page-title') | {{ 'DeliveBoo' }}</title>
 
@@ -22,7 +23,7 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="http://localhost:5174">
                                     <div class="guest-header-logo">
-                                        <img src="/image/User/logo deliveboo1.png" alt="LOGO">
+                                        <img src="/image/User/soloscrittalogo.png" alt="LOGO">
                                     </div>
                                 </a>
                             </li>

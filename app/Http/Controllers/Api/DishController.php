@@ -34,6 +34,7 @@ class DishController extends Controller
         }
         //prendo i piatti di quell'utente
         $dishes = Dish::where('user_id', $restaurant->id)
+                        ->whereNull('delete')
                         ->where('visible', 1)
                         ->get();
 
